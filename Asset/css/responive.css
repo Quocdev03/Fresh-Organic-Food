@@ -1,0 +1,57 @@
+/* Header */
+@media screen and (max-width: 1023.98px) {
+
+   .header {
+      padding-top: 0;
+   }
+
+   .header-main {
+      padding: 22px 0px;
+      border-radius: 0;
+   }
+
+   .header-menu {
+      display: none;
+   }
+
+   .header-auth {
+      display: none;
+   }
+
+   .menu-toggle {
+      display: block;
+   }
+
+   .hero-container {
+      flex-direction: column;
+      gap: 40px;
+   }
+
+   .hero-image {
+      max-width: 70%;
+   }
+
+   .hero-heading {
+      font-size: 60px;
+      line-height: 80px;
+   }
+
+   .hero-desc {
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 767.98px) {
+   .header-main {
+      margin-bottom: 50px;
+   }
+
+   .hero-heading {
+      font-size: 40px;
+      line-height: 60px;
+   }
+
+   .mb-nav {
+      width: 300px;
+   }
+}
