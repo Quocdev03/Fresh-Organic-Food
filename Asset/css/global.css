@@ -48,3 +48,29 @@ body {
 .btn-primary:hover::before {
    width: 100%;
 }
+
+.section-heading {
+   margin-bottom: 28px;
+}
+
+.section-heading h1 {
+   font-weight: 600;
+   font-size: 52px;
+   line-height: 71px;
+   text-align: center;
+   color: var(--heading-color);
+}
+
+@media screen and (max-width: 1023.98px) {
+   .section-heading h1 {
+      font-size: 42px;
+      line-height: 51px;
+   }
+}
+
+@media screen and (max-width: 767.98px) {
+   .section-heading h1 {
+      font-size: 32px;
+      line-height: 41px;
+   }
+}
