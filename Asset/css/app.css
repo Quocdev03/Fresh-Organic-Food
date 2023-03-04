@@ -1,6 +1,6 @@
 /* Mobile Nav */
 .menu-toggle {
-   font-size: 22px;
+   font-size: 30px;
    color: var(--primary-color);
    cursor: pointer;
    display: none;
@@ -8,9 +8,9 @@
 
 .menu-close {
    position: absolute;
-   top: 20px;
-   right: 25px;
-   font-size: 25px;
+   top: 25px;
+   right: 45px;
+   font-size: 35px;
    color: var(--primary-color);
    cursor: pointer;
 }
@@ -24,10 +24,10 @@
    height: 100%;
    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.1);
    background-color: var(--bg2);
-   z-index: 3;
+   z-index: 110;
    padding: 70px 40px;
    transition: all 0.2s linear;
-   transform: translateX(100%);
+   transform: translateX(120%);
 }
 
 .mb-nav.is-show {
@@ -221,7 +221,6 @@
    font-size: 18px;
    line-height: 32px;
    color: var(--text-color);
-   max-width: 497px;
    margin-bottom: 56px;
 }
 
@@ -319,10 +318,6 @@
    top: 12px;
    z-index: 10;
    cursor: pointer;
-}
-
-.offer-item:hover {
-   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.1);
 }
 
 .offer-item-image {

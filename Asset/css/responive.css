@@ -1,15 +1,17 @@
 /* Header */
 @media screen and (max-width: 1023.98px) {
-
    .header {
       padding-top: 0;
-      transition: all 0.2s linear;
    }
 
    .header-main {
-      padding: 22px 0px;
+      position: fixed;
+      padding: 33px 20px;
+      right: 0;
+      top: 0;
+      left: 0;
       border-radius: 0;
-      transition: all 0.2s linear;
+      z-index: 100;
    }
 
    .header-menu {
@@ -27,8 +29,12 @@
 }
 
 @media screen and (max-width: 767.98px) {
+   .header {
+      padding-bottom: 50px;
+   }
+
    .header-main {
-      margin-bottom: 50px;
+      padding: 23px 20px;
    }
 
    .mb-nav {
@@ -37,24 +43,37 @@
 }
 
 @media screen and (max-width: 375.98px) {
+   .header-main {
+      padding: 18px 15px;
+   }
+
    .mb-nav {
-      width: 250px;
-      padding: 70px 20px;
+      width: 280px;
+      padding: 85px 20px;
    }
 }
 
 
 /* Hero section */
+@media screen and (min-width: 1024px) {
+   .hero-desc {
+      max-width: 497px;
+
+   }
+}
+
 @media screen and (max-width: 1023.98px) {
+   .hero {
+      padding-top: 180px;
+   }
+
    .hero-container {
       flex-wrap: wrap;
-      gap: 45px;
-      transition: all 0.2s linear;
+      gap: 60px;
    }
 
    .hero-image {
       max-width: 65%;
-      transition: all 0.2s linear;
       margin-left: auto;
       margin-right: auto;
    }
@@ -62,7 +81,6 @@
    .hero-heading {
       font-size: 60px;
       line-height: 80px;
-      transition: all 0.2s linear;
    }
 
    .hero-desc {
@@ -70,20 +88,28 @@
    }
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 768.98px) {
+   .hero {
+      padding-top: 160px;
+   }
+
    .hero-heading {
       font-size: 40px;
       line-height: 60px;
-      transition: all 0.2s linear;
    }
 
 }
 
-@media screen and (max-width: 375.98px) {
+@media screen and (max-width: 667.98px) {
+   .hero {
+      padding-top: 120px;
+   }
+}
+
+@media screen and (max-width: 475.98px) {
 
    .hero-image {
       max-width: 90%;
-      transition: all 0.2s linear;
    }
 }
 
