@@ -1,3 +1,4 @@
+/* Scroll mượt */
 html {
    scroll-behavior: smooth;
 }
@@ -9,11 +10,31 @@ body {
    background-color: var(--white-color);
 }
 
+/* Nền thanh cuộn */
+::-webkit-scrollbar {
+   width: 10px;
+   background-color: var(--white-color);
+}
+
+/* Thanh cuộn */
+::-webkit-scrollbar-thumb {
+   border-radius: 5px;
+   background-color: #8ab356;
+}
+
+/* Màu khi select vào text */
+::selection {
+   background-color: rgba(51, 224, 35, 0.7);
+   color: #fff;
+}
+
+/* Kích thước toàn trang */
 .wrapper {
    max-width: 1920px;
    margin: 0 auto;
 }
 
+/* Kích thước các phần tử trong trang */
 .container {
    max-width: 1200px;
    margin: 0 auto;
