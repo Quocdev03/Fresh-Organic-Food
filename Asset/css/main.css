@@ -118,6 +118,10 @@
    transform: rotate(-4deg) scale(1.02);
 }
 
+.header-menu-item-link:nth-child(2) {
+   transform: rotate(4deg) scale(1.02);
+}
+
 .header-menu-item-link::before {
    position: absolute;
    content: '';
@@ -331,6 +335,7 @@
    margin-bottom: 18px;
    transition: all 0.2s linear;
    position: relative;
+   cursor: pointer;
 }
 
 .offer-item-image img {
@@ -428,6 +433,7 @@
 .feature-item-image img {
    height: 180px;
    width: 100%;
+   cursor: pointer;
 }
 
 .feature-item-content {
