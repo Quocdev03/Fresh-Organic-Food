@@ -201,7 +201,7 @@
 }
 
 .hero-image img:hover {
-   transform: scale(1.1);
+   transform: scale(1.03);
 }
 
 .hero-heading {
@@ -247,6 +247,11 @@
 .logo-item img {
    width: 40px;
    height: 40px;
+   transition: all 0.2s ease-out;
+}
+
+.logo-item img:hover {
+   transform: scale(1.06);
 }
 
 .logo-text {
@@ -407,6 +412,8 @@
 
 .feature-item {
    transition: all 0.2s linear;
+   overflow: hidden;
+   width: 100%;
 }
 
 .feature-item:hover {
@@ -418,16 +425,14 @@
    background-color: white;
 }
 
-.feature-item-image {
-   max-height: 180px;
+.feature-item-image img {
+   height: 180px;
+   width: 100%;
 }
 
 .feature-item-content {
    background-color: var(--bg2);
-   padding: 22px 54px 26px 55px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   padding: 35px 20px 26px 20px;
    border-radius: 4px;
 }
 
@@ -436,17 +441,32 @@
    font-size: 18px;
    line-height: 32px;
    color: var(--heading-color);
-   margin-bottom: 12px;
+   margin-bottom: 15px;
    padding-bottom: 3px;
-   border-bottom: 1px solid var(--primary-color);
+   position: relative;
+   text-align: center;
+}
+
+.feature-item-title::before {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   content: '';
+   left: 50%;
+   transform: translateX(-50%);
+   top: 100%;
+   width: 50%;
+   height: 2px;
+   background-color: var(--primary-color);
 }
 
 .feature-item-price {
    font-weight: 600;
-   font-size: 22px;
+   font-size: 20px;
    line-height: 30px;
    color: var(--heading-color);
-   width: max-content;
+   text-align: center;
 }
 
 /* Deal section */
@@ -467,13 +487,14 @@
 }
 
 .deal-list {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-gap: 30px;
+   display: flex;
+   align-items: center;
+   gap: 30px;
 }
 
 .deal-item {
    display: flex;
+   justify-content: space-between;
    align-items: center;
    gap: 20px;
    border-radius: 10px;
@@ -512,6 +533,11 @@
    line-height: 44px;
    color: var(--heading-color);
    margin-bottom: 37px;
+}
+
+.deal-content-more {
+   padding-inline: 20px;
+   font-size: 15px;
 }
 
 /* Natural section */
