@@ -1,0 +1,126 @@
+.product {
+   margin-bottom: 100px;
+}
+
+.product-category {
+   margin-bottom: 70px;
+}
+
+.product-list {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 15px;
+}
+
+.product-item {
+   border: 1px solid #e9e9e9;
+   border-radius: 5px;
+   overflow: hidden;
+   transition: all 0.2s ease-in-out;
+}
+
+.product-item:hover {
+   box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* .product-item:hover:nth-child(even) .product-item-image {
+   background-color: #E1FCD4;
+} */
+
+.product-item:hover .product-item-image {
+   background-color: rgba(237, 237, 237, .4);
+}
+
+.product-item-image {
+   transition: all 0.2s ease-in-out;
+   padding: 16px 0px;
+   position: relative;
+}
+
+.product-item {
+   position: relative;
+}
+
+.product-new {
+   position: absolute;
+   left: 10px;
+   top: 12px;
+   z-index: 20;
+}
+
+.product-new span {
+   display: block;
+   padding: 3px 23px;
+   background-color: var(--primary-color);
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 16px;
+   border-radius: 5px;
+   color: var(--white-color);
+}
+
+.product-item-like {
+   position: absolute;
+   right: 10px;
+   top: 12px;
+   z-index: 10;
+   cursor: pointer;
+   display: none;
+}
+
+.product-item-unlike {
+   position: absolute;
+   right: 10px;
+   top: 12px;
+   z-index: 10;
+   cursor: pointer;
+}
+
+.product-item-image img {
+   height: 180px;
+   object-fit: cover;
+   margin-left: auto;
+   margin-right: auto;
+   transform: scale(.87);
+   transition: all 0.2s ease-in-out;
+}
+
+.product-item:hover .product-item-image img {
+   transform: scale(.90);
+}
+
+.product-item-content {
+   padding: 12px 28px 14px 28px;
+   text-align: center;
+}
+
+.product-item-content-title {
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 32px;
+   color: var(--heading-color);
+   margin-bottom: 10px;
+}
+
+.product-item-content-price {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 22px;
+   margin-bottom: 15px;
+}
+
+.product-item-content-price span {
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 32px;
+   color: var(--text-color);
+   text-decoration: line-through;
+}
+
+.product-item-content-price h3 {
+   font-weight: 600;
+   font-size: 22px;
+   line-height: 30px;
+   color: var(--primary-color);
+}

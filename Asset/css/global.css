@@ -12,7 +12,7 @@ body {
 
 /* Nền thanh cuộn */
 ::-webkit-scrollbar {
-   width: 10px;
+   width: 8px;
    background-color: var(--white-color);
 }
 
@@ -69,6 +69,24 @@ body {
    width: 100%;
 }
 
+.btn-outline {
+   display: inline-block;
+   font-weight: 600;
+   font-size: 18px;
+   line-height: 32px;
+   border: 0.5px solid var(--primary-color);
+   border-radius: 4px;
+   padding: 5px 48px;
+   margin-bottom: 10px;
+   color: var(--primary-color);
+   transition: all 0.2s ease-in-out;
+}
+
+.btn-outline:hover {
+   background: rgb(82, 192, 32);
+   color: var(--white-color);
+}
+
 .section-heading {
    margin-bottom: 28px;
 }
@@ -93,4 +111,21 @@ body {
       font-size: 32px;
       line-height: 41px;
    }
+}
+
+.section-title {
+   margin-bottom: 60px;
+}
+
+.section-title h2 {
+   display: inline-block;
+   font-weight: 500;
+   font-size: 30px;
+   line-height: 51px;
+   color: var(--primary-color);
+   border-bottom: 3px solid var(--primary-color);
+}
+
+.hide {
+   display: none;
 }
