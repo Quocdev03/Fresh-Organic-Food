@@ -3,6 +3,7 @@
 const menuOpen = document.querySelector(".menu-toggle");
 const menuClose = document.querySelector(".menu-close");
 const mbNav = document.querySelector(".mb-nav");
+const body = document.body;
 const activeClass = "is-show";
 // click vào menu toggle thì thêm class is-show
 menuOpen.addEventListener("click", function () {
