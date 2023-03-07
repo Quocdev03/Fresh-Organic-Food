@@ -87,6 +87,20 @@ body {
    color: var(--white-color);
 }
 
+@media screen and (max-width: 1023.98px) {
+   .btn-outline {
+      padding: 5px 35px;
+   }
+}
+
+@media screen and (max-width: 767.98px) {
+   .btn-outline {
+      padding: 4px 20px;
+      font-size: 16px;
+      line-height: 26px;
+   }
+}
+
 .section-heading {
    margin-bottom: 28px;
 }
@@ -124,6 +138,20 @@ body {
    line-height: 51px;
    color: var(--primary-color);
    border-bottom: 3px solid var(--primary-color);
+}
+
+@media screen and (max-width: 1023.98px) {
+   .section-title h2 {
+      font-size: 26px;
+      line-height: 41px;
+   }
+}
+
+@media screen and (max-width: 767.98px) {
+   .section-title h2 {
+      font-size: 23px;
+      line-height: 35px;
+   }
 }
 
 .hide {
