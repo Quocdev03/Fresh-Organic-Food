@@ -306,7 +306,7 @@
    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 667px) {
    .product-list {
       display: grid;
       grid-auto-columns: 80%;
@@ -327,5 +327,11 @@
 
    .product-list>* {
       scroll-snap-align: start;
+   }
+}
+
+@media screen and (max-width: 279.99px) {
+   .product-list {
+      grid-auto-columns: 100%
    }
 }
