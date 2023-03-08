@@ -56,7 +56,7 @@
 
 /* Hero section */
 @media screen and (min-width: 1024px) {
-   @keyframes moveX {
+   @keyframes moveY {
       from {
          transform: translateY(-15px);
       }
@@ -67,7 +67,7 @@
    }
 
    .hero-image img {
-      animation: moveX 1.5s alternate infinite;
+      animation: moveY 1.5s alternate infinite;
    }
 
    .hero-desc {
@@ -168,10 +168,31 @@
 }
 
 @media screen and (max-width: 687.98px) {
+
    .offer-list {
-      grid-template-columns: 100%;
+      display: grid;
+      grid-auto-columns: 90%;
+      grid-auto-flow: column;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      grid-template-columns: unset;
+   }
+
+   .offer-list::-webkit-scrollbar {
+      display: none;
+      width: 0;
+   }
+
+   .offer-list>* {
+      scroll-snap-align: start;
    }
 }
+
 
 /* Feature Section */
 @media screen and (max-width: 1024.98px) {
@@ -195,9 +216,29 @@
    }
 }
 
-@media screen and (max-width: 475.98px) {
+@media screen and (max-width: 576.98px) {
+
    .feature-list {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-auto-columns: 90%;
+      grid-auto-flow: column;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      grid-template-columns: unset;
+   }
+
+   .feature-list::-webkit-scrollbar {
+      display: none;
+      width: 0;
+   }
+
+   .feature-list>* {
+      scroll-snap-align: start;
    }
 }
 
@@ -289,7 +330,7 @@
 
 /* Product Section */
 @media screen and (min-width: 1024px) {
-   .product-item:hover .product-item-image img {
+   .product-item-image:hover img {
       transform: scale(.90);
    }
 }
@@ -311,6 +352,7 @@
       display: grid;
       grid-auto-columns: 80%;
       grid-auto-flow: column;
+      overflow: auto;
       overflow-y: hidden;
       scroll-snap-type: x mandatory;
       scroll-snap-stop: always;

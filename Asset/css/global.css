@@ -68,7 +68,7 @@ input {
    width: 0;
    height: 100%;
    background-color: rgba(255, 255, 255, .15);
-   transition: width .5s ease-out;
+   transition: width .4s ease-out;
 }
 
 .btn-primary:hover::before {

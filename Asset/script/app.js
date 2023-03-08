@@ -13,3 +13,12 @@ menuOpen.addEventListener("click", function () {
 menuClose.addEventListener("click", function () {
    mbNav.classList.remove(activeClass);
 })
+
+// Heart
+let like = document.querySelectorAll(".offer-item-like");
+let activeLike = "show-like";
+like.forEach((item) => {
+   item.addEventListener("click", function () {
+      item.classList.toggle(activeLike);
+   })
+})

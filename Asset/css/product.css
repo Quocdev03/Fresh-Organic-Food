@@ -40,16 +40,16 @@
 
 .product-item:hover {
    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-   animation: moveY .2s forwards ease-in-out;
+   animation: productMoveY .2s forwards ease-in-out;
 }
 
-@keyframes moveY {
+@keyframes productMoveY {
    from {
       transform: translateY(0);
    }
 
    to {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
    }
 }
 
@@ -57,7 +57,7 @@
    background-color: #E1FCD4;
 } */
 
-.product-item:hover .product-item-image {
+.product-item-image:hover {
    background-color: rgba(237, 237, 237, .2);
 }
 
