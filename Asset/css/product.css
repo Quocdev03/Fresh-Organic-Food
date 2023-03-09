@@ -38,25 +38,6 @@
    background-color: var(--white-color);
 }
 
-.product-item:hover {
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-   animation: productMoveY .2s forwards ease-in-out;
-}
-
-@keyframes productMoveY {
-   from {
-      transform: translateY(0);
-   }
-
-   to {
-      transform: translateY(-3px);
-   }
-}
-
-/* .product-item:hover:nth-child(even) .product-item-image {
-   background-color: #E1FCD4;
-} */
-
 .product-item-image:hover {
    background-color: rgba(237, 237, 237, .2);
 }
