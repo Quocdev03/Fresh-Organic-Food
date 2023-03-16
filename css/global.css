@@ -47,6 +47,8 @@ input {
 }
 
 .btn-primary {
+   border: none;
+   outline: none;
    background-color: var(--primary-color);
    color: var(--white-color);
    border-radius: 5px;
@@ -76,6 +78,7 @@ input {
 }
 
 .btn-outline {
+   outline: none;
    display: inline-block;
    font-weight: 600;
    font-size: 18px;
@@ -87,6 +90,8 @@ input {
    color: var(--primary-color);
    transition: all 0.2s ease-in-out;
    z-index: 30;
+   background-color: transparent;
+   cursor: pointer;
 }
 
 .btn-outline:hover {
@@ -97,14 +102,6 @@ input {
 @media screen and (max-width: 1023.98px) {
    .btn-outline {
       padding: 5px 35px;
-   }
-}
-
-@media screen and (max-width: 767.98px) {
-   .btn-outline {
-      padding: 4px 25px;
-      font-size: 16px;
-      line-height: 26px;
    }
 }
 

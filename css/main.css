@@ -404,12 +404,10 @@
    cursor: pointer;
    font-size: 22px;
    color: rgb(214, 211, 211);
-   transition: all 0.1s ease-out;
 }
 
 .offer-item-like.show-like {
    color: red;
-   font-size: 23px;
 }
 
 .offer-item-image {

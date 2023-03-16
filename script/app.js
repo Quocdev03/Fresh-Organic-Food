@@ -19,7 +19,7 @@ document.addEventListener('click', function (e) {
       mbNav.classList.remove("is-show");
    }
 })
-// Heart
+// like
 let like = document.querySelectorAll(".offer-item-like");
 let activeLike = "show-like";
 like.forEach((item) => {
