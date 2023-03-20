@@ -38,13 +38,11 @@
    background-color: var(--white-color);
 }
 
-.product-item-image:hover {
-   background-color: rgba(237, 237, 237, .2);
-}
+
 
 .product-item-image {
    transition: all 0.2s ease-in-out;
-   padding: 16px 0px;
+   padding: 5px;
    position: relative;
 }
 

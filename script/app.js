@@ -1,29 +1,46 @@
-// Menu Toggle
-// Lấy giá trị bên html
-const menuOpen = document.querySelector(".menu-toggle");
-const menuClose = document.querySelector(".menu-close");
-const mbNav = document.querySelector(".mb-nav");
-const activeClass = "is-show";
-// click vào menu toggle thì thêm class is-show
-menuOpen.addEventListener("click", function (e) {
-   e.stopPropagation();
-   mbNav.classList.add(activeClass);
-})
-// click vào menu close thì xoá class is-show
-menuClose.addEventListener("click", function (e) {
-   mbNav.classList.remove(activeClass);
-})
-// click ra ngoài menu thì xoá class is-show
-document.addEventListener('click', function (e) {
-   if (!mbNav.contains(e.target) && !e.target.matches(".menu-toggle")) {
-      mbNav.classList.remove("is-show");
-   }
-})
-// like
-let like = document.querySelectorAll(".offer-item-like");
-let activeLike = "show-like";
-like.forEach((item) => {
-   item.addEventListener("click", function () {
-      item.classList.toggle(activeLike);
+window.addEventListener("load", function () {
+   // Menu Toggle
+   const menuOpen = document.querySelector(".menu-toggle");
+   const menuClose = document.querySelector(".menu-close");
+   const mbNav = document.querySelector(".mb-nav");
+   const activeClass = "is-show";
+   menuOpen.addEventListener("click", function (e) {
+      e.stopPropagation();
+      mbNav.classList.add(activeClass);
+   });
+   menuClose.addEventListener("click", function () {
+      mbNav.classList.remove(activeClass);
+   });
+   document.addEventListener('click', function (e) {
+      if (!mbNav.contains(e.target) && !e.target.matches(".menu-toggle")) {
+         mbNav.classList.remove("is-show");
+      }
    })
-})
+   // Like
+   let like = document.querySelectorAll(".offer-item-like");
+   let activeLike = "show-like";
+   like.forEach((item) => {
+      item.addEventListener("click", function () {
+         item.classList.toggle(activeLike);
+      });
+   });
+   // Quantity product cart
+   const counterIncrease = document.querySelector(".cart-item-content__counter--plus");
+   const counterDecrease = document.querySelector(".cart-item-content__counter--minus");
+   const counterNumber = document.querySelector(".cart-item-content__counter--number");
+   let counterValue = parseInt(counterNumber.textContent);
+   counterDecrease.addEventListener("click", function () {
+      counterValue -= 1;
+      if (counterValue = 1) {
+         counterDecrease.classList.add("is-disable");
+      }
+      counterNumber.textContent = counterValue;
+   });
+   counterIncrease.addEventListener("click", function (e) {
+      counterValue += 1;
+      if (counterValue >= 20) {
+         counterIncrease.classList.add("is-disable");
+      }
+      counterNumber.textContent = counterValue;
+   });
+});

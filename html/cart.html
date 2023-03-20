@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <link rel="stylesheet" href="../css/reset.css">
+   <link rel="stylesheet" href="../css/variables.css">
+   <link rel="stylesheet" href="../css/global.css">
+   <link rel="stylesheet" href="../css/product.css">
+   <link rel="stylesheet" href="../css/cart.css">
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="stylesheet" href="../css/responive.css">
+   <link rel="icon" href="../images/icon/favicon.png" type="image/x-icon" />
+   <title>Fresh Organic Food</title>
+</head>
+
+<body>
+
+   <div class="wrapper">
+
+      <div class="header">
+
+         <header class="header-main" id="header-main">
+            <div class="container">
+               <div class="header-container">
+                  <div class="header-logo">
+                     <a href="index.html">
+                        <img srcset="../images/logo/header-logo.png 2x" alt="">
+                     </a>
+                  </div>
+                  <ul class="header-menu">
+                     <li class="header-menu-item">
+                        <a href="index.html" class="header-menu-item-link">Home</a>
+                     </li>
+                     <li class="header-menu-item">
+                        <a href="product.html" class="header-menu-item-link">Product</a>
+                     </li>
+                     <li class="header-menu-item">
+                        <a href="#!" class="header-menu-item-link">Contact</a>
+                     </li>
+                  </ul>
+                  <div class="header-auth">
+                     <a href="#cart" class="header-cart-link">
+                        <img srcset="../images/icon/cart.png 2x" alt="">
+                     </a>
+                     <div class="header-button">
+                        <a href="#!" class="header-btn-signup">Sign Up</a>
+                        <a href="#!" class="btn-primary header-btn-login">Login</a>
+                     </div>
+                  </div>
+                  <div class="menu-toggle">
+                     <i class="fa-solid fa-bars"></i>
+                  </div>
+                  <nav class="mb-nav">
+                     <div class="menu-close">
+                        <i class="fa-solid fa-xmark"></i>
+                     </div>
+                     <ul class="navigation">
+                        <li class="navigation-item">
+                           <a href="#header-main" class="navigation-item-link">Home</a>
+                        </li>
+                        <li class="navigation-item">
+                           <a href="product.html" class="navigation-item-link">Product</a>
+                        </li>
+                        <li class="navigation-item">
+                           <a href="#!" class="navigation-item-link">Contact</a>
+                        </li>
+                        <li class="navigation-cart-item">
+                           <a href="cart" class="navigation-cart-link">
+                              <img srcset="../images/icon/cart.png 2x" alt="">
+                           </a>
+                        </li>
+                        <li class="navigation-btn-signup-item">
+                           <a href="#!" class="btn-outline">SignUp</a>
+                        </li>
+                        <li class="navigation-btn-login-item">
+                           <a href="#!" class="btn-primary navigation-btn-login">Login</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </header>
+
+
+
+      </div>
+
+      <main>
+         <section class="intro">
+            <div class="container">
+               <div class="intro-container">
+                  <h1 class="intro-heading">Welcome to Cart</h1>
+               </div>
+            </div>
+         </section>
+         <section class="cart" id="cart">
+            <div class="container">
+               <div class="cart-container">
+                  <div class="cart-list">
+                     <div class="cart-item">
+                        <div class="cart-item-image">
+                           <img srcset="../images/product/fruits(11).png 2x" alt="">
+                        </div>
+                        <div class="cart-item-content">
+                           <h1 class="cart-item-content__title">
+                              Grape Black
+                           </h1>
+                           <div class="card-item-content-prices">
+                              <h2 class="cart-item-content__price">
+                                 28.000<sup>&#8363</sup>
+                              </h2>
+                              <span class="cart-item-content__category">/kg</span>
+                           </div>
+                           <div class="cart-item-content__quantity">
+                              <div class="cart-item-content__counter">
+                                 <i class="fa-solid fa-minus cart-item-content__counter--minus"></i>
+                                 <h2 class="cart-item-content__counter--number">1</h2>
+                                 <i class="fa-solid fa-plus cart-item-content__counter--plus"></i>
+                              </div>
+                              <a href="product.html" class="cart-item-content__more">See more
+                                 product</a>
+                           </div>
+                        </div>
+                        <div class="cart-item-remove">
+                           <img src="../images/icon/close.svg" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="cart-payment">
+                     <div class="cart-payment-detail">
+                        <div class="cart-payment-detail__header">
+                           <div class="cart-payment-detail__title">
+                              <h1>Price Detail</h1>
+                           </div>
+                           <div class="cart-payment-detail__sub">
+                              <h1 class="cart-payment-detail__sub--title">Subtotal Price</h1>
+                              <span
+                                 class="cart-payment-detail__sub--price">84.000<sup>&#8363</sup></span>
+                           </div>
+                        </div>
+                        <div class="cart-payment-detail__total">
+                           <h1 class="cart-payment-detail__total--title">Total</h1>
+                           <span
+                              class="cart-payment-detail__total--price">120.000<sup>&#8363</sup></span>
+                        </div>
+                     </div>
+                     <div class="cart-payment-checkout">
+                        <button type="submit" class="btn-primary">Checkout</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <footer class="footer">
+         <div class="container">
+            <div class="footer-container">
+               <div class="footer-background">
+                  <img srcset="../images/footer.png 2x" alt="">
+               </div>
+               <div class="footer-logo">
+                  <a href="index.html">
+                     <img srcset="../images/logo/footer-logo.png 2x" alt="">
+                  </a>
+               </div>
+               <div class="footer-list">
+                  <ul class="footer-column">
+                     <h1 class="footer-column-heading">Quick Links</h1>
+                     <li class="footer-item">
+                        <a href="index.html" class="footer-link">Home
+                        </a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="product.html" class="footer-link">
+                           Product
+                        </a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="#!" class="footer-link">
+                           About Us</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="#!" class="footer-link">
+                           Blog
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="footer-column">
+                     <h1 class="footer-column-heading">Information</h1>
+                     <li class="footer-item">
+                        <a href="#!" class="footer-link">About Us</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="#!" class="footer-link">Delivery Information</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="#!" class="footer-link">Privacy Policy</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="#!" class="footer-link">Terms & Conditions</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="#!" class="footer-link">Contact Us</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="#!" class="footer-link">Site Map</a>
+                     </li>
+                  </ul>
+                  <ul class="footer-column">
+                     <h1 class="footer-column-heading">Products</h1>
+                     <li class="footer-item">
+                        <a href="product.html" class="footer-link">Meat</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="product.html" class="footer-link">Vegetables</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="product.html" class="footer-link">Fruits</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="product.html" class="footer-link">Fast Food</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="product.html" class="footer-link">Fried Food</a>
+                     </li>
+                     <li class="footer-item">
+                        <a href="product.html" class="footer-link">Food</a>
+                     </li>
+                  </ul>
+                  <ul class="footer-column">
+                     <h1 class="footer-column-heading">Contact Us</h1>
+                     <div class="footer-contact">
+                        <div class="footer-contact-item">
+                           <img src="../images/icon/pin-icon.svg" alt="">
+                           <span>256 Đ. Nguyen Van Cu, An Hoa, Ninh Kieu, Can Tho</span>
+                        </div>
+                        <div class="footer-contact-item">
+                           <img src="../images/icon/call-icon.svg" alt="">
+                           <span>+84 000 111 2222</span>
+                        </div>
+                        <div class="footer-contact-item">
+                           <img src="../images/icon/mail-icon.svg" alt="">
+                           <span>example@mail.com</span>
+                        </div>
+                     </div>
+                  </ul>
+               </div>
+               <div class="footer-bottom">
+                  <div class="footer-copyright">
+                     <span>© 2023 Madbrains. All Rights Reserved.</span>
+                  </div>
+                  <div class="footer-social">
+                     <a href="#!" class="footer-social-link">
+                        <img src="../images/icon/facebook-icon.svg" alt="">
+                     </a>
+                     <a href="#!" class="footer-social-link">
+                        <img src="../images/icon/twiter-icon.svg" alt="">
+                     </a>
+                     <a href="#!" class="footer-social-link">
+                        <img src="../images/icon/instagram-icon.svg" alt="">
+                     </a>
+                     <a href="#!" class="footer-social-link">
+                        <img src="../images/icon/pinterest-icon.svg" alt="">
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+   </div>
+
+   <script src="../script/app.js"></script>
+
+</body>
+
+</html>
