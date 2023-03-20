@@ -146,6 +146,7 @@
 .cart-payment-detail__sub {
    padding: 30px 20px;
    color: var(--gray-graphite-color);
+   font-size: 16px;
 }
 
 .cart-payment-detail__total {
