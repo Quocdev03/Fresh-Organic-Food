@@ -27,20 +27,27 @@ window.addEventListener("load", function () {
    // Quantity product cart
    const counterIncrease = document.querySelector(".cart-item-content__counter--plus");
    const counterDecrease = document.querySelector(".cart-item-content__counter--minus");
-   const counterNumber = document.querySelector(".cart-item-content__counter--number");
+   let counterNumber = document.querySelector(".cart-item-content__counter--number");
    let counterValue = parseInt(counterNumber.textContent);
-   counterDecrease.addEventListener("click", function () {
+   counterDecrease.addEventListener("click", function (e) {
       counterValue -= 1;
-      if (counterValue = 1) {
+      counterNumber.textContent = counterValue;
+      counterCheck = counterValue;
+      if (counterCheck <= 1) {
          counterDecrease.classList.add("is-disable");
       }
-      counterNumber.textContent = counterValue;
+      else {
+         counterIncrease.classList.remove("is-disable");
+      }
    });
    counterIncrease.addEventListener("click", function (e) {
       counterValue += 1;
-      if (counterValue >= 20) {
-         counterIncrease.classList.add("is-disable");
-      }
       counterNumber.textContent = counterValue;
+      counterCheck = counterValue;
+      if (counterCheck >= 20) {
+         counterIncrease.classList.add("is-disable");
+      } else {
+         counterDecrease.classList.remove("is-disable");
+      }
    });
 });

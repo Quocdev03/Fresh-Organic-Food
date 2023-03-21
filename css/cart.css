@@ -93,15 +93,21 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   font-size: 14px;
+   flex-shrink: 1;
+   font-size: 16px;
    cursor: pointer;
    color: var(--gray-graphite-color);
-   padding: 3px 4px;
+   padding: 0px 6px;
    border: 2px solid var(--gray-graphite-color);
    border-radius: 3px;
+   background-color: transparent;
 }
 
-.cart-item-content__counter--minus.is-disable,
+.cart-item-content__counter--minus.is-disable {
+   opacity: .2;
+   pointer-events: none;
+}
+
 .cart-item-content__counter--plus.is-disable {
    opacity: .2;
    pointer-events: none;
