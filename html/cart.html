@@ -90,9 +90,6 @@
                </div>
             </div>
          </header>
-
-
-
       </div>
 
       <main>
@@ -116,14 +113,17 @@
                               Grape Black
                            </h1>
                            <div class="card-item-content-prices">
-                              <h2 class="cart-item-content__price">
-                                 28.000<sup>&#8363</sup>
-                              </h2>
+                              <div class="cart-item-content__price">
+                                 <h2>
+                                    28.000
+                                 </h2><sup>&#8363</sup>
+                              </div>
                               <span class="cart-item-content__category">/kg</span>
                            </div>
                            <div class="cart-item-content__quantity">
                               <div class="cart-item-content__counter">
-                                 <button class="cart-item-content__counter--minus">-</button>
+                                 <button
+                                    class="cart-item-content__counter--minus is-disable">-</button>
                                  <h2 class="cart-item-content__counter--number">1</h2>
                                  <button class="cart-item-content__counter--plus">+</button>
                               </div>
@@ -280,7 +280,8 @@
       </footer>
 
    </div>
-
+   <script
+      src="https://cdn.jsdelivr.net/npm/javascript-debounce@1.0.1/dist/javascript-debounce.min.js"></script>
    <script src="../script/app.js"></script>
 
 </body>

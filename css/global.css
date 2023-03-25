@@ -35,7 +35,8 @@ input {
 
 /* Kích thước toàn trang */
 .wrapper {
-   max-width: 1920px;
+   --sizePage: 1920px;
+   max-width: var(--sizePage);
    margin: 0 auto;
 }
 
@@ -47,6 +48,10 @@ input {
 }
 
 .btn-primary {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: max-content;
    border: none;
    outline: none;
    background-color: var(--primary-color);
@@ -55,9 +60,9 @@ input {
    padding: 10px 44px;
    cursor: pointer;
    font-weight: 600;
-   font-size: 18px;
-   line-height: 25px;
+   font-size: var(--xlarge-font-size);
    position: relative;
+   z-index: 90;
    transition: transform .1s ease-out;
 }
 
@@ -78,15 +83,20 @@ input {
 }
 
 .btn-primary:active {
-   transform: scale(.95);
+   transform: scale(.98) !important;
+}
+
+@media screen and (max-width: 1023.98px) {
+   .btn-primary {
+      padding: 10px 35px;
+   }
 }
 
 .btn-outline {
    outline: none;
    display: inline-block;
    font-weight: 600;
-   font-size: 18px;
-   line-height: 32px;
+   font-size: var(--xlarge-font-size);
    border: 0.5px solid var(--primary-color);
    border-radius: 4px;
    padding: 5px 48px;
@@ -103,12 +113,12 @@ input {
 }
 
 .btn-outline:active {
-   transform: scale(.95);
+   transform: scale(.96);
 }
 
 @media screen and (max-width: 1023.98px) {
    .btn-outline {
-      padding: 5px 35px;
+      padding: 10px 35px;
    }
 }
 
@@ -118,24 +128,10 @@ input {
 
 .section-heading h1 {
    font-weight: 600;
-   font-size: 52px;
-   line-height: 71px;
    text-align: center;
    color: var(--heading-color);
-}
-
-@media screen and (max-width: 1023.98px) {
-   .section-heading h1 {
-      font-size: 42px;
-      line-height: 51px;
-   }
-}
-
-@media screen and (max-width: 767.98px) {
-   .section-heading h1 {
-      font-size: 32px;
-      line-height: 41px;
-   }
+   font-size: var(--display-font-size);
+   line-height: var(--display-line-height);
 }
 
 .section-title {
@@ -145,23 +141,52 @@ input {
 .section-title h2 {
    display: inline-block;
    font-weight: 500;
-   font-size: 30px;
-   line-height: 51px;
    color: var(--primary-color);
    border-bottom: 3px solid var(--primary-color);
+   font-size: var(--heading-font-size);
+   line-height: var(--heading-line-height);
+}
+
+.intro {
+   background-image: url(../images/cart/bg.png);
+   background-size: cover;
+   background-position: center;
+   padding: 160px 0;
+}
+
+.intro-heading {
+   display: block;
+   color: var(--white-color);
+   font-weight: 600;
+   text-align: center;
+   font-size: var(--title-font-size);
+   line-height: var(--title-line-height);
+   position: relative;
+   padding-bottom: 10px;
+}
+
+.intro-heading::before {
+   content: '';
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   right: 0;
+   bottom: 0;
+   width: 10%;
+   height: 3px;
+   background-color: var(--white-color);
 }
 
 @media screen and (max-width: 1023.98px) {
-   .section-title h2 {
-      font-size: 26px;
-      line-height: 41px;
+   .intro {
+      padding: 110px 0;
    }
+
 }
 
 @media screen and (max-width: 767.98px) {
-   .section-title h2 {
-      font-size: 23px;
-      line-height: 35px;
+   .intro {
+      padding: 60px 0;
    }
 }
 
