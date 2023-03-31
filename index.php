@@ -70,7 +70,8 @@ if (!isset($_GET["url"])) {
             }
             if ($page == "productdetail") {
                require "page/productdetail.php";
-            } else {
+            }
+            if ($page == "404") {
                require "page/404.php";
             }
          }

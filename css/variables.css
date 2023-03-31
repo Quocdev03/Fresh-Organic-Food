@@ -14,6 +14,8 @@
    --red-color: #ff0a0a;
    --tealGreen: #1A6A62;
 
+   --scroll-color: #8ab356;
+
    --bg1: #f0ffed;
    --bg2: #f9f9f9;
    --bg3: #edf9ff;
@@ -30,13 +32,16 @@
    --medium-line-height: 19px;
 
    --large-font-size: 16px;
-   --large-line-height: 22px;
+   --large-line-height: 24px;
 
    --xlarge-font-size: 18px;
    --xlarge-line-height: 32px;
 
    --xxlarge-font-size: 22px;
-   --xxlarge-line-height: 30px;
+   --xxlarge-line-height: 36px;
+
+   --xxxlarge-font-size: 28px;
+   --xxxlarge-line-height: 43px;
 
    --heading-font-size: 33px;
    --heading-line-height: 44px;
@@ -67,6 +72,9 @@
 
       --xxlarge-font-size: 19px;
       --xxlarge-line-height: 26px;
+
+      --xxxlarge-font-size: 25px;
+      --xxxlarge-line-height: 35px;
 
       --heading-font-size: 28px;
       --heading-line-height: 37px;
@@ -99,6 +107,9 @@
       --xxlarge-font-size: 16px;
       --xxlarge-line-height: 22px;
 
+      --xxxlarge-font-size: 21px;
+      --xxxlarge-line-height: 26px;
+
       --heading-font-size: 23px;
       --heading-line-height: 30px;
 
@@ -130,6 +141,9 @@
 
       --xxlarge-font-size: 14px;
       --xxlarge-line-height: 19px;
+
+      --xxxlarge-font-size: 16px;
+      --xxxlarge-line-height: 24px;
 
       --heading-font-size: 19px;
       --heading-line-height: 26px;

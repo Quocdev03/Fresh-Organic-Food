@@ -68,6 +68,10 @@
    padding: 3px 5px;
 }
 
+.product-deital-icon a>i {
+   font-size: 11px;
+}
+
 .product-item:hover .product-deital-icon {
    top: 10px;
 }
@@ -140,4 +144,9 @@
    color: var(--primary-color);
    font-size: var(--xxlarge-font-size);
    line-height: var(--xxlarge-line-height);
+}
+
+.product-button {
+   margin-left: auto;
+   margin-right: auto;
 }

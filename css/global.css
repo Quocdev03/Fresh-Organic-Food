@@ -24,7 +24,7 @@ input {
 /* Thanh cuộn */
 ::-webkit-scrollbar-thumb {
    border-radius: 5px;
-   background-color: #8ab356;
+   background-color: var(--scroll-color);
 }
 
 ::selection {
@@ -52,22 +52,27 @@ input {
    padding: 0 15px;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-outline {
    display: flex;
    justify-content: center;
    align-items: center;
    width: max-content;
    border: none;
    outline: none;
-   background-color: var(--primary-color);
-   color: var(--white-color);
    border-radius: 5px;
    padding: 10px 44px;
-   cursor: pointer;
    font-weight: 600;
    font-size: var(--xlarge-font-size);
+   cursor: pointer;
    position: relative;
    z-index: 90;
+
+}
+
+.btn-primary {
+   background-color: var(--primary-color);
+   color: var(--white-color);
    transition: transform .1s ease-out;
 }
 
@@ -98,17 +103,9 @@ input {
 }
 
 .btn-outline {
-   outline: none;
-   display: inline-block;
-   font-weight: 600;
-   font-size: var(--xlarge-font-size);
    border: 0.5px solid var(--primary-color);
-   border-radius: 4px;
-   padding: 8px 48px;
-   margin-bottom: 10px;
    color: var(--primary-color);
    background-color: transparent;
-   cursor: pointer;
    transition: all .15s ease-out;
 }
 
