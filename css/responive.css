@@ -167,6 +167,10 @@
       /* Dừng lại điểm đầu tiên của element khi scroll */
       scroll-snap-align: start;
    }
+
+   .offer-item {
+      margin-bottom: 15px;
+   }
 }
 
 @media screen and (max-width: 474.98px) {
@@ -176,7 +180,7 @@
 
    .offer-item-image {
       margin-bottom: unset;
-      padding: 30px 0px;
+      padding: 20px 0px;
    }
 
    .offer-item-image img {
@@ -395,9 +399,14 @@
    .product-item {
       margin-top: 10px;
    }
+
+   .product-item-image img {
+      height: 130px;
+   }
 }
 
 @media screen and (max-width: 457.99px) {
+
    .product-list {
       grid-auto-columns: 100%;
    }

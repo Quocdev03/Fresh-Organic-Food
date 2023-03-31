@@ -63,7 +63,7 @@ window.addEventListener("load", function () {
    const headerHeight = header && header.offsetHeight;
    window.addEventListener("scroll", debounce(function (e) {
       const scrollY = window.pageYOffset;
-      const fixPadding = 15;
+      const fixPadding = 0;
       if (scrollY >= headerHeight) {
          header && header.classList.add("fixed");
          document.body.style.paddingTop = `${headerHeight + fixPadding}px`;
@@ -76,19 +76,4 @@ window.addEventListener("load", function () {
          introSection.style.paddingTop = 0;
       }
    }), 100);
-
-   // const productButton = document.querySelectorAll(".product-button");
-   // productButton.forEach((item) => {
-   //    item.addEventListener("click", function (e) {
-   //       e.stopPropagation();
-   //       const productButtonTarget = e.target;
-   //       const product = productButtonTarget.parentElement.parentElement;
-   //       const productImage = product.querySelector(".product-item-image img").srcset;
-   //       const productName = product.querySelector(".product-item-content-title").innerText;
-   //       const productPrice = product.querySelector(".product-item-content-price--new").innerText;
-   //    });
-   // });
-   // function addCart(productImage, productName, productPrice) {
-
-   // }
 });

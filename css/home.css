@@ -71,7 +71,7 @@
 
 /* Header */
 .header {
-   padding: 30px 0 110px 0;
+   padding: 30px 0 90px 0;
    background-color: var(--bg1);
    overflow: hidden;
 }
@@ -147,7 +147,7 @@
    left: 50%;
    transform: translateX(-50%);
    width: 0;
-   height: .16rem;
+   height: .15rem;
    background-color: #7BBA26;
    transition: .3s ease-in-out;
 }
@@ -208,53 +208,6 @@
    100% {
       transform: translateY(7px);
    }
-}
-
-/* Hero Section */
-.hero {
-   position: relative;
-}
-
-.hero-container {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: 10px;
-}
-
-.hero-image {
-   z-index: 30;
-}
-
-.hero-image img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   transition: transform 0.2s linear;
-}
-
-.hero-image img:hover {
-   transform: scale(1.03);
-}
-
-.hero-heading {
-   font-weight: 800;
-   color: var(--heading-color);
-   margin-bottom: 28px;
-   font-size: var(--hero-font-size);
-   line-height: var(--hero-line-height);
-}
-
-.hero-heading span {
-   color: var(--primary-color);
-}
-
-.hero-desc {
-   font-weight: 400;
-   color: var(--text-color);
-   margin-bottom: 56px;
-   font-size: var(--xlarge-font-size);
-   line-height: var(--xlarge-line-height);
 }
 
 /* Logo Section */
@@ -376,7 +329,7 @@
 
 .offer-item-image {
    height: 175px;
-   padding: 10px 40px;
+   padding: 10px 45px;
    margin-bottom: 20px;
    transition: all 0.2s linear;
    position: relative;
@@ -717,7 +670,7 @@
    bottom: 0;
    left: 0;
    width: 0;
-   height: .16rem;
+   height: .15rem;
    background-color: var(--primary-color);
    transition: .3s ease-out;
 }

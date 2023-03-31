@@ -46,6 +46,30 @@
 
 .product-item {
    position: relative;
+   overflow: hidden;
+}
+
+.product-deital-icon {
+   position: absolute;
+   top: -100%;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: var(--primary-color);
+   z-index: 40;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: top 0.25s ease;
+}
+
+.product-deital-icon a {
+   display: inline-block;
+   font-size: 15px;
+   color: var(--white-color);
+   padding: 3px 5px;
+}
+
+.product-item:hover .product-deital-icon {
+   top: 10px;
 }
 
 .product-new {
