@@ -53,6 +53,7 @@
 
 .detail-image-bottom::-webkit-scrollbar {
    height: 5px;
+   cursor: pointer;
 }
 
 .detail-image-bottom::-webkit-scrollbar-thumb {

@@ -150,7 +150,7 @@ input {
 }
 
 .intro {
-   background-image: url(../images/cart/bg.png);
+   background-image: url('../images/cart/bg.png');
    background-size: cover;
    background-position: center;
    padding: 160px 0;
@@ -202,4 +202,20 @@ input {
 
 .hide {
    display: none;
+}
+
+.padding-section {
+   padding: 100px 0;
+}
+
+@media screen and (max-width: 1023.98px) {
+   .padding-section {
+      padding: 70px 0;
+   }
+}
+
+@media screen and (max-width: 374.98px) {
+   .padding-section {
+      padding: 50px 0;
+   }
 }

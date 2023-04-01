@@ -6,7 +6,7 @@
    </div>
 </section>
 
-<section class="product" id="product">
+<section class="product padding-section">
    <div class="container">
       <div class="product-bg">
          <img srcset="images/product/product-bg2.png 2x" alt="">

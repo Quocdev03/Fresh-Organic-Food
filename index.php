@@ -18,14 +18,7 @@ if (!isset($_GET["url"])) {
    <link rel="stylesheet" href="./css/reset.css">
    <link rel="stylesheet" href="./css/variables.css">
    <link rel="stylesheet" href="./css/global.css">
-   <link rel="stylesheet" href="./css/home.css">
-   <link rel="stylesheet" href="./css/hero.css">
-   <link rel="stylesheet" href="./css/product.css">
-   <link rel="stylesheet" href="./css/cart.css">
-   <link rel="stylesheet" href="./css/details.css">
-   <link rel="stylesheet" href="./css/productdetail.css">
-   <link rel="stylesheet" href="./css/404.css">
-   <link rel="stylesheet" href="./css/responive.css">
+   <link rel="stylesheet" href="./css/component.css">
    <link rel="icon" href="./images/icon/favicon.png" type="image/x-icon" />
    <title>Fresh Organic Food</title>
 </head>
@@ -65,6 +58,9 @@ if (!isset($_GET["url"])) {
             if ($page == "product") {
                require "page/product.php";
             }
+            if ($page == "contact") {
+               require "page/contact.php";
+            }
             if ($page == "cart") {
                require "page/cart.php";
             }
@@ -89,9 +85,7 @@ if (!isset($_GET["url"])) {
 
    </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/javascript-debounce@1.0.1/dist/javascript-debounce.min.js"></script>
    <script src="./script/app.js"></script>
-
 </body>
 
 </html>

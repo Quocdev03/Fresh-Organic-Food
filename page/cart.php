@@ -5,7 +5,7 @@
          </div>
       </div>
    </section>
-   <section class="cart">
+   <section class="cart padding-section">
       <div class="container">
          <div class="cart-container">
             <div class="cart-list">

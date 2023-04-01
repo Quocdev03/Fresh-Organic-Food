@@ -68,11 +68,7 @@
    }
 
    .hero-image img {
-      animation: moveY 1.5s alternate infinite;
-   }
-
-   .hero-desc {
-      max-width: 497px;
+      animation: moveY 1.8s alternate infinite;
    }
 }
 

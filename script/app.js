@@ -57,11 +57,27 @@
 //    });
 
 //    // Fixed menu
+// function debounceFn(func, wait, immediate) {
+//    let timeout;
+//    return function () {
+//       let context = this,
+//          args = arguments;
+//       let later = function () {
+//          timeout = null;
+//          if (!immediate) func.apply(context, args);
+//       };
+//       let callNow = immediate && !timeout;
+//       clearTimeout(timeout);
+//       timeout = setTimeout(later, wait);
+//       if (callNow) func.apply(context, args);
+//    };
+// }
+// 
 //    const header = document.querySelector(".header-main");
 //    const heroSection = document.querySelector(".hero");
 //    const introSection = document.querySelector(".intro");
 //    const headerHeight = header && header.offsetHeight;
-//    window.addEventListener("scroll", debounce(function (e) {
+//    window.addEventListener("scroll", debounceFn(function (e) {
 //       const scrollY = window.pageYOffset;
 //       const fixPadding = 0;
 //       if (scrollY >= headerHeight) {
@@ -77,21 +93,18 @@
 //       }
 //    }), 100);
 // });
+
 const detailImage = document.querySelectorAll(".detail-image-bottom-item");
 const detailImageShow = document.querySelectorAll(".detail-image-item--show");
-[...detailImage].forEach((item) => item.addEventListener("click", function (e) {
-
+[...detailImage].forEach((item) => item.addEventListener("click", handleClick));
+function handleClick(e) {
    [...detailImage].forEach((item) => item.classList.remove("is-active"));
-
    e.target.classList.add("is-active");
-
    const detailTabItem = (e.target.dataset.item);
-
    [...detailImageShow].forEach((item) => {
       item.classList.remove("is-show");
-
       if (item.getAttribute("data-item") === detailTabItem) {
          item.classList.add("is-show");
       }
-   })
-}));
+   });
+}

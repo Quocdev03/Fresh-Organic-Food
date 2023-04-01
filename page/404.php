@@ -8,7 +8,7 @@
       </div>
    </section>
 
-   <section class="error">
+   <section class="error padding-section">
       <div class="container">
          <div class="error-container">
             <h1 class="intro-title">Oops ! Page Not Found</h1>
