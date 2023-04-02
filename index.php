@@ -58,8 +58,11 @@ if (!isset($_GET["url"])) {
             if ($page == "product") {
                require "page/product.php";
             }
-            if ($page == "contact") {
-               require "page/contact.php";
+            if ($page == "addtocart") {
+               require "page/addtocart.php";
+            }
+            if ($page == "deltocart") {
+               require "page/deltocart.php";
             }
             if ($page == "cart") {
                require "page/cart.php";
@@ -67,8 +70,14 @@ if (!isset($_GET["url"])) {
             if ($page == "productdetail") {
                require "page/productdetail.php";
             }
+            if ($page == "contact") {
+               require "page/contact.php";
+            }
             if ($page == "404") {
                require "page/404.php";
+            }
+            if ($page == "admin") {
+               require "/admin/admin.php";
             }
          }
          ?>

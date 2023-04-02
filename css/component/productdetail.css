@@ -37,6 +37,8 @@
 }
 
 .detail-image-top img {
+   margin-left: auto;
+   margin-right: auto;
    max-width: 370px;
    height: 310px;
    object-fit: cover;

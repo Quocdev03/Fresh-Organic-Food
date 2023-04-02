@@ -14,6 +14,9 @@
       <li class="header-menu-item">
          <a href="index.php?url=contact" class="header-menu-item-link">Contact</a>
       </li>
+      <li class="header-menu-item">
+         <a href="./admin/admin.php" class="header-menu-item-link">Test Admin</a>
+      </li>
    </ul>
    <div class="header-auth">
       <a href="index.php?url=cart" class="header-cart-link">
