@@ -1,3 +1,9 @@
+<?php
+$productId = $_GET['productId'];
+$productName = $_GET['productName'];
+$productPrice = $_GET['productPrice'];
+$productImage = $_GET['productImage'];
+?>
 <main>
 
    <section class="intro">
@@ -8,33 +14,33 @@
       </div>
    </section>
 
-   <section class="detail">
+   <section class="detail padding-section">
       <div class="container">
          <div class="detail-container">
             <div class="detail-image">
                <div class="detail-image-top">
-                  <img data-item="1" class="detail-image-item--show is-show" srcset="images/detailproduct/imgSmallTest.png 2x" alt="">
-                  <img data-item="2" class="detail-image-item--show" srcset="images/detailproduct/imgSmallTest.png 2x" alt="">
-                  <img data-item="3" class="detail-image-item--show" srcset="images/detailproduct/imgSmallTest.png 2x" alt="">
-                  <img data-item="4" class="detail-image-item--show" srcset="images/detailproduct/imgSmallTest.png 2x" alt="">
+                  <img data-item="1" class="detail-image-item--show is-show" srcset="<?php echo $productImage ?>" alt="">
+                  <img data-item="2" class="detail-image-item--show" srcset="<?php echo $productImage ?>" alt="">
+                  <img data-item="3" class="detail-image-item--show" srcset="<?php echo $productImage ?>" alt="">
+                  <img data-item="4" class="detail-image-item--show" srcset="<?php echo $productImage ?>" alt="">
                </div>
                <div class="detail-image-bottom">
-                  <img data-item="1" class="detail-image-bottom-item is-active" srcset="images/detailproduct/imgSmallTest.png 2x" alt="">
-                  <img data-item="2" class="detail-image-bottom-item " srcset="images/detailproduct/imgSmallTest.png 2x" alt="">
-                  <img data-item="3" class="detail-image-bottom-item " srcset="images/detailproduct/imgSmallTest.png 2x" alt="">
-                  <img data-item="4" class="detail-image-bottom-item " srcset="images/detailproduct/imgSmallTest.png 2x" alt="">
+                  <img data-item="1" class="detail-image-bottom-item is-active" srcset="<?php echo $productImage ?>" alt="">
+                  <img data-item="2" class="detail-image-bottom-item " srcset="<?php echo $productImage ?>" alt="">
+                  <img data-item="3" class="detail-image-bottom-item " srcset="<?php echo $productImage ?>" alt="">
+                  <img data-item="4" class="detail-image-bottom-item " srcset="<?php echo $productImage ?>" alt="">
                </div>
                <div class="detail-image-button">
-                  <button type="submit" class="btn-outline">Add to Cart</button>
+                  <button type="submit" name="productAdd" value="Add To Cart" class="btn-outline ">Add To Cart</button>
                   <button type="submit" class="btn-primary">Buy Now</button>
                </div>
             </div>
             <div class="detail-content">
-               <h1 class="detail-content__title">Fresh Organic Peach</h1>
+               <h1 class="detail-content__title"><?php echo $productName ?></h1>
                <div class="detail-content-price">
                   <div class="detail__price">
                      <h2>
-                        28.000
+                        <?php echo $productPrice ?>
                      </h2><sup>&#8363</sup>
                   </div>
                   <span class="detail-content__category">/kg</span>
@@ -87,6 +93,7 @@
                English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and search for lorem ipsum
                will uncover many web sites still in their infancy.
             </p>
+            <a href="index.php?url=product" class="btn-primary">Go Product</a>
          </div>
       </div>
    </section>

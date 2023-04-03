@@ -185,7 +185,7 @@
                   </div>
                </div>
             </div>
-            <a href="#!" class="btn-primary offer-more">Load More</a>
+            <a href="index.php?url=product" class="btn-primary offer-more">Load More</a>
          </div>
       </div>
    </section>
@@ -251,7 +251,7 @@
                   </div>
                </div>
             </div>
-            <a href="#!" class="btn-primary feature-more">More</a>
+            <a href="index.php?url=product" class="btn-primary feature-more">More</a>
          </div>
       </div>
    </section>

@@ -4,6 +4,8 @@ if (!isset($_GET["url"])) {
    exit;
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,31 +56,25 @@ if (!isset($_GET["url"])) {
             $page = $_GET["url"];
             if ($page == "home") {
                require "page/home.php";
-            }
-            if ($page == "product") {
+            } elseif ($page == "product") {
                require "page/product.php";
-            }
-            if ($page == "addtocart") {
-               require "page/addtocart.php";
-            }
-            if ($page == "deltocart") {
-               require "page/deltocart.php";
-            }
-            if ($page == "cart") {
-               require "page/cart.php";
-            }
-            if ($page == "productdetail") {
+            } elseif ($page == "productdetail") {
                require "page/productdetail.php";
-            }
-            if ($page == "contact") {
+            } elseif ($page == "cart") {
+               require "page/cart.php";
+            } elseif ($page == "addtocart") {
+               require "page/addtocart.php";
+            } elseif ($page == "removetocart") {
+               require "page/removetocart.php";
+            } elseif ($page == "contact") {
                require "page/contact.php";
-            }
-            if ($page == "404") {
+            } elseif ($page == "admin") {
+               require "./admin/index.php";
+            } else {
                require "page/404.php";
             }
-            if ($page == "admin") {
-               require "/admin/admin.php";
-            }
+         } else {
+            require "page/404.php";
          }
          ?>
 

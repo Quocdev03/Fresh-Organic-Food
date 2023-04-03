@@ -25,7 +25,7 @@
                <div class="product-item">
                   <form action="index.php?url=addtocart" method="post">
                      <div class="product-deital-icon">
-                        <a href="index.php?url=productdetail"> More
+                        <a href="index.php?url=productdetail&productId=1&productName=Meat Chicken 1&productPrice=25000&productImage=images/product/meat_chicken(1).png 2x">More
                            <i class="fa-solid fa-angles-right"></i>
                         </a>
                      </div>
@@ -42,13 +42,13 @@
                         <h1 class="product-item-content-title">Meat Chicken 1</h1>
                         <div class="product-item-content-price">
                            <div class="product-item-content-price--old">
-                              <span>25.000</span><sup>&#8363</sup>
+                              <span>25,000</span><sup>&#8363</sup>
                            </div>
                            <div class="product-item-content-price--new">
-                              <h3>25.000</h3><sup>&#8363</sup> <span>/kg</span>
+                              <h3>25,000</h3><sup>&#8363</sup> <span>/kg</span>
                            </div>
                         </div>
-                        <input type="hidden" name="productImg" value="images/product/meat_chicken(1).png 2x">
+                        <input type="hidden" name="productImage" value="images/product/meat_chicken(1).png 2x">
                         <input type="hidden" name="productName" value="Meat Chicken 1">
                         <input type="hidden" name="productPrice" value="25000">
                         <input type="hidden" name="productId" value="1">
@@ -59,7 +59,7 @@
                <div class="product-item">
                   <form action="index.php?url=addtocart" method="post">
                      <div class="product-deital-icon">
-                        <a href="index.php?url=productdetail"> More
+                        <a href="index.php?url=productdetail&productId=2&productName=Meat Chicken 2&productPrice=23000&productImage=images/product/meat_chicken(2).png 2x"> More
                            <i class="fa-solid fa-angles-right"></i>
                         </a>
                      </div>
@@ -76,13 +76,13 @@
                         <h1 class="product-item-content-title">Meat Chicken 2</h1>
                         <div class="product-item-content-price">
                            <div class="product-item-content-price--old">
-                              <span>20.000</span><sup>&#8363</sup>
+                              <span>20,000</span><sup>&#8363</sup>
                            </div>
                            <div class="product-item-content-price--new">
-                              <h3>30.000</h3><sup>&#8363</sup> <span>/kg</span>
+                              <h3>30,000</h3><sup>&#8363</sup> <span>/kg</span>
                            </div>
                         </div>
-                        <input type="hidden" name="productImg" value="images/product/meat_chicken(2).png 2x">
+                        <input type="hidden" name="productImage" value="images/product/meat_chicken(2).png 2x">
                         <input type="hidden" name="productName" value="Meat Chicken 2">
                         <input type="hidden" name="productPrice" value="30000">
                         <input type="hidden" name="productId" value="2">
@@ -93,7 +93,7 @@
                <div class="product-item">
                   <form action="index.php?url=addtocart" method="post">
                      <div class="product-deital-icon">
-                        <a href="index.php?url=productdetail"> More
+                        <a href="index.php?url=productdetail&productId=3&productName=Cow Meat 1&productPrice=27000&productImage=images/product/meat_cow(1).png 2x"> More
                            <i class="fa-solid fa-angles-right"></i>
                         </a>
                      </div>
@@ -107,17 +107,17 @@
                         <img srcset="images/product/meat_cow(1).png 2x" alt="">
                      </div>
                      <div class="product-item-content">
-                        <h1 class="product-item-content-title">Cow Meat</h1>
+                        <h1 class="product-item-content-title">Cow Meat 1</h1>
                         <div class="product-item-content-price">
                            <div class="product-item-content-price--old">
-                              <span>25.000</span><sup>&#8363</sup>
+                              <span>25,000</span><sup>&#8363</sup>
                            </div>
                            <div class="product-item-content-price--new">
-                              <h3>27.000</h3><sup>&#8363</sup> <span>/kg</span>
+                              <h3>27,000</h3><sup>&#8363</sup> <span>/kg</span>
                            </div>
                         </div>
-                        <input type="hidden" name="productImg" value="images/product/meat_cow(1).png 2x">
-                        <input type="hidden" name="productName" value="Meat Chicken 1">
+                        <input type="hidden" name="productImage" value="images/product/meat_cow(1).png 2x">
+                        <input type="hidden" name="productName" value="Cow Meat 1">
                         <input type="hidden" name="productPrice" value="27000">
                         <input type="hidden" name="productId" value="3">
                         <button type="submit" name="productAdd" value="Add To Cart" class="btn-outline product-button">Add To Cart</button>
@@ -127,7 +127,7 @@
                <div class="product-item">
                   <form action="index.php?url=addtocart" method="post">
                      <div class="product-deital-icon">
-                        <a href="index.php?url=productdetail"> More
+                        <a href="index.php?url=productdetail&productId=4&productName=Cow Meat 2&productPrice=40000&productImage=images/product/meat_cow(2).png 2x"> More
                            <i class="fa-solid fa-angles-right"></i>
                         </a>
                      </div>
@@ -144,16 +144,16 @@
                         <h1 class="product-item-content-title">Cow Meat 2</h1>
                         <div class="product-item-content-price">
                            <div class="product-item-content-price--old">
-                              <span>25.000</span><sup>&#8363</sup>
+                              <span>25,000</span><sup>&#8363</sup>
                            </div>
                            <div class="product-item-content-price--new">
-                              <h3>40.000</h3><sup>&#8363</sup> <span>/kg</span>
+                              <h3>40,000</h3><sup>&#8363</sup> <span>/kg</span>
                            </div>
                         </div>
-                        <input type="hidden" name="productImg" value="images/product/meat_cow(2).png 2x">
-                        <input type="hidden" name="productName" value="Meat Chicken 1">
-                        <input type="hidden" name="productPrice" value="25000">
-                        <input type="hidden" name="productId" value="1">
+                        <input type="hidden" name="productImage" value="images/product/meat_cow(2).png 2x">
+                        <input type="hidden" name="productName" value="Cow Meat 2">
+                        <input type="hidden" name="productPrice" value="40000">
+                        <input type="hidden" name="productId" value="4">
                         <button type="submit" name="productAdd" value="Add To Cart" class="btn-outline product-button">Add To Cart</button>
                      </div>
                   </form>
