@@ -43,8 +43,8 @@ if (isset($_SESSION['cart'])) {
       </a>
       <span class="header-cart-link__quantity"> <?php echo $cart_total ?></span>
       <div class="header-button">
-         <a href="#!" class="header-btn-signup">Sign Up</a>
-         <a href="#!" class="btn-primary header-btn-login">Login</a>
+         <a href="#!" class="btn-outline">Sign Up</a>
+         <a href="#!" class="btn-primary ">Login</a>
       </div>
    </div>
    <div class="menu-toggle">
@@ -73,7 +73,7 @@ if (isset($_SESSION['cart'])) {
             <a href="#!" class="btn-outline">SignUp</a>
          </li>
          <li class="navigation-btn-login-item">
-            <a href="#!" class="btn-primary navigation-btn-login">Login</a>
+            <a href="#!" class="btn-primary">Login</a>
          </li>
       </ul>
    </nav>

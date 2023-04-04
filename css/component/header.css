@@ -58,17 +58,6 @@
    color: var(--white-color);
 }
 
-.navigation-btn-signup {
-   border-radius: 5px;
-   padding: 10px 44px;
-   font-weight: 400;
-   color: var(--text-color);
-   transition: all .3s ease-out;
-   border: 1px solid var(--primary-color);
-   font-size: var(--xlarge-font-size);
-   line-height: var(--xlarge-line-height);
-}
-
 /* Header */
 .header {
    padding: 30px 0 90px 0;
@@ -91,6 +80,7 @@
 
 .header-main.fixed {
    max-width: var(--sizePage);
+   background-color: rgba(255, 255, 255, 0.9);
    position: fixed;
    right: 0;
    top: 0;
@@ -98,6 +88,7 @@
    border-radius: 0;
    transition: all .3s ease-in;
    animation: fade .2s forwards 1;
+   z-index: 999;
 }
 
 @keyframes fade {
@@ -166,30 +157,6 @@
    display: flex;
    align-items: center;
    gap: 20px;
-}
-
-.header-btn-login {
-   color: var(--white-color);
-   background-color: var(--primary-color);
-   border-radius: 5px;
-}
-
-.header-btn-signup {
-   border-radius: 5px;
-   font-weight: 400;
-   color: var(--text-color);
-   transition: all .2s ease-out;
-   font-size: var(--xlarge-font-size);
-   padding: 9px 40px;
-}
-
-.header-btn-signup:hover {
-   color: var(--white-color);
-   background-color: var(--primary-color);
-}
-
-.header-btn-signup:active {
-   transform: scale(.95);
 }
 
 /* .header-cart-link:hover {

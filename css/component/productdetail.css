@@ -33,11 +33,9 @@
 }
 
 .detail-image-top img {
-   margin-left: auto;
-   margin-right: auto;
    width: 350px;
    object-fit: cover;
-   margin-bottom: 70px;
+   margin: 70px auto 120px auto;
 }
 
 .detail-image-bottom {
@@ -130,6 +128,7 @@
 .detail-content__logo {
    display: flex;
    align-items: center;
+   flex-wrap: wrap;
    gap: 26px;
    margin-bottom: 30px;
 }
@@ -149,9 +148,11 @@
 }
 
 .detail-content__about--bottom {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-gap: 18px 147px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 30px;
 }
 
 .detail-content__about--title h1,

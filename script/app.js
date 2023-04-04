@@ -80,7 +80,7 @@ window.addEventListener("load", function () {
    const headerHeight = header && header.offsetHeight;
    window.addEventListener("scroll", debounceFn(function (e) {
       const scrollY = window.pageYOffset;
-      const fixPadding = 30;
+      const fixPadding = 0;
       if (scrollY >= headerHeight) {
          header && header.classList.add("fixed");
          document.body.style.paddingTop = `${headerHeight + fixPadding}px`;
