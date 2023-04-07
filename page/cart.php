@@ -46,7 +46,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                   </div>
                </div>
                <div class="cart-item-remove">
-                  <a href="index.php?url=removetocart">
+               <a href="index.php?url=removetocart&removeItemCart=' . $product[0] . '">
                   <img src="images/icon/close.svg" alt=""></a>
                </div>
                </div>';
@@ -101,7 +101,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                   </div>
                </div>
                <div class="cart-payment-checkout">
-                  <a href="index.php?url=removetocart" class="btn-primary">Remove All</a>
+                  <a href="index.php?url=removetocart&removeAllCart" class="btn-primary">Remove All</a>
                   <button type="submit" class="btn-primary">Checkout</button>
                </div>
             </div>
