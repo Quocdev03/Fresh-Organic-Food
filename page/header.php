@@ -62,11 +62,12 @@ if (isset($_SESSION['cart'])) {
             <a href="index.php?url=product" class="navigation-item-link">Product</a>
          </li>
          <li class="navigation-item">
-            <a href="#!" class="navigation-item-link">Contact</a>
+            <a href="index.php?url=contact" class="navigation-item-link">Contact</a>
          </li>
          <li class="navigation-cart-item">
             <a href="index.php?url=cart" class="navigation-cart-link">
                <img srcset="images/icon/cart.png 2x" alt="">
+               <span class="nav-cart-link__quantity"> <?php echo $cart_total ?></span>
             </a>
          </li>
          <li class="navigation-btn-signup-item">

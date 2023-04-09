@@ -26,7 +26,7 @@ if (!isset($_GET["url"])) {
 
          <?php
          if (isset($_GET["url"])) {
-            $admin = $_GET["url"];
+            $page = $_GET["url"];
          }
          ?>
 

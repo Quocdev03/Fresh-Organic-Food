@@ -69,6 +69,9 @@ if (!isset($_GET["url"])) {
             } elseif ($page == "contact") {
                require "page/contact.php";
             } elseif ($page == "admin") {
+            } elseif ($page == "checkout") {
+               require "page/checkout.php";
+            } elseif ($page == "admin") {
                require "./admin/index.php";
             } else {
                require "page/404.php";

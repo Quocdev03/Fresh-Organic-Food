@@ -28,11 +28,11 @@
 
 .contact-form-input {
    width: 100%;
+   position: relative;
 }
 
 .contact-form-input input {
    width: 100%;
-   position: relative;
    transition: all .2s ease-in;
    padding: 20px 0px 20px 25px;
 }
@@ -74,4 +74,52 @@
    line-height: var(--large-line-height);
    color: var(--text-color-2);
    margin-bottom: 10px;
+}
+
+.contact-input-name.invalid+.input-icons .fa-times,
+.contact-input-name.valid+.input-icons .fa-check,
+.contact-input-mail.invalid+.input-icons .fa-times,
+.contact-input-mail.valid+.input-icons .fa-check {
+   opacity: 1;
+   visibility: visible;
+   transform: scale(1);
+}
+
+.input-wrapper {
+   position: relative;
+   width: 300px;
+   margin: 25px auto;
+}
+
+.input-icons {
+   position: absolute;
+   top: 65%;
+   right: 25px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.input-icons i {
+   color: white;
+   width: 23px;
+   height: 23px;
+   border-radius: 23px;
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+   font-size: 14px;
+   opacity: 0;
+   visibility: hidden;
+   transform: scale(0);
+   transition: all 0.2s ease;
+   position: absolute;
+}
+
+.fa-check {
+   background-color: #07efb5;
+}
+
+.fa-times {
+   background-color: #ff2149;
 }

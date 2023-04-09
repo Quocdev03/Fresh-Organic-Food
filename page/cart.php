@@ -102,7 +102,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                </div>
                <div class="cart-payment-checkout">
                   <a href="index.php?url=removetocart&removeAllCart" class="btn-primary">Remove All</a>
-                  <button type="submit" class="btn-primary">Checkout</button>
+                  <a href="index.php?url=checkout" class="btn-primary">Check Out</a>
                </div>
             </div>
          </div>

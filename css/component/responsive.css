@@ -1,7 +1,8 @@
 /* Header */
-@media screen and (max-width: 1028.98px) {
+@media screen and (max-width: 1023.98px) {
    .header {
       padding-top: 0;
+      padding-bottom: 70px;
    }
 
    .header-main {
@@ -72,7 +73,10 @@
    }
 }
 
-@media screen and (max-width: 1024.98px) {
+@media screen and (max-width: 1023.98px) {
+   .hero {
+      padding-top: 40px;
+   }
 
    .hero-container {
       flex-wrap: wrap;
@@ -87,6 +91,12 @@
 
    .hero-desc {
       width: 100%;
+   }
+}
+
+@media screen and (max-width: 767.98px) {
+   .hero {
+      padding-top: 0;
    }
 }
 

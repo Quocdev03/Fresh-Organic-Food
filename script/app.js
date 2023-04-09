@@ -4,11 +4,11 @@ const menuOpen = document.querySelector(".menu-toggle");
 const menuClose = document.querySelector(".menu-close");
 const mbNav = document.querySelector(".mb-nav");
 const activeClass = "is-show";
-menuOpen.addEventListener("click", function (e) {
+menuOpen && menuOpen.addEventListener("click", function (e) {
    e.stopPropagation();
    mbNav.classList.add(activeClass);
 });
-menuClose.addEventListener("click", function () {
+menuClose && menuClose.addEventListener("click", function () {
    mbNav.classList.remove(activeClass);
 });
 document.addEventListener('click', function (e) {
@@ -27,7 +27,6 @@ like.forEach((item) => {
 });
 
 // Quantity product cart
-
 const counterIncrease = document.querySelector(".cart-item-content__counter--plus");
 const counterDecrease = document.querySelector(".cart-item-content__counter--minus");
 const counterNumber = document.querySelector(".cart-item-content__counter--number");
@@ -75,22 +74,15 @@ function debounceFn(func, wait, immediate) {
 }
 
 const header = document.querySelector(".header-main");
-const heroSection = document.querySelector(".hero");
-const introSection = document.querySelector(".intro");
 const headerHeight = header && header.offsetHeight;
 window.addEventListener("scroll", debounceFn(function (e) {
    const scrollY = window.pageYOffset;
-   const fixPadding = 0;
    if (scrollY >= headerHeight) {
       header && header.classList.add("fixed");
-      document.body.style.paddingTop = `${headerHeight + fixPadding}px`;
-      heroSection.style.paddingTop = `${headerHeight + fixPadding}px`;
-      introSection.style.paddingTop = `${headerHeight + fixPadding}px`;
+      document.body.style.paddingTop = `${headerHeight}px`;
    } else {
       header && header.classList.remove("fixed");
       document.body.style.paddingTop = 0;
-      heroSection.style.paddingTop = 0;
-      introSection.style.paddingTop = 0;
    }
 }), 100);
 
@@ -108,3 +100,50 @@ function handleClick(e) {
       }
    });
 }
+// Check contact
+const nameInput = document.querySelector(".contact-input-name");
+const mailInput = document.querySelector(".contact-input-mail");
+nameInput && nameInput.addEventListener("input", function (e) {
+   //    ^ là anchor bắt đầu chuỗi
+   // [] là character set, đây là character set Unicode (được xác định bởi flag /u), có nghĩa là chỉ chấp nhận các kí tự trong tập hợp nằm trong dấu ngoặc này
+   // \p{L} đại diện cho kí tự Unicode, có chức năng phân biệt chữ cái với các kí tự khác (bao gồm cả dấu chấm, dấu phẩy,...)
+   // ` là khoảng trắng, cho phép nhập khoảng trắng trong tên
+   // {6,30} là quantifier, yêu cầu số lượng kí tự từ 6 đến 30
+   // $ là anchor kết thúc chuỗi
+   const value = e.target.value;
+   const regexName = /^[\p{L} ]{6,30}$/u;
+   if (regexName.test(value)) {
+      e.target.classList.add("valid");
+      e.target.classList.remove("invalid");
+   } else {
+      e.target.classList.remove("valid");
+      e.target.classList.add("invalid");
+   }
+   if (!value) {
+      e.target.classList.remove("invalid");
+   }
+});
+mailInput && mailInput.addEventListener("input", function (e) {
+   //    ^: Bắt đầu của chuỗi.
+   // (?!.*\d{3}): Negative lookahead, đảm bảo rằng không có chuỗi con nào trong chuỗi email chứa 3 chữ số liên tiếp.
+   // .*: Bất kỳ ký tự nào (trừ ký tự xuống dòng) xuất hiện bất kỳ số lần nào.
+   // \d{3}: Ba chữ số liên tiếp.
+   // [a-zA-Z0-9._%+-]+: Một hoặc nhiều ký tự chữ cái hoặc số hoặc một số ký tự đặc biệt như . (dấu chấm), _ (gạch dưới), %, +, hoặc - xuất hiện liên tiếp. Đây là phần local-part của địa chỉ email.
+   // @: Ký tự @.
+   // [a-zA-Z0-9.-]+: Một hoặc nhiều ký tự chữ cái hoặc số hoặc dấu gạch ngang xuất hiện liên tiếp. Đây là phần domain của địa chỉ email.
+   // \.: Dấu chấm.
+   // [a-zA-Z]{2,}: Hai hoặc nhiều ký tự chữ cái xuất hiện liên tiếp. Đây là phần tên miền của địa chỉ email.
+   // $: Kết thúc của chuỗi.
+   const value = e.target.value;
+   const regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   if (regexEmail.test(value.trim(''))) {
+      e.target.classList.add("valid");
+      e.target.classList.remove("invalid");
+   } else {
+      e.target.classList.remove("valid");
+      e.target.classList.add("invalid");
+   }
+   if (!value) {
+      e.target.classList.remove("invalid");
+   }
+});

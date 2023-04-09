@@ -18,17 +18,25 @@
             <form action="#!" method="post" autocomplete="off">
                <div class="contact-form-content">
                   <div class="contact-form-input">
-                     <label for="#!">Name</label>
-                     <input type="text" placeholder="Enter Your Name Here" required>
+                     <label for="#!">Full Name</label>
+                     <input class="contact-input-name" type="text" placeholder="Enter Your Name Here" required>
+                     <div class="input-icons">
+                        <i class="fa fa-check"></i>
+                        <i class="fa fa-times"></i>
+                     </div>
                   </div>
                   <div class="contact-form-input">
                      <label for="#!">Email</label>
-                     <input type="email" placeholder="Enter Your Email Here" required>
+                     <input class="contact-input-mail" type="email" placeholder="Enter Your Email Here" required>
+                     <div class="input-icons">
+                        <i class="fa fa-check"></i>
+                        <i class="fa fa-times"></i>
+                     </div>
                   </div>
                </div>
                <div class="contact-form-texterea">
                   <label for="#!">Message</label>
-                  <textarea name="" placeholder="Write Your Message Here"></textarea>
+                  <textarea maxlength="500" name="" placeholder="Write Your Message Here"></textarea>
                </div>
                <button type="submit" class="btn-outline contact-button">Send Message</button>
             </form>
