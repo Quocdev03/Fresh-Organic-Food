@@ -61,9 +61,10 @@ input {
    border: none;
    outline: none;
    border-radius: 5px;
-   padding: 10px 44px;
+   padding: 10px 40px;
    font-weight: 600;
    font-size: var(--xlarge-font-size);
+   line-height: initial;
    cursor: pointer;
    position: relative;
    z-index: 90;

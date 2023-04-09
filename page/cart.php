@@ -111,11 +111,13 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
 <?php
 } else {
 ?>
-   <section class="cartempty">
+   <section class="cartempty padding-section">
       <div class="container">
          <div class="cartempty-main">
-            <h1> Ban chua co hang ?</h1>
-            <a href="index.php?url=product">See more product</a>
+            <img class="cartempty-image" srcset="images/cart/cart-empty2x.png 2x" alt="">
+            <h1 class="cartempty-title">Your Cart Is <span>Empty!</span></h1>
+            <p class="cartempty-desc">Must add item on the cart before you process to check out!</p>
+            <a class="btn-primary" href="index.php?url=product">Return to product</a>
          </div>
       </div>
    </section>

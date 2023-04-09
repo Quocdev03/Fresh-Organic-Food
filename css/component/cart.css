@@ -152,3 +152,33 @@
    align-items: center;
    justify-content: space-between;
 }
+
+.cartempty-main {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.cartempty-image {
+   margin-bottom: 70px;
+}
+
+.cartempty-title {
+   color: var(--heading-color);
+   font-weight: 700;
+   font-size: var(--heading-font-size);
+   line-height: var(--heading-line-height);
+   margin-bottom: 40px;
+}
+
+.cartempty-title span {
+   color: var(--primary-color);
+}
+
+.cartempty-desc {
+   font-size: var(--xlarge-font-size);
+   line-height: var(--xlarge-line-height);
+   color: var(--text-color);
+   margin-bottom: 30px;
+}
