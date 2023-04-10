@@ -116,7 +116,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
          <div class="cartempty-main">
             <img class="cartempty-image" srcset="images/cart/cart-empty2x.png 2x" alt="">
             <h1 class="cartempty-title">Your Cart Is <span>Empty!</span></h1>
-            <p class="cartempty-desc">Must add item on the cart before you process to check out!</p>
+            <p class="cartempty-desc">Must add item on the cart!</p>
             <a class="btn-primary" href="index.php?url=product">Return to product</a>
          </div>
       </div>

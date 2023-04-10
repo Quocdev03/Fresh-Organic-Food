@@ -169,7 +169,7 @@
    font-weight: 700;
    font-size: var(--heading-font-size);
    line-height: var(--heading-line-height);
-   margin-bottom: 40px;
+   margin-bottom: 20px;
 }
 
 .cartempty-title span {
@@ -180,5 +180,5 @@
    font-size: var(--xlarge-font-size);
    line-height: var(--xlarge-line-height);
    color: var(--text-color);
-   margin-bottom: 30px;
+   margin-bottom: 50px;
 }

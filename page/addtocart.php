@@ -1,4 +1,5 @@
 <?php
+// kiểm tra xem session đã được khởi tạo chưa
 if (session_status() === PHP_SESSION_NONE) {
    session_start();
 }

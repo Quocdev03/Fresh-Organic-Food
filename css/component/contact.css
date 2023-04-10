@@ -65,6 +65,13 @@
 .contact-form-input input::placeholder,
 .contact-form-texterea textarea::placeholder {
    color: var(--gray-light-color);
+   transition: all 0.3s linear;
+}
+
+.contact-form-input input:focus::placeholder,
+.contact-form-texterea textarea:focus::placeholder {
+   opacity: 0;
+   visibility: hidden;
 }
 
 .contact-form-input label,
@@ -93,7 +100,7 @@
 
 .input-icons {
    position: absolute;
-   top: 65%;
+   top: 67%;
    right: 25px;
    display: flex;
    justify-content: center;

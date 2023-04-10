@@ -111,7 +111,7 @@ input {
 }
 
 .btn-outline:hover {
-   background: rgb(82, 192, 32);
+   background: var(--primary-color);
    color: var(--white-color);
 }
 

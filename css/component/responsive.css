@@ -495,3 +495,16 @@
       gap: 10px;
    }
 }
+
+/* Check Out  */
+@media screen and (max-width: 1279.98px) {
+   .checkout-main {
+      grid-template-columns: 100%;
+   }
+}
+
+@media screen and (max-width: 1023.98px) {
+   .checkout-info-form {
+      grid-template-columns: 100%;
+   }
+}

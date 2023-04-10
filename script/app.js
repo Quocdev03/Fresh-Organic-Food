@@ -111,7 +111,7 @@ nameInput && nameInput.addEventListener("input", function (e) {
    // {6,30} là quantifier, yêu cầu số lượng kí tự từ 6 đến 30
    // $ là anchor kết thúc chuỗi
    const value = e.target.value;
-   const regexName = /^[\p{L} ]{6,30}$/u;
+   const regexName = /^[\p{L} ]{6,40}$/u;
    if (regexName.test(value)) {
       e.target.classList.add("valid");
       e.target.classList.remove("invalid");

@@ -1,5 +1,8 @@
 <?php
-session_start();
+// kiểm tra xem session đã được khởi tạo chưa
+if (session_status() === PHP_SESSION_NONE) {
+   session_start();
+}
 ob_start();
 
 // Xoá toàn bộ sản phẩm

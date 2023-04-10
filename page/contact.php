@@ -27,7 +27,7 @@
                   </div>
                   <div class="contact-form-input">
                      <label for="#!">Email</label>
-                     <input class="contact-input-mail" type="email" placeholder="Enter Your Email Here" required>
+                     <input class="contact-input-mail" type="mail" placeholder="Enter Your Email Here" required>
                      <div class="input-icons">
                         <i class="fa fa-check"></i>
                         <i class="fa fa-times"></i>
