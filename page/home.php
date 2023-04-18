@@ -41,7 +41,7 @@
                      <i class="fa-solid fa-heart"></i>
                   </div>
                   <div class="offer-item-image">
-                     <img srcset="./images/product/fruits(2).png 2x" alt="">
+                     <img srcset="./images/product/fruits_RedStrawberry.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Red Strawberry</h1>
@@ -60,7 +60,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits(3).png 2x" alt="">
+                     <img srcset="./images/product/fruits_SweetCherry.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Sweet Cherry</h1>
@@ -79,7 +79,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits(4).png 2x" alt="">
+                     <img srcset="./images/product/fruits_RedRespberry.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Red Respberry</h1>
@@ -98,26 +98,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits(5).png 2x" alt="">
-                  </div>
-                  <div class="offer-item-content">
-                     <h1 class="offer-item-title">Strawberry</h1>
-                     <div class="offer-item-price">
-                        <h2 class="offer-item-price--old">$25.00</h2>
-                        <h3 class="offer-item-price--current">$15.00</h3>
-                     </div>
-                  </div>
-               </div>
-               <div class="offer-item">
-                  <div class="offer-new">
-                     <span>New</span>
-                  </div>
-                  <div class="offer-item-like" id="like">
-                     <i class="fa-solid fa-heart"></i>
-                  </div>
-                  <div class="offer-item-image">
-
-                     <img srcset="./images/product/fruits(6).png 2x" alt="">
+                     <img srcset="./images/product/fruits_Watermelon.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Watermelon</h1>
@@ -136,7 +117,26 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits(7).png 2x" alt="">
+                     <img srcset="./images/product/fruits_BlackCurrant.png 2x" alt="">
+                  </div>
+                  <div class="offer-item-content">
+                     <h1 class="offer-item-title">Black Currant</h1>
+                     <div class="offer-item-price">
+                        <h2 class="offer-item-price--old">$25.00</h2>
+                        <h3 class="offer-item-price--current">$15.00</h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="offer-item">
+                  <div class="offer-new">
+                     <span>New</span>
+                  </div>
+                  <div class="offer-item-like" id="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
+                  <div class="offer-item-image">
+
+                     <img srcset="./images/product/fruits_DragonFruit.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Dragon Fruit</h1>
@@ -155,10 +155,10 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/vegetable(1).png 2x" alt="">
+                     <img srcset="./images/product/fruits_GreenApple.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1 class="offer-item-title">Pineapple</h1>
+                     <h1 class="offer-item-title">Green Apple</h1>
                      <div class="offer-item-price">
                         <h2 class="offer-item-price--old">$25.00</h2>
                         <h3 class="offer-item-price--current">$15.00</h3>
@@ -174,7 +174,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits(1).png 2x" alt="">
+                     <img srcset="./images/product/fruits_Grape.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Grapes</h1>

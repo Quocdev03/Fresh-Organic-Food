@@ -10,7 +10,7 @@ if (isset($_POST['productAdd']) && ($_POST['productAdd'])) {
    $productName = $_POST['productName'];
    $productImage = $_POST['productImage'];
    $productPrice = $_POST['productPrice'];
-   $productQuantity = 1;
+   $productQuantity = $_POST['productQuantity'];
    // Create array child
    $product = array($productId, $productName, $productImage, $productPrice, $productQuantity);
 
@@ -22,7 +22,6 @@ if (isset($_POST['productAdd']) && ($_POST['productAdd'])) {
          break;
       }
    }
-
    // If product already exists in cart, increase quantity
    if ($productIndex > -1) {
       $_SESSION['cart'][$productIndex][4] += 1;

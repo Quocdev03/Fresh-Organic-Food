@@ -45,7 +45,7 @@ $productImage = $_GET['productImage'];
                   <div class="detail-content-price">
                      <div class="detail__price">
                         <h2>
-                           <?php echo $productPrice ?>
+                           <?php echo number_format($productPrice) ?>
                         </h2><sup>&#8363</sup>
                      </div>
                      <span class="detail-content__category">/kg</span>

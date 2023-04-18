@@ -63,9 +63,11 @@ if (!isset($_GET["url"])) {
             } elseif ($page == "cart") {
                require "page/cart.php";
             } elseif ($page == "addtocart") {
-               require "page/addtocart.php";
+               require "process/addtocart.php";
             } elseif ($page == "removetocart") {
-               require "page/removetocart.php";
+               require "process/removetocart.php";
+            } elseif ($page == "update-cart-quantity-ajax") {
+               require "process/update-cart-quantity-ajax.php";
             } elseif ($page == "contact") {
                require "page/contact.php";
             } elseif ($page == "admin") {

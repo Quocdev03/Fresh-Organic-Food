@@ -5,15 +5,17 @@
 if (session_status() === PHP_SESSION_NONE) {
    session_start();
 }
-ob_start();
 // set cart total to 0
 $cart_total = 0;
-
 // check if cart session is set
 if (isset($_SESSION['cart'])) {
    // loop through cart items to get total quantity
-   foreach ($_SESSION['cart'] as $product) {
-      $cart_total += $product[4];
+   if (count($_SESSION['cart']) > 0) {
+      foreach ($_SESSION['cart'] as $product) {
+         $cart_total += $product[4];
+      }
+   } else {
+      return $cart_total;
    }
 }
 ?>

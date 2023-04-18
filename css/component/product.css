@@ -125,6 +125,10 @@
    text-transform: none;
 }
 
+.product-item-content-title {
+   white-space: nowrap;
+}
+
 .product-item-content-price--new,
 .product-item-content-price--old {
    display: flex;

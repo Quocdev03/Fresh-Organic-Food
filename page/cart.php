@@ -21,7 +21,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                foreach ($_SESSION['cart'] as $product) {
                   echo '<div class="cart-item">
                <div class="cart-item-image">
-                  <img srcset="' . $product[2] . '" alt="">
+                  <img src="images/product/' . $product[2] . ' "alt="">
                </div>
                <div class="cart-item-content">
                   <h1 class="cart-item-content__title">
@@ -36,10 +36,10 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                      <span class="cart-item-content__category">/kg</span>
                   </div>
                   <div class="cart-item-content__quantity">
-                     <div class="cart-item-content__counter">
-                        <button class="cart-item-content__counter--minus is-disable">-</button>
+                     <div class="cart-item-content__counter" data-product-id=' . $product[0] . '>
+                        <button type="submit" class="cart-item-content__counter--minus is-disable">-</button>
                         <h2 class="cart-item-content__counter--number">' . $product[4] . '</h2>
-                        <button class="cart-item-content__counter--plus">+</button>
+                        <button type="submit" class="cart-item-content__counter--plus">+</button>
                      </div>
                      <a href="index.php?url=product" class="cart-item-content__more">See more
                         product</a>
@@ -52,6 +52,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                </div>';
                }
                ?>
+
                <a href="index.php?url=product" class="btn-primary">go product</a>
             </div>
             <div class="cart-payment">
