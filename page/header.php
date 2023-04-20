@@ -15,33 +15,33 @@ if (isset($_SESSION['cart'])) {
          $cart_total += $product[4];
       }
    } else {
-      return $cart_total;
+      $cart_total = 0;
    }
 }
 ?>
 <div class="header-container">
    <div class="header-logo">
-      <a href="index.php?url=home">
-         <img srcset="images/logo/header-logo.png 2x" alt="">
+      <a href="index.php?url=Home">
+         <img srcset="Images/logo/header-logo.png 2x" alt="">
       </a>
    </div>
    <ul class="header-menu">
       <li class="header-menu-item">
-         <a href="index.php?url=home" class="header-menu-item-link">Home</a>
+         <a href="index.php?url=Home" class="header-menu-item-link">Home</a>
       </li>
       <li class="header-menu-item">
-         <a href="index.php?url=product" class="header-menu-item-link">Product</a>
+         <a href="index.php?url=Product" class="header-menu-item-link">Product</a>
       </li>
       <li class="header-menu-item">
-         <a href="index.php?url=contact" class="header-menu-item-link">Contact</a>
+         <a href="index.php?url=Contact" class="header-menu-item-link">Contact</a>
       </li>
       <li class="header-menu-item">
-         <a href="admin/index.php" class="header-menu-item-link">Test Admin</a>
+         <a href="Admin/index.php" class="header-menu-item-link">Test Admin</a>
       </li>
    </ul>
    <div class="header-auth">
-      <a href="index.php?url=cart" class="header-cart-link">
-         <img srcset="images/icon/cart.png 2x" alt="">
+      <a href="index.php?url=Cart" class="header-cart-link">
+         <img srcset="Images/icon/cart.png 2x" alt="">
       </a>
       <span class="header-cart-link__quantity"> <?php echo $cart_total ?></span>
       <div class="header-button">
@@ -58,17 +58,17 @@ if (isset($_SESSION['cart'])) {
       </div>
       <ul class="navigation">
          <li class="navigation-item">
-            <a href="index.php?url=home" class="navigation-item-link">Home</a>
+            <a href="index.php?url=Home" class="navigation-item-link">Home</a>
          </li>
          <li class="navigation-item">
-            <a href="index.php?url=product" class="navigation-item-link">Product</a>
+            <a href="index.php?url=Product" class="navigation-item-link">Product</a>
          </li>
          <li class="navigation-item">
-            <a href="index.php?url=contact" class="navigation-item-link">Contact</a>
+            <a href="index.php?url=Contact" class="navigation-item-link">Contact</a>
          </li>
          <li class="navigation-cart-item">
-            <a href="index.php?url=cart" class="navigation-cart-link">
-               <img srcset="images/icon/cart.png 2x" alt="">
+            <a href="index.php?url=Cart" class="navigation-cart-link">
+               <img srcset="Images/icon/cart.png 2x" alt="">
                <span class="nav-cart-link__quantity"> <?php echo $cart_total ?></span>
             </a>
          </li>

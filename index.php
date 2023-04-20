@@ -1,10 +1,9 @@
 <?php
 if (!isset($_GET["url"])) {
-   header("Location: index.php?url=home");
+   header("Location: index.php?url=Home");
    exit;
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,12 +15,12 @@ if (!isset($_GET["url"])) {
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-   <link rel="stylesheet" href="./css/reset.css">
-   <link rel="stylesheet" href="./css/variables.css">
-   <link rel="stylesheet" href="./css/global.css">
-   <link rel="stylesheet" href="./css/component.css">
-   <link rel="icon" href="./images/icon/favicon.png" type="image/x-icon" />
+   <link rel="stylesheet" href="./Css/Font_Awesome_6.4.0/css/all.css">
+   <link rel="stylesheet" href="./Css/Reset.css">
+   <link rel="stylesheet" href="./Css/Variables.css">
+   <link rel="stylesheet" href="./Css/Global.css">
+   <link rel="stylesheet" href="./Css/Component.css">
+   <link rel="icon" href="./Images/icon/favicon.png" type="image/x-icon" />
    <title>Fresh Organic Food</title>
 </head>
 
@@ -33,7 +32,7 @@ if (!isset($_GET["url"])) {
          <header class="header-main" id="header-main">
             <div class="container">
                <?php
-               require "page/header.php"
+               require "Page/Header.php"
                ?>
             </div>
          </header>
@@ -41,8 +40,8 @@ if (!isset($_GET["url"])) {
          <?php
          if (isset($_GET["url"])) {
             $page = $_GET["url"];
-            if ($page == "home") {
-               require "page/hero.php";
+            if ($page == "Home") {
+               require "Page/Hero.php";
             }
          }
          ?>
@@ -54,32 +53,37 @@ if (!isset($_GET["url"])) {
          <?php
          if (isset($_GET["url"])) {
             $page = $_GET["url"];
-            if ($page == "home") {
-               require "page/home.php";
-            } elseif ($page == "product") {
-               require "page/product.php";
-            } elseif ($page == "productdetail") {
-               require "page/productdetail.php";
-            } elseif ($page == "cart") {
-               require "page/cart.php";
-            } elseif ($page == "addtocart") {
-               require "process/addtocart.php";
-            } elseif ($page == "removetocart") {
-               require "process/removetocart.php";
-            } elseif ($page == "update-cart-quantity-ajax") {
-               require "process/update-cart-quantity-ajax.php";
-            } elseif ($page == "contact") {
-               require "page/contact.php";
-            } elseif ($page == "admin") {
-            } elseif ($page == "checkout") {
-               require "page/checkout.php";
-            } elseif ($page == "admin") {
-               require "./admin/index.php";
+            if ($page == "Home") {
+               require "Page/Home.php";
+            } elseif ($page == "Product") {
+               require "Page/Product.php";
+            } elseif ($page == "Product_Detail") {
+               require "Page/Product_Detail.php";
+            } elseif ($page == "Cart") {
+               require "Page/Cart.php";
+            } elseif ($page == "Contact") {
+               require "Page/Contact.php";
+            } elseif ($page == "Checkout") {
+               require "Page/Checkout.php";
+            } elseif ($page == "Payment_Complete") {
+               require "Page/Payment_Complete.php";
+            } elseif ($page == "Add_To_Cart") {
+               require "Request/Add_To_Cart.php";
+            } elseif ($page == "Remove_To_Cart") {
+               require "Request/Remove_To_Cart.php";
+            } elseif ($page == "Update_Cart_Quantity") {
+               require "Request/Update_Cart_Quantity.php";
+            } elseif ($page == "Request_Order_Bill") {
+               require "Request/Request_Order_Bill.php";
+            } elseif ($page == "Request_Contact_Customer") {
+               require "Request/Request_Contact_Customer.php";
+            } elseif ($page == "Admin") {
+               require "./Admin/index.php";
             } else {
-               require "page/404.php";
+               require "Page/404.php";
             }
          } else {
-            require "page/404.php";
+            require "Page/404.php";
          }
          ?>
 
@@ -88,14 +92,14 @@ if (!isset($_GET["url"])) {
       <footer class="footer">
          <div class="container">
             <?php
-            require "page/footer.php"
+            require "Page/Footer.php"
             ?>
          </div>
       </footer>
 
    </div>
 
-   <script src="./script/app.js"></script>
+   <script src="./Script/App.js"></script>
 </body>
 
 </html>

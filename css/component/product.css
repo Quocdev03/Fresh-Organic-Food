@@ -48,30 +48,32 @@
    overflow: hidden;
 }
 
-.product-deital-icon {
+.product-detail-icon {
    position: absolute;
    top: -100%;
    left: 50%;
    transform: translateX(-50%);
-   background-color: var(--primary-color);
    z-index: 40;
-   border-radius: 5px;
-   cursor: pointer;
    transition: top 0.25s ease;
 }
 
-.product-deital-icon a {
+.product-detail-icon a {
    display: inline-block;
    font-size: 15px;
    color: var(--white-color);
    padding: 3px 5px;
+   background-color: var(--primary-color);
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   cursor: pointer;
 }
 
-.product-deital-icon a>i {
+.product-detail-icon a i {
    font-size: 11px;
 }
 
-.product-item:hover .product-deital-icon {
+.product-item:hover .product-detail-icon {
    top: 10px;
 }
 

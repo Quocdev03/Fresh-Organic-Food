@@ -6,6 +6,7 @@ window.addEventListener("load", function () {
    detailProductImage();
    checkContact();
 });
+
 // Menu Toggle
 const menuToggle = () => {
    const menuOpen = document.querySelector(".menu-toggle");
@@ -25,19 +26,18 @@ const menuToggle = () => {
       }
    });
 }
-menuToggle();
 
 // Like
 const likeItem = () => {
    let like = document.querySelectorAll(".offer-item-like");
    let activeLike = "show-like";
    like.forEach((item) => {
-      item.addEventListener("click", function () {
+      item.addEventListener("click", function (e) {
+         e.stopPropagation();
          item.classList.toggle(activeLike);
       });
    });
 }
-likeItem();
 
 // Quantity Cart
 const QuantityCart = () => {
@@ -93,42 +93,6 @@ const QuantityCart = () => {
       });
    });
 }
-function sendCartData(productId, counterValue) {
-   const xhr = new XMLHttpRequest();
-   const url = 'process/update-cart-quantity.php';
-   const params = 'productId=' + productId + '&counterValue=' + counterValue;
-   xhr.open('POST', url, true);
-   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-   xhr.onreadystatechange = function () {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-         const responseData = JSON.parse(xhr.responseText);
-         updateProductQuantity(responseData);
-      }
-   }
-   xhr.send(params);
-}
-function updateProductQuantity(productId, newQuantity) {
-   fetch('process/update-cart-quantity.php', {
-      method: 'POST',
-      headers: {
-         'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-         productId: productId,
-         productQuantity: newQuantity
-      })
-   })
-      .then(response => response.json())
-      .then(data => {
-         console.log(data);
-         // update the UI with the updated cart data
-         // ...
-      })
-      .catch(error => {
-         console.error('Error:', error);
-      });
-}
-QuantityCart();
 
 // Fixed menu
 const fixedMenu = () => {
@@ -161,7 +125,6 @@ const fixedMenu = () => {
       }
    }), 300);
 }
-fixedMenu();
 
 // Detail product image
 const detailProductImage = () => {
@@ -180,7 +143,7 @@ const detailProductImage = () => {
       });
    }
 }
-detailProductImage();
+
 // Check contact
 const checkContact = () => {
    const nameInput = document.querySelector(".contact-input-name");
@@ -230,4 +193,3 @@ const checkContact = () => {
       }
    });
 }
-checkContact(); 

@@ -21,7 +21,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                foreach ($_SESSION['cart'] as $product) {
                   echo '<div class="cart-item">
                <div class="cart-item-image">
-                  <img src="images/product/' . $product[2] . ' "alt="">
+                  <img srcset="Images/product/' . $product[2] . ' "alt="">
                </div>
                <div class="cart-item-content">
                   <h1 class="cart-item-content__title">
@@ -46,14 +46,14 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                   </div>
                </div>
                <div class="cart-item-remove">
-               <a href="index.php?url=removetocart&removeItemCart=' . $product[0] . '">
-                  <img src="images/icon/close.svg" alt=""></a>
+               <a href="index.php?url=Remove_To_Cart&Remove_Item_Cart=' . $product[0] . '">
+                  <img src="Images/icon/close.svg" alt=""></a>
                </div>
                </div>';
                }
                ?>
 
-               <a href="index.php?url=product" class="btn-primary">go product</a>
+               <a href="index.php?url=Product" class="btn-primary">go product</a>
             </div>
             <div class="cart-payment">
                <div class="cart-payment-detail">
@@ -102,8 +102,8 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                   </div>
                </div>
                <div class="cart-payment-checkout">
-                  <a href="index.php?url=removetocart&removeAllCart" class="btn-primary">Remove All</a>
-                  <a href="index.php?url=checkout" class="btn-primary">Check Out</a>
+                  <a href="index.php?url=Remove_To_Cart&Remove_All_Cart" class="btn-primary">Remove All</a>
+                  <a href="index.php?url=Checkout" class="btn-primary">Check Out</a>
                </div>
             </div>
          </div>
@@ -115,10 +115,10 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
    <section class="cartempty padding-section">
       <div class="container">
          <div class="cartempty-main">
-            <img class="cartempty-image" srcset="images/cart/cart-empty2x.png 2x" alt="">
+            <img class="cartempty-image" srcset="Images/cart/cart-empty2x.png 2x" alt="">
             <h1 class="cartempty-title">Your Cart Is <span>Empty!</span></h1>
             <p class="cartempty-desc">Must add item on the cart!</p>
-            <a class="btn-primary" href="index.php?url=product">Return to product</a>
+            <a class="btn-primary" href="index.php?url=Product">Return to product</a>
          </div>
       </div>
    </section>

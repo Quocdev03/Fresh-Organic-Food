@@ -1,12 +1,8 @@
-.checkout {}
-
 .checkout-main {
    display: grid;
    grid-template-columns: 770px 1fr;
    grid-gap: 30px;
 }
-
-.checkout-content {}
 
 .checkout-info-heading {
    font-size: var(--xxlarge-font-size);
@@ -17,8 +13,6 @@
    margin-bottom: 30px;
    border-bottom: 1px solid var(--gray-light-color);
 }
-
-.checkout-bottom {}
 
 .checkout-info {
    margin-bottom: 30px;
@@ -62,9 +56,9 @@
    margin-bottom: 10px;
 }
 
-.checkout-address {}
-
-.checkout-address-form {}
+.checkout-address-form {
+   margin-bottom: 20px;
+}
 
 .checkout-address-form select {
    width: 100%;

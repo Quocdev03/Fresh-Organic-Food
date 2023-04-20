@@ -1,5 +1,5 @@
 <?php
-require_once 'admin/connect.php';
+require_once 'Server/Connect.php';
 ?>
 <section class="intro">
    <div class="container">
@@ -11,7 +11,7 @@ require_once 'admin/connect.php';
 <section class="product padding-section">
    <div class="container">
       <div class="product-bg">
-         <img srcset="images/product/product-bg2.png 2x" alt="">
+         <img srcset="Images/product/product-bg2.png 2x" alt="">
       </div>
       <div class="product-main">
          <div class="section-heading">
@@ -32,12 +32,12 @@ require_once 'admin/connect.php';
                   // đổ dữ liệu vào trang web
                   while ($row = $result->fetch_assoc()) {
                      echo '<div class="product-item">
-                     <form action="index.php?url=addtocart" method="post">
-                        <div class="product-deital-icon">
-                           <a href="index.php?url=productdetail&productId=' . $row["MaSP"] . '&productName=' . $row["TenSP"] . '&productPrice=' . $row["Gia"] . '&productImage=images/product/' . $row["Hinh_sp"] . ' 2x">More
-                              <i class="fa-solid fa-angles-right"></i>
-                           </a>
-                        </div>
+                     <div class="product-detail-icon">
+                        <a href="index.php?url=Product_Detail&productId=' . $row["MaSP"] . '&productQuantity=' . $row["Sl"] . '&productDesc=' . $row["Mo_ta"] . '&productName=' . $row["TenSP"] . '&productPrice=' . $row["Gia_Moi"] . '&productImage=' . $row["Hinh_sp"] . ' 2x">More
+                           <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                     </div>
+                     <form action="index.php?url=Add_To_Cart" method="post">
                         <div class="product-new">
                            <span>New</span>
                         </div>
@@ -45,21 +45,21 @@ require_once 'admin/connect.php';
                            <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="product-item-image">
-                        <img srcset="images/product/' . $row["Hinh_sp"] . ' 2x" alt="">
+                        <img srcset="Images/product/' . $row["Hinh_sp"] . ' 2x" alt="">
                         </div>
                         <div class="product-item-content">
                            <h1 class="product-item-content-title">' . $row["TenSP"] . '</h1>
                            <div class="product-item-content-price">
                               <div class="product-item-content-price--old">
-                                 <span>25,000</span><sup>&#8363</sup>
+                                 <span>' . number_format($row["Gia_Cu"]) . '</span><sup>&#8363</sup>
                               </div>
                               <div class="product-item-content-price--new">
-                                 <h3>' . number_format($row["Gia"]) . '</h3><sup>&#8363</sup> <span>/kg</span>
+                                 <h3>' . number_format($row["Gia_Moi"]) . '</h3><sup>&#8363</sup> <span>/kg</span>
                               </div>
                            </div>
                            <input type="hidden" name="productImage" value="' . $row["Hinh_sp"] . '">
                            <input type="hidden" name="productName" value="' . $row["TenSP"] . '">
-                           <input type="hidden" name="productPrice" value="' . $row["Gia"] . '">
+                           <input type="hidden" name="productPrice" value="' . $row["Gia_Moi"] . '">
                            <input type="hidden" name="productId" value="' . $row["MaSP"] . '">
                            <input type="hidden" name="productQuantity" value="' . $row["Sl"] . '">
                            <button type="submit" name="productAdd" value="Add To Cart" class="btn-outline product-button">Add To Cart</button>
@@ -88,12 +88,12 @@ require_once 'admin/connect.php';
                   // đổ dữ liệu vào trang web
                   while ($row = $result->fetch_assoc()) {
                      echo '<div class="product-item">
-                     <form action="index.php?url=addtocart" method="post">
-                        <div class="product-deital-icon">
-                           <a href="index.php?url=productdetail&productId=' . $row["MaSP"] . '&productName=' . $row["TenSP"] . '&productPrice=' . $row["Gia"] . '&productImage=images/product/' . $row["Hinh_sp"] . ' 2x">More
-                              <i class="fa-solid fa-angles-right"></i>
-                           </a>
-                        </div>
+                     <div class="product-detail-icon">
+                        <a href="index.php?url=Product_Detail&productId=' . $row["MaSP"] . '&productQuantity=' . $row["Sl"] . '&productDesc=' . $row["Mo_ta"] . '&productName=' . $row["TenSP"] . '&productPrice=' . $row["Gia_Moi"] . '&productImage=' . $row["Hinh_sp"] . ' 2x">More
+                           <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                     </div>
+                     <form action="index.php?url=Add_To_Cart" method="post">
                         <div class="product-new">
                            <span>New</span>
                         </div>
@@ -101,21 +101,21 @@ require_once 'admin/connect.php';
                            <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="product-item-image">
-                        <img srcset="images/product/' . $row["Hinh_sp"] . ' 2x" alt="">
+                        <img srcset="Images/product/' . $row["Hinh_sp"] . ' 2x" alt="">
                         </div>
                         <div class="product-item-content">
                            <h1 class="product-item-content-title">' . $row["TenSP"] . '</h1>
                            <div class="product-item-content-price">
                               <div class="product-item-content-price--old">
-                                 <span>25,000</span><sup>&#8363</sup>
+                                    <span>' . number_format($row["Gia_Cu"]) . '</span><sup>&#8363</sup>
                               </div>
                               <div class="product-item-content-price--new">
-                                 <h3>' . number_format($row["Gia"]) . '</h3><sup>&#8363</sup> <span>/kg</span>
+                                 <h3>' . number_format($row["Gia_Moi"]) . '</h3><sup>&#8363</sup> <span>/kg</span>
                               </div>
                            </div>
                            <input type="hidden" name="productImage" value="' . $row["Hinh_sp"] . '">
                            <input type="hidden" name="productName" value="' . $row["TenSP"] . '">
-                           <input type="hidden" name="productPrice" value="' . $row["Gia"] . '">
+                           <input type="hidden" name="productPrice" value="' . $row["Gia_Moi"] . '">
                            <input type="hidden" name="productId" value="' . $row["MaSP"] . '">
                            <input type="hidden" name="productQuantity" value="' . $row["Sl"] . '">
                            <button type="submit" name="productAdd" value="Add To Cart" class="btn-outline product-button">Add To Cart</button>
@@ -124,7 +124,7 @@ require_once 'admin/connect.php';
                   </div>';
                   }
                } else {
-                  require "page/404.php";
+                  '';
                }
                ?>
             </div>
@@ -144,12 +144,12 @@ require_once 'admin/connect.php';
                   // đổ dữ liệu vào trang web
                   while ($row = $result->fetch_assoc()) {
                      echo '<div class="product-item">
-                     <form action="index.php?url=addtocart" method="post">
-                        <div class="product-deital-icon">
-                           <a href="index.php?url=productdetail&productId=' . $row["MaSP"] . '&productName=' . $row["TenSP"] . '&productPrice=' . $row["Gia"] . '&productImage=images/product/' . $row["Hinh_sp"] . ' 2x">More
-                              <i class="fa-solid fa-angles-right"></i>
-                           </a>
-                        </div>
+                     <div class="product-detail-icon">
+                        <a href="index.php?url=Product_Detail&productId=' . $row["MaSP"] . '&productQuantity=' . $row["Sl"] . '&productDesc=' . $row["Mo_ta"] . '&productName=' . $row["TenSP"] . '&productPrice=' . $row["Gia_Moi"] . '&productImage=' . $row["Hinh_sp"] . ' 2x">More
+                           <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                     </div>
+                     <form action="index.php?url=Add_To_Cart" method="post">
                         <div class="product-new">
                            <span>New</span>
                         </div>
@@ -157,21 +157,21 @@ require_once 'admin/connect.php';
                            <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="product-item-image">
-                        <img srcset="images/product/' . $row["Hinh_sp"] . ' 2x" alt="">
+                        <img srcset="Images/product/' . $row["Hinh_sp"] . ' 2x" alt="">
                         </div>
                         <div class="product-item-content">
                            <h1 class="product-item-content-title">' . $row["TenSP"] . '</h1>
                            <div class="product-item-content-price">
                               <div class="product-item-content-price--old">
-                                 <span>25,000</span><sup>&#8363</sup>
+                                    <span>' . number_format($row["Gia_Cu"]) . '</span><sup>&#8363</sup>
                               </div>
                               <div class="product-item-content-price--new">
-                                 <h3>' . number_format($row["Gia"]) . '</h3><sup>&#8363</sup> <span>/kg</span>
+                                 <h3>' . number_format($row["Gia_Moi"]) . '</h3><sup>&#8363</sup> <span>/kg</span>
                               </div>
                            </div>
                            <input type="hidden" name="productImage" value="' . $row["Hinh_sp"] . '">
                            <input type="hidden" name="productName" value="' . $row["TenSP"] . '">
-                           <input type="hidden" name="productPrice" value="' . $row["Gia"] . '">
+                           <input type="hidden" name="productPrice" value="' . $row["Gia_Moi"] . '">
                            <input type="hidden" name="productQuantity" value="' . $row["Sl"] . '">
                            <input type="hidden" name="productId" value="' . $row["MaSP"] . '">
                            <button type="submit" name="productAdd" value="Add To Cart" class="btn-outline product-button">Add To Cart</button>
@@ -180,7 +180,7 @@ require_once 'admin/connect.php';
                   </div>';
                   }
                } else {
-                  require "page/404.php";
+                  '';
                }
                ?>
             </div>
@@ -200,12 +200,12 @@ require_once 'admin/connect.php';
                   // đổ dữ liệu vào trang web
                   while ($row = $result->fetch_assoc()) {
                      echo '<div class="product-item">
-                     <form action="index.php?url=addtocart" method="post">
-                        <div class="product-deital-icon">
-                           <a href="index.php?url=productdetail&productId=' . $row["MaSP"] . '&productName=' . $row["TenSP"] . '&productPrice=' . $row["Gia"] . '&productImage=images/product/' . $row["Hinh_sp"] . ' 2x">More
-                              <i class="fa-solid fa-angles-right"></i>
-                           </a>
-                        </div>
+                     <div class="product-detail-icon">
+                        <a href="index.php?url=Product_Detail&productId=' . $row["MaSP"] . '&productQuantity=' . $row["Sl"] . '&productDesc=' . $row["Mo_ta"] . '&productName=' . $row["TenSP"] . '&productPrice=' . $row["Gia_Moi"] . '&productImage=' . $row["Hinh_sp"] . ' 2x">More
+                           <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                     </div>
+                     <form action="index.php?url=Add_To_Cart" method="post">
                         <div class="product-new">
                            <span>New</span>
                         </div>
@@ -213,21 +213,21 @@ require_once 'admin/connect.php';
                            <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="product-item-image">
-                        <img srcset="images/product/' . $row["Hinh_sp"] . ' 2x" alt="">
+                        <img srcset="Images/product/' . $row["Hinh_sp"] . ' 2x" alt="">
                         </div>
                         <div class="product-item-content">
                            <h1 class="product-item-content-title">' . $row["TenSP"] . '</h1>
                            <div class="product-item-content-price">
                               <div class="product-item-content-price--old">
-                                 <span>25,000</span><sup>&#8363</sup>
+                                    <span>' . number_format($row["Gia_Cu"]) . '</span><sup>&#8363</sup>
                               </div>
                               <div class="product-item-content-price--new">
-                              <h3>' . number_format($row["Gia"]) . '</h3><sup>&#8363</sup> <span>/kg</span>
+                              <h3>' . number_format($row["Gia_Moi"]) . '</h3><sup>&#8363</sup> <span>/kg</span>
                               </div>
                               </div>
                               <input type="hidden" name="productImage" value="' . $row["Hinh_sp"] . '">
                            <input type="hidden" name="productName" value="' . $row["TenSP"] . '">
-                           <input type="hidden" name="productPrice" value="' . $row["Gia"] . '">
+                           <input type="hidden" name="productPrice" value="' . $row["Gia_Moi"] . '">
                            <input type="hidden" name="productQuantity" value="' . $row["Sl"] . '">
                            <input type="hidden" name="productId" value="' . $row["MaSP"] . '">
                            <button type="submit" name="productAdd" value="Add To Cart" class="btn-outline product-button">Add To Cart</button>
@@ -236,7 +236,7 @@ require_once 'admin/connect.php';
                   </div>';
                   }
                } else {
-                  require "page/404.php";
+                  '';
                }
                ?>
             </div>
@@ -256,12 +256,12 @@ require_once 'admin/connect.php';
                   // đổ dữ liệu vào trang web
                   while ($row = $result->fetch_assoc()) {
                      echo '<div class="product-item">
-                     <form action="index.php?url=addtocart" method="post">
-                        <div class="product-deital-icon">
-                           <a href="index.php?url=productdetail&productId=' . $row["MaSP"] . '&productName=' . $row["TenSP"] . '&productPrice=' . $row["Gia"] . '&productImage=images/product/' . $row["Hinh_sp"] . ' 2x">More
-                              <i class="fa-solid fa-angles-right"></i>
-                           </a>
-                        </div>
+                     <div class="product-detail-icon">
+                        <a href="index.php?url=Product_Detail&productId=' . $row["MaSP"] . '&productQuantity=' . $row["Sl"] . '&productDesc=' . $row["Mo_ta"] . '&productName=' . $row["TenSP"] . '&productPrice=' . $row["Gia_Moi"] . '&productImage=' . $row["Hinh_sp"] . ' 2x">More
+                           <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                     </div>
+                     <form action="index.php?url=Add_To_Cart" method="post">
                         <div class="product-new">
                            <span>New</span>
                         </div>
@@ -269,21 +269,21 @@ require_once 'admin/connect.php';
                            <i class="fa-solid fa-heart"></i>
                         </div>
                         <div class="product-item-image">
-                        <img srcset="images/product/' . $row["Hinh_sp"] . ' 2x" alt="">
+                        <img srcset="Images/product/' . $row["Hinh_sp"] . ' 2x" alt="">
                         </div>
                         <div class="product-item-content">
                            <h1 class="product-item-content-title">' . $row["TenSP"] . '</h1>
                            <div class="product-item-content-price">
                               <div class="product-item-content-price--old">
-                                 <span>25,000</span><sup>&#8363</sup>
+                                    <span>' . number_format($row["Gia_Cu"]) . '</span><sup>&#8363</sup>
                               </div>
                               <div class="product-item-content-price--new">
-                                 <h3>' . number_format($row["Gia"]) . '</h3><sup>&#8363</sup> <span>/kg</span>
+                                 <h3>' . number_format($row["Gia_Moi"]) . '</h3><sup>&#8363</sup> <span>/kg</span>
                               </div>
                            </div>
                            <input type="hidden" name="productImage" value="' . $row["Hinh_sp"] . '">
                            <input type="hidden" name="productName" value="' . $row["TenSP"] . '">
-                           <input type="hidden" name="productPrice" value="' . $row["Gia"] . '">
+                           <input type="hidden" name="productPrice" value="' . $row["Gia_Moi"] . '">
                            <input type="hidden" name="productQuantity" value="' . $row["Sl"] . '">
                            <input type="hidden" name="productId" value="' . $row["MaSP"] . '">
                            <button type="submit" name="productAdd" value="Add To Cart" class="btn-outline product-button">Add To Cart</button>
@@ -292,7 +292,7 @@ require_once 'admin/connect.php';
                   </div>';
                   }
                } else {
-                  require "page/404.php";
+                  '';
                }
                ?>
             </div>

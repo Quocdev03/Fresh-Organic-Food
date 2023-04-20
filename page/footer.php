@@ -1,21 +1,21 @@
 <div class="footer-container">
    <div class="footer-background">
-      <img srcset="./images/footer.png 2x" alt="">
+      <img srcset="./Images/footer.png 2x" alt="">
    </div>
    <div class="footer-logo">
       <a href="#header-main">
-         <img srcset="./images/logo/footer-logo.png 2x" alt="">
+         <img srcset="./Images/logo/footer-logo.png 2x" alt="">
       </a>
    </div>
    <div class="footer-list">
       <ul class="footer-column">
          <h1 class="footer-column-heading">Quick Links</h1>
          <li class="footer-item">
-            <a href="#header-main" class="footer-link">Home
+            <a href="#!" class="footer-link">Home
             </a>
          </li>
          <li class="footer-item">
-            <a href="./html/product.html" class="footer-link">
+            <a href="#!" class="footer-link">
                Product
             </a>
          </li>
@@ -75,15 +75,15 @@
          <h1 class="footer-column-heading">Contact Us</h1>
          <div class="footer-contact">
             <div class="footer-contact-item">
-               <img src="./images/icon/pin-icon.svg" alt="">
+               <img src="./Images/icon/pin-icon.svg" alt="">
                <span>256 Đ. Nguyen Van Cu, An Hoa, Ninh Kieu, Can Tho</span>
             </div>
             <div class="footer-contact-item">
-               <img src="./images/icon/call-icon.svg" alt="">
+               <img src="./Images/icon/call-icon.svg" alt="">
                <span>+84 000 111 2222</span>
             </div>
             <div class="footer-contact-item">
-               <img src="./images/icon/mail-icon.svg" alt="">
+               <img src="./Images/icon/mail-icon.svg" alt="">
                <span>example@mail.com</span>
             </div>
          </div>
@@ -95,16 +95,16 @@
       </div>
       <div class="footer-social">
          <a href="#!" class="footer-social-link">
-            <img src="./images/icon/facebook-icon.svg" alt="">
+            <img src="./Images/icon/facebook-icon.svg" alt="">
          </a>
          <a href="#!" class="footer-social-link">
-            <img src="./images/icon/twiter-icon.svg" alt="">
+            <img src="./Images/icon/twiter-icon.svg" alt="">
          </a>
          <a href="#!" class="footer-social-link">
-            <img src="./images/icon/instagram-icon.svg" alt="">
+            <img src="./Images/icon/instagram-icon.svg" alt="">
          </a>
          <a href="#!" class="footer-social-link">
-            <img src="./images/icon/pinterest-icon.svg" alt="">
+            <img src="./Images/icon/pinterest-icon.svg" alt="">
          </a>
       </div>
    </div>

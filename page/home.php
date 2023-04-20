@@ -2,20 +2,20 @@
       <div class="container">
          <div class="logo-container">
             <div class="logo-item">
-               <img src="./images/logo/service.svg " alt="">
+               <img src="./Images/logo/service.svg " alt="">
                <span class="logo-text" style="color: var(--primary-color);">24/7
                   Service</span>
             </div>
             <div class="logo-item">
-               <img src="./images/logo/delivery.svg " alt="">
+               <img src="./Images/logo/delivery.svg " alt="">
                <span class="logo-text">Fast Delivery</span>
             </div>
             <div class="logo-item">
-               <img src="./images/logo/policy.svg" alt="">
+               <img src="./Images/logo/policy.svg" alt="">
                <span class="logo-text">15 Days Return Policy</span>
             </div>
             <div class="logo-item">
-               <img src="./images/logo/sercure.svg" alt="">
+               <img src="./Images/logo/sercure.svg" alt="">
                <span class="logo-text">100% Secure Payment</span>
             </div>
          </div>
@@ -25,7 +25,7 @@
    <section class="offer">
       <div class="container">
          <div class="offer-bg">
-            <img srcset="./images/product/product-bg1.png 2x" alt="">
+            <img srcset="./Images/product/product-bg1.png 2x" alt="">
          </div>
          <div class="offer-container">
             <div class="section-heading offer-heading">
@@ -41,7 +41,7 @@
                      <i class="fa-solid fa-heart"></i>
                   </div>
                   <div class="offer-item-image">
-                     <img srcset="./images/product/fruits_RedStrawberry.png 2x" alt="">
+                     <img srcset="./Images/product/fruits_RedStrawberry.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Red Strawberry</h1>
@@ -60,7 +60,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits_SweetCherry.png 2x" alt="">
+                     <img srcset="./Images/product/fruits_SweetCherry.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Sweet Cherry</h1>
@@ -79,7 +79,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits_RedRespberry.png 2x" alt="">
+                     <img srcset="./Images/product/fruits_RedRespberry.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Red Respberry</h1>
@@ -98,7 +98,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits_Watermelon.png 2x" alt="">
+                     <img srcset="./Images/product/fruits_Watermelon.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Watermelon</h1>
@@ -117,7 +117,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits_BlackCurrant.png 2x" alt="">
+                     <img srcset="./Images/product/fruits_BlackCurrant.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Black Currant</h1>
@@ -136,7 +136,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits_DragonFruit.png 2x" alt="">
+                     <img srcset="./Images/product/fruits_DragonFruit.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Dragon Fruit</h1>
@@ -155,7 +155,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits_GreenApple.png 2x" alt="">
+                     <img srcset="./Images/product/fruits_GreenApple.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Green Apple</h1>
@@ -174,7 +174,7 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./images/product/fruits_Grape.png 2x" alt="">
+                     <img srcset="./Images/product/fruits_Grape.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
                      <h1 class="offer-item-title">Grapes</h1>
@@ -193,7 +193,7 @@
    <section class="feature">
       <div class="container">
          <div class="feature-bg">
-            <img srcset="./images/feature/features-bg.png 2x" alt="">
+            <img srcset="./Images/feature/features-bg.png 2x" alt="">
          </div>
          <div class="feature-container">
             <div class="feature-header">
@@ -208,7 +208,7 @@
             <div class="feature-list">
                <div class="feature-item">
                   <div class="feature-item-image">
-                     <img srcset="./images/feature/feature(1).png 2x" alt="">
+                     <img srcset="./Images/feature/feature(1).png 2x" alt="">
                   </div>
                   <div class="feature-item-content">
                      <h1 class="feature-item-title">Fresh Fruit</h1>
@@ -219,7 +219,7 @@
                </div>
                <div class="feature-item">
                   <div class="feature-item-image">
-                     <img srcset="./images/feature/feature(2).png 2x" alt="">
+                     <img srcset="./Images/feature/feature(2).png 2x" alt="">
                   </div>
                   <div class="feature-item-content">
                      <h1 class="feature-item-title">Fresh Dry Fruit</h1>
@@ -230,7 +230,7 @@
                </div>
                <div class="feature-item">
                   <div class="feature-item-image">
-                     <img srcset="./images/feature/feature(3).png 2x" alt="">
+                     <img srcset="./Images/feature/feature(3).png 2x" alt="">
                   </div>
                   <div class="feature-item-content">
                      <h1 class="feature-item-title">Fresh Salad</h1>
@@ -241,7 +241,7 @@
                </div>
                <div class="feature-item">
                   <div class="feature-item-image">
-                     <img srcset="./images/feature/feature(4).png 2x" alt="">
+                     <img srcset="./Images/feature/feature(4).png 2x" alt="">
                   </div>
                   <div class="feature-item-content">
                      <h1 class="feature-item-title">Oragnic Vegetables</h1>
@@ -259,7 +259,7 @@
    <section class="deal">
       <div class="container">
          <div class="deal-bg">
-            <img srcset="./images/deal-bg.png 2x" alt="">
+            <img srcset="./Images/deal-bg.png 2x" alt="">
          </div>
          <div class="deal-container">
             <div class="deal-header">
@@ -284,7 +284,7 @@
                      <a href="#!" class="btn-primary deal-content-more">Shop Now</a>
                   </div>
                   <div class="deal-image">
-                     <img srcset="./images/deal-1.png 2x" alt="">
+                     <img srcset="./Images/deal-1.png 2x" alt="">
                   </div>
                </div>
                <div class="deal-item">
@@ -299,7 +299,7 @@
                      <a href="#!" class="btn-primary deal-content-more">Shop Now</a>
                   </div>
                   <div class="deal-image">
-                     <img srcset="./images/deal-2.png 2x" alt="">
+                     <img srcset="./Images/deal-2.png 2x" alt="">
                   </div>
                </div>
             </div>
@@ -322,19 +322,19 @@
             </div>
             <div class="natural-list">
                <div class="natural-item">
-                  <img srcset="./images/natural/natural-1.png 2x" alt="">
+                  <img srcset="./Images/natural/natural-1.png 2x" alt="">
                </div>
                <div class="natural-item">
-                  <img srcset="./images/natural/natural-2.png 2x" alt="">
+                  <img srcset="./Images/natural/natural-2.png 2x" alt="">
                </div>
                <div class="natural-item">
-                  <img srcset="./images/natural/natural-3.png 2x" alt="">
+                  <img srcset="./Images/natural/natural-3.png 2x" alt="">
                </div>
                <div class="natural-item">
-                  <img srcset="./images/natural/natural-4.png 2x" alt="">
+                  <img srcset="./Images/natural/natural-4.png 2x" alt="">
                </div>
                <div class="natural-item">
-                  <img srcset="./images/natural/natural-5.png 2x" alt="">
+                  <img srcset="./Images/natural/natural-5.png 2x" alt="">
                </div>
             </div>
          </div>

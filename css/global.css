@@ -5,6 +5,7 @@ html {
 
 body {
    text-transform: capitalize;
+   text-rendering: geometricPrecision;
    font-family: 'Nunito', sans-serif;
    overflow-x: hidden;
    background-color: var(--white-color);
@@ -47,7 +48,8 @@ input {
 
 /* Kích thước các phần tử trong trang */
 .container {
-   max-width: 1200px;
+   --sizeElement: 1200px;
+   max-width: var(--sizeElement);
    margin: 0 auto;
    padding: 0 15px;
 }
@@ -151,7 +153,7 @@ input {
 }
 
 .intro {
-   background-image: url('../images/cart/bg.png');
+   background-image: url('../Images/cart/bg.png');
    background-size: cover;
    background-position: center;
    padding: 160px 0;

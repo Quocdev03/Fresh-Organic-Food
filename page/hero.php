@@ -16,7 +16,7 @@
             <a href="#!" class="btn-primary hero-button">Explore More</a>
          </div>
          <div class="hero-image">
-            <img srcset="./images/header-img.png 2x" alt="">
+            <img srcset="./Images/header-img.png 2x" alt="">
          </div>
       </div>
    </div>
