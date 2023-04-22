@@ -1,9 +1,6 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-   session_start();
-}
-ob_start();
 require_once 'Server/Connect.php';
+require_once 'Server/Session.php';
 ?>
 <section class="intro">
    <div class="container">

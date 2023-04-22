@@ -1,9 +1,6 @@
 <?php
-// kiểm tra xem session đã được khởi tạo chưa
-if (session_status() === PHP_SESSION_NONE) {
-   session_start();
-}
-ob_start();
+require_once 'Server/Session.php';
+
 if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
 ?>
    <section class="intro">

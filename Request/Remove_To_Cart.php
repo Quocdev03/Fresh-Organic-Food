@@ -1,9 +1,5 @@
 <?php
-// kiểm tra xem session đã được khởi tạo chưa
-if (session_status() === PHP_SESSION_NONE) {
-   session_start();
-}
-ob_start();
+require_once 'Server/Session.php';
 
 // Xoá toàn bộ sản phẩm
 if (isset($_GET['Remove_All_Cart'])) unset($_SESSION['cart']);

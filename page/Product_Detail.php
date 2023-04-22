@@ -1,8 +1,5 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-   session_start();
-}
-ob_start();
+require_once 'Server/Session.php';
 if ((isset($_GET['url']) && $_GET['url'] == 'Product_Detail')) {
    $productId = $_GET['productId'];
    $productName = $_GET['productName'];

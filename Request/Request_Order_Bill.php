@@ -1,12 +1,8 @@
 <?php
 require_once 'Server/Connect.php';
 require_once 'Server/Function.php';
+require_once 'Server/Session.php';
 $currentTime = date('Y-m-d H:i:s');
-// kiểm tra xem session đã được khởi tạo chưa
-if (session_status() === PHP_SESSION_NONE) {
-   session_start();
-}
-ob_start();
 if (isset($_POST['Request_Info'])) {
 
    // Thêm dữ liệu vào bảng khách hàng

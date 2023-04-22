@@ -1,9 +1,5 @@
 <?php
-// kiểm tra xem session đã được khởi tạo chưa
-if (session_status() === PHP_SESSION_NONE) {
-   session_start();
-}
-ob_start();
+require_once 'Server/Session.php';
 // set cart total to 0
 $cart_total = 0;
 // check if cart session is set

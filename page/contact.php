@@ -1,3 +1,6 @@
+<?php
+require_once 'Server/Session.php';
+?>
 <section class="intro">
    <div class="container">
       <div class="intro-container">

@@ -1,8 +1,5 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-   session_start();
-}
-ob_start();
+require_once 'Server/Session.php';
 if (isset($_POST['productAdd']) && ($_POST['productAdd'])) {
 
    $productId = $_POST['productId'];

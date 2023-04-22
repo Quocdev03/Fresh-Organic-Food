@@ -1,9 +1,5 @@
 <?php
-// kiểm tra xem session đã được khởi tạo chưa
-if (session_status() === PHP_SESSION_NONE) {
-   session_start();
-}
-ob_start();
+require_once 'Server/Session.php';
 if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
 ?>
    <section class="intro">
@@ -42,7 +38,8 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                   <div class="paymentComplete-more-item">
                      <h2>Order Status:</h2>
                      <span class="paymentComplete-more-item__status not-confirm">
-                        Chưa Xác Nhận!
+                        <!-- Chưa Xác Nhận! -->
+                        Đã Xác Nhận!
                      </span>
                   </div>
                   <p class="paymentComplete-more-note not-confirm">
@@ -101,7 +98,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
          <div class="cartempty-main">
             <img class="cartempty-image" srcset="Images/cart/cart-empty2x.png 2x" alt="">
             <h1 class="cartempty-title">Your Cart Is <span>Empty!</span></h1>
-            <p class="cartempty-desc">Must add item on the cart before you process to check out!</p>
+            <p class="cartempty-desc">Must add item on the cart before you process to payment!</p>
             <a class="btn-primary" href="index.php?url=product">Return to product</a>
          </div>
       </div>

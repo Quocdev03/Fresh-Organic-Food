@@ -196,7 +196,7 @@ const checkContact = () => {
 
 const checkPaymentStatus = () => {
    const conditionStatus = "Đã Xác Nhận!";
-   const conditionNote = "Đơn Hàng Của Bạn Đã Được Xác Nhận Thành Công, Vui Lòng Chờ!";
+   const conditionNote = "Đơn Hàng Của Bạn Đã Được Xác Nhận Thành Công, Vui Lòng Chờ Trong Vài Giờ!";
    const status = document.querySelector(".paymentComplete-more-item__status");
    const note = document.querySelector(".paymentComplete-more-note");
    const textStatus = status.textContent.trim();
