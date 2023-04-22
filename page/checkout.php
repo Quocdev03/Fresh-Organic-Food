@@ -117,8 +117,8 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                   </div>
                   <div class="cart-payment-checkout">
                      <input type="hidden" value="<?php echo $product[0] ?>" name="productId">
-                     <input type="hidden" value="<?php echo number_format($totalprice) ?>" name="productTotalPrice">
-                     <input type="hidden" value="<?php echo number_format($totalquantity) ?>" name="productTotalQuantity">
+                     <input type="hidden" value="<?php echo $totalprice ?>" name="productTotalPrice">
+                     <input type="hidden" value="<?php echo $totalquantity ?>" name="productTotalQuantity">
                      <button name="Request_Info" type="submit" class="btn-primary">Order Now</button>
                   </div>
                </div>

@@ -508,3 +508,14 @@
       grid-template-columns: 100%;
    }
 }
+
+/* Payment Complete */
+@media screen and (max-width: 1179.98px) {
+   .paymentComplete-main {
+      grid-template-columns: 100%;
+   }
+
+   .paymentComplete-info {
+      flex-wrap: wrap;
+   }
+}

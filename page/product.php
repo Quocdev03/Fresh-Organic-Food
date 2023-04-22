@@ -1,4 +1,8 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+   session_start();
+}
+ob_start();
 require_once 'Server/Connect.php';
 ?>
 <section class="intro">

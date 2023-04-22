@@ -193,3 +193,37 @@ const checkContact = () => {
       }
    });
 }
+
+const checkPaymentStatus = () => {
+   const conditionStatus = "Đã Xác Nhận!";
+   const conditionNote = "Đơn Hàng Của Bạn Đã Được Xác Nhận Thành Công, Vui Lòng Chờ!";
+   const status = document.querySelector(".paymentComplete-more-item__status");
+   const note = document.querySelector(".paymentComplete-more-note");
+   const textStatus = status.textContent.trim();
+   const textNote = note.textContent.trim();
+
+   function colorProcessStatus() {
+      if (textStatus === conditionStatus) {
+         status.classList.remove("not-confirm");
+         status.classList.add("confirm");
+      } else {
+         status.classList.add("not-confirm");
+         status.classList.remove("confirm");
+      }
+   }
+   colorProcessStatus();
+
+   function colorProcessNote() {
+      if (textStatus === conditionStatus) {
+         note.textContent = conditionNote;
+         note.classList.remove("not-confirm");
+         note.classList.add("confirm");
+      } else {
+         note.classList.add("not-confirm");
+         note.classList.remove("confirm");
+      }
+   }
+   colorProcessNote();
+}
+
+checkPaymentStatus();

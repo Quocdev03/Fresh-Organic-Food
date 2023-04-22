@@ -1,6 +1,7 @@
 <?php
 require_once 'Server/Connect.php';
 require_once 'Server/Function.php';
+$currentTime = date('Y-m-d H:i:s');
 // kiểm tra xem session đã được khởi tạo chưa
 if (session_status() === PHP_SESSION_NONE) {
    session_start();
@@ -17,28 +18,15 @@ if (isset($_POST['Request_Info'])) {
    $district = $_POST['district'];
    $moreAddress = $_POST['moreAddress'];
    $address = $moreAddress . ', ' . $district . ', ' . $province;
-   $resultThemKhachHang = ThemKhachHang($conn, $fullname, $address, $birthday, $phone, $email);
-   if ($resultThemKhachHang === true) {
-      echo "thao tác thực hiện thành công";
-   } else {
-      echo "Thao tác thất bại";
-   }
-
+   $ThemKhachHang = ThemKhachHang($conn, $fullname, $address, $birthday, $phone, $email);
    // Thêm dữ liệu vào bảng đơn hàng
-   $productId = $_POST['productId'];
    $productTotalPrice = $_POST['productTotalPrice'];
-   $productTotalQuantity = $_POST['productTotalQuantity'];
+   XacDinhMaKhachHang($conn, $fullname, $address, $birthday, $phone, $email);
+   $ThemDonHang = ThemDonHang($conn, $fullname, $address, $birthday, $phone, $email, $productTotalPrice, $currentTime);
 
-   // "INSERT INTO donhang (MaDH, MaSP, Sl)
-   //          VALUES ('$product_id', '$quantity')"
-
-   // $sql_order =;
-   // if ($conn->query($sql_order) === FALSE) {
-   //    echo "Error: ";
-   // }
-
-   // // if (($conn->query($sql_customer) === true) && ($conn->query($sql_order) === true)) {
-   // //    header("Location index.php?url=Payment_Complete");
-   // // }
-
+   if ($ThemDonHang === true && $ThemKhachHang === true) {
+      header("Location: index.php?url=Payment_Complete");
+   } else {
+      require 'Page/404.php';
+   }
 }

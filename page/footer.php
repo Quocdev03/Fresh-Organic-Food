@@ -3,7 +3,7 @@
       <img srcset="./Images/footer.png 2x" alt="">
    </div>
    <div class="footer-logo">
-      <a href="#header-main">
+      <a href="#!">
          <img srcset="./Images/logo/footer-logo.png 2x" alt="">
       </a>
    </div>
@@ -84,7 +84,7 @@
             </div>
             <div class="footer-contact-item">
                <img src="./Images/icon/mail-icon.svg" alt="">
-               <span>example@mail.com</span>
+               <span class="ttc-unset">example@mail.com</span>
             </div>
          </div>
       </ul>

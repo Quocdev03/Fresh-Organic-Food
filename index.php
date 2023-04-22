@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Ho_Chi_Minh');
 if (!isset($_GET["url"])) {
    header("Location: index.php?url=Home");
    exit;
@@ -77,6 +78,8 @@ if (!isset($_GET["url"])) {
                require "Request/Request_Order_Bill.php";
             } elseif ($page == "Request_Contact_Customer") {
                require "Request/Request_Contact_Customer.php";
+            } elseif ($page == "Payment_Complete") {
+               require "Request/Payment_Complete.php";
             } elseif ($page == "Admin") {
                require "./Admin/index.php";
             } else {

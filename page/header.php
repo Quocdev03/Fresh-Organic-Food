@@ -1,10 +1,9 @@
 <?php
-// Get quantity in cart page
-// start session
 // kiểm tra xem session đã được khởi tạo chưa
 if (session_status() === PHP_SESSION_NONE) {
    session_start();
 }
+ob_start();
 // set cart total to 0
 $cart_total = 0;
 // check if cart session is set
