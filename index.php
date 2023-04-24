@@ -104,6 +104,7 @@ if (!isset($_GET["url"])) {
    </div>
 
    <script src="./Script/App.js"></script>
+   <script src="./Script/Reload.js"></script>
 </body>
 
 </html>

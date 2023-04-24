@@ -18,11 +18,11 @@ require_once 'Server/Session.php';
             <p class="contact-desc">Feel free to contact with us any time.</p>
          </div>
          <div class="contact-form">
-            <form action="#!" method="post" autocomplete="off">
+            <form action="index.php?url=Request_Contact_Customer" method="post" autocomplete="off">
                <div class="contact-form-content">
                   <div class="contact-form-input">
                      <label for="#!">Full Name</label>
-                     <input class="contact-input-name" type="text" placeholder="Enter Your Name Here" required>
+                     <input name="fullName" class="contact-input-name" type="text" placeholder="Enter Your Name Here" required>
                      <div class="input-icons">
                         <i class="fa fa-check"></i>
                         <i class="fa fa-times"></i>
@@ -30,7 +30,7 @@ require_once 'Server/Session.php';
                   </div>
                   <div class="contact-form-input">
                      <label for="#!">Email</label>
-                     <input class="contact-input-mail" type="mail" placeholder="Enter Your Email Here" required>
+                     <input name="email" class="contact-input-mail" type="mail" placeholder="Enter Your Email Here" required>
                      <div class="input-icons">
                         <i class="fa fa-check"></i>
                         <i class="fa fa-times"></i>
@@ -39,9 +39,9 @@ require_once 'Server/Session.php';
                </div>
                <div class="contact-form-texterea">
                   <label for="#!">Message</label>
-                  <textarea maxlength="500" name="" placeholder="Write Your Message Here"></textarea>
+                  <textarea maxlength="500" name="message" placeholder="Write Your Message Here"></textarea>
                </div>
-               <button type="submit" class="btn-outline contact-button">Send Message</button>
+               <button type="submit" name="requestContactCustomer" class="btn-outline contact-button">Send Message</button>
             </form>
          </div>
       </div>

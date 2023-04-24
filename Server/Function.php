@@ -36,9 +36,28 @@ function ThemDonHang($connect, $fullname, $address, $birthday, $phone, $email, $
    $maKH = $resultCallBack2["MaKH"];
    $callBack = TongDonHang($connect);
    $resultCallBack = mysqli_fetch_array($callBack);
+   $createPaymentCode = $resultCallBack["Count(*)"] + 1;
+   $getPaymentCode = "FOF000" . $createPaymentCode;
    $createNumber = $resultCallBack["Count(*)"] + 1;
    $createId = "DH" . $createNumber;
-   $sql_order = "INSERT INTO donhang (MaDH, MaKH, TgLap, TTrang, Tien)
-                  VALUES ('$createId', '$maKH', '$currentTime', 'Chờ Xác Nhận', '$price')";
+   $sql_order = "INSERT INTO donhang (MaDH, MaKH, TgLap, TTrang, Tien, MaThanhToan)
+                  VALUES ('$createId', '$maKH', '$currentTime', 'Chờ Xác Nhận', '$price','$getPaymentCode')";
    return mysqli_query($connect, $sql_order);
+}
+
+function TongYKienKhachHang($connect)
+{
+   $sql_customer = "SELECT Count(*) FROM ykienkhachhang ";
+   return  mysqli_query($connect, $sql_customer);
+}
+
+function YKienKhachHang($connect, $fullname, $email, $message)
+{
+   $callBack = TongYKienKhachHang($connect);
+   $resultCallBack = mysqli_fetch_array($callBack);
+   $createNumber = $resultCallBack["Count(*)"] + 1;
+   $createId = "YKH" . $createNumber;
+   $sql_customer = "INSERT INTO ykienkhachhang (MaYK, HoTen, Email, YKien)
+                     VALUES ('$createId', '$fullname', '$email','$message')";
+   return mysqli_query($connect, $sql_customer);
 }

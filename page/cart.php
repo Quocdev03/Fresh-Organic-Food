@@ -33,12 +33,12 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                      <span class="cart-item-content__category">/kg</span>
                   </div>
                   <div class="cart-item-content__quantity">
-                     <div class="cart-item-content__counter" data-product-id=' . $product[0] . '>
-                        <button type="submit" class="cart-item-content__counter--minus is-disable">-</button>
-                        <h2 class="cart-item-content__counter--number">' . $product[4] . '</h2>
-                        <button type="submit" class="cart-item-content__counter--plus">+</button>
+                     <div class="cart-item-content__counter" data-product-id="' . $product[0] . '" >
+                     <button type="submit" class="cart-item-content__counter--minus ">-</button>
+                     <h2 class="cart-item-content__counter--number">' . $product[4] . '</h2>
+                     <button type="submit" class="cart-item-content__counter--plus">+</button>
                      </div>
-                     <a href="index.php?url=product" class="cart-item-content__more">See more
+                     <a href="index.php?url=Product" class="cart-item-content__more">See more
                         product</a>
                   </div>
                </div>

@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
    menuToggle();
    likeItem();
-   QuantityCart();
+   quantityCart();
    fixedMenu();
    detailProductImage();
    checkContact();
@@ -40,57 +40,45 @@ const likeItem = () => {
 }
 
 // Quantity Cart
-const QuantityCart = () => {
-   const productItem = document.querySelectorAll(".cart-item-content__counter");
-   [...productItem].forEach((item) => {
-      const counterDecrease = item.querySelector(".cart-item-content__counter--minus");
-      const counterIncrease = item.querySelector(".cart-item-content__counter--plus");
-      const counterNumber = item.querySelector(".cart-item-content__counter--number");
-      let counterValue = counterNumber ? parseInt(counterNumber.textContent) : 0;
-      let counterLock = false;
-      const productId = item.getAttribute('data-product-id');
+const quantityCart = () => {
+   function updateCartQuantity(productItem) {
+      const productId = productItem.getAttribute('data-product-id');
+      const quantity = parseInt(productItem.querySelector('.cart-item-content__counter--number').textContent);
 
-      function checkCounterLock(boolean) {
-         if (!boolean === "true" || !boolean === "false") return
-         counterLock = boolean;
-      }
-
-      function delayClick(miliSecond) {
-         setTimeout(() => {
-            checkCounterLock(false)
-         }, miliSecond);
-      }
-
-      counterDecrease.addEventListener("click", function (e) {
-         if (!counterLock) {
-            checkCounterLock(true);
-            counterValue = counterValue - 1;
-            counterNumber.textContent = counterValue;
-            if (counterValue > 1) {
-               counterDecrease.classList.remove("is-disable");
-               counterIncrease.classList.remove("is-disable");
-            } else {
-               counterDecrease.classList.add("is-disable");
-            }
-            delayClick(100);
-            sendCartData(productId, counterValue);
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', 'index.php?url=Update_Cart_Quantity');
+      xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+      xhr.onreadystatechange = function () {
+         if (xhr.readyState === 4 && xhr.status === 200) {
+            // Lưu vị trí hiện tại của trang trước khi tải lại
+            const savedPosition = window.scrollY;
+            // Tải lại trang
+            window.location.reload(true);
+            // Đặt vị trí của trang trở lại vị trí được lưu trước đó
+            window.scrollTo(0, savedPosition);
          }
+      };
+      xhr.send(`productId=${productId}&quantity=${quantity}`);
+   }
+
+   const productItems = document.querySelectorAll(".cart-item-content__counter");
+   [...productItems].forEach((productItem) => {
+      const counterDecrease = productItem.querySelector(".cart-item-content__counter--minus");
+      const counterIncrease = productItem.querySelector(".cart-item-content__counter--plus");
+      const counterNumber = productItem.querySelector(".cart-item-content__counter--number");
+      let counterValue = counterNumber ? parseInt(counterNumber.textContent) : 0;
+      counterDecrease.addEventListener("click", function (e) {
+         counterValue = counterValue - 1;
+         counterNumber.textContent = counterValue;
+         updateCartQuantity(productItem);
       });
 
       counterIncrease.addEventListener("click", function (e) {
-         if (!counterLock) {
-            checkCounterLock(true);
-            counterValue += 1;
-            counterNumber.textContent = counterValue;
-            if (counterValue >= 20) {
-               counterIncrease.classList.add("is-disable");
-            } else {
-               counterDecrease.classList.remove("is-disable");
-            }
-            delayClick(100);
-            sendCartData(productId, counterValue);
-         }
+         counterValue += 1;
+         counterNumber.textContent = counterValue;
+         updateCartQuantity(productItem);
       });
+
    });
 }
 
@@ -149,12 +137,6 @@ const checkContact = () => {
    const nameInput = document.querySelector(".contact-input-name");
    const mailInput = document.querySelector(".contact-input-mail");
    nameInput && nameInput.addEventListener("input", function (e) {
-      //    ^ là anchor bắt đầu chuỗi
-      // [] là character set, đây là character set Unicode (được xác định bởi flag /u), có nghĩa là chỉ chấp nhận các kí tự trong tập hợp nằm trong dấu ngoặc này
-      // \p{L} đại diện cho kí tự Unicode, có chức năng phân biệt chữ cái với các kí tự khác (bao gồm cả dấu chấm, dấu phẩy,...)
-      // ` là khoảng trắng, cho phép nhập khoảng trắng trong tên
-      // {6,30} là quantifier, yêu cầu số lượng kí tự từ 6 đến 30
-      // $ là anchor kết thúc chuỗi
       const value = e.target.value;
       const regexName = /^[\p{L} ]{6,40}$/u;
       if (regexName.test(value)) {
@@ -169,16 +151,6 @@ const checkContact = () => {
       }
    });
    mailInput && mailInput.addEventListener("input", function (e) {
-      //    ^: Bắt đầu của chuỗi.
-      // (?!.*\d{3}): Negative lookahead, đảm bảo rằng không có chuỗi con nào trong chuỗi email chứa 3 chữ số liên tiếp.
-      // .*: Bất kỳ ký tự nào (trừ ký tự xuống dòng) xuất hiện bất kỳ số lần nào.
-      // \d{3}: Ba chữ số liên tiếp.
-      // [a-zA-Z0-9._%+-]+: Một hoặc nhiều ký tự chữ cái hoặc số hoặc một số ký tự đặc biệt như . (dấu chấm), _ (gạch dưới), %, +, hoặc - xuất hiện liên tiếp. Đây là phần local-part của địa chỉ email.
-      // @: Ký tự @.
-      // [a-zA-Z0-9.-]+: Một hoặc nhiều ký tự chữ cái hoặc số hoặc dấu gạch ngang xuất hiện liên tiếp. Đây là phần domain của địa chỉ email.
-      // \.: Dấu chấm.
-      // [a-zA-Z]{2,}: Hai hoặc nhiều ký tự chữ cái xuất hiện liên tiếp. Đây là phần tên miền của địa chỉ email.
-      // $: Kết thúc của chuỗi.
       const value = e.target.value;
       const regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (regexEmail.test(value.trim(''))) {
@@ -194,33 +166,37 @@ const checkContact = () => {
    });
 }
 
+// Check Payment Status
 const checkPaymentStatus = () => {
    const conditionStatus = "Đã Xác Nhận!";
    const conditionNote = "Đơn Hàng Của Bạn Đã Được Xác Nhận Thành Công, Vui Lòng Chờ Trong Vài Giờ!";
    const status = document.querySelector(".paymentComplete-more-item__status");
    const note = document.querySelector(".paymentComplete-more-note");
-   const textStatus = status.textContent.trim();
-   const textNote = note.textContent.trim();
+   const textStatus = status ? status.textContent.trim() : null;
 
    function colorProcessStatus() {
-      if (textStatus === conditionStatus) {
-         status.classList.remove("not-confirm");
-         status.classList.add("confirm");
-      } else {
-         status.classList.add("not-confirm");
-         status.classList.remove("confirm");
+      if (status) {
+         if (textStatus === conditionStatus) {
+            status.classList.remove("not-confirm");
+            status.classList.add("confirm");
+         } else {
+            status.classList.add("not-confirm");
+            status.classList.remove("confirm");
+         }
       }
    }
    colorProcessStatus();
 
    function colorProcessNote() {
-      if (textStatus === conditionStatus) {
-         note.textContent = conditionNote;
-         note.classList.remove("not-confirm");
-         note.classList.add("confirm");
-      } else {
-         note.classList.add("not-confirm");
-         note.classList.remove("confirm");
+      if (note) {
+         if (textStatus === conditionStatus) {
+            note.textContent = conditionNote;
+            note.classList.remove("not-confirm");
+            note.classList.add("confirm");
+         } else {
+            note.classList.add("not-confirm");
+            note.classList.remove("confirm");
+         }
       }
    }
    colorProcessNote();
