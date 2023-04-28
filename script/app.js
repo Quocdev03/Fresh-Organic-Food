@@ -36,12 +36,31 @@ const menuToggle = () => {
 const likeItem = () => {
    let like = document.querySelectorAll(".offer-item-like");
    let activeLike = "show-like";
-   like.forEach((item) => {
+
+   // Lấy trạng thái lưu trữ nếu có
+   let likesState = sessionStorage.getItem("likesState");
+   if (likesState) {
+      likesState = JSON.parse(likesState);
+      // Thiết lập trạng thái lớp CSS "active" tương ứng cho các nút like
+      like.forEach((item, index) => {
+         if (likesState[index]) {
+            item.classList.add(activeLike);
+         }
+      });
+   } else {
+      likesState = [];
+   }
+
+   like.forEach((item, index) => {
       item.addEventListener("click", function () {
          item.classList.toggle(activeLike);
+         // Cập nhật trạng thái lưu trữ
+         likesState[index] = item.classList.contains(activeLike);
+         sessionStorage.setItem("likesState", JSON.stringify(likesState));
       });
    });
 }
+
 
 // Quantity Cart
 const quantityCart = () => {
