@@ -6,7 +6,7 @@ require_once 'Server/Session.php';
    <section class="intro">
       <div class="container">
          <div class="intro-container">
-            <h1 class="intro-heading">404 Page</h1>
+            <h1 class="intro-heading">404</h1>
          </div>
       </div>
    </section>

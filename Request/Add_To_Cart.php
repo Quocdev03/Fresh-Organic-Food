@@ -6,7 +6,7 @@ if (isset($_POST['productAdd']) && ($_POST['productAdd'])) {
    $productName = $_POST['productName'];
    $productImage = $_POST['productImage'];
    $productPrice = $_POST['productPrice'];
-   $productQuantity = $_POST['productQuantity'];
+   $productQuantity = 1;
 
    $product = array($productId, $productName, $productImage, $productPrice, $productQuantity);
 

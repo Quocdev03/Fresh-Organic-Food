@@ -1,5 +1,4 @@
 <?php
-
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 if (!isset($_GET["url"])) {
    header("Location: index.php?url=Home");
@@ -22,16 +21,22 @@ if (!isset($_GET["url"])) {
    <link rel="stylesheet" href="./Css/Variables.css">
    <link rel="stylesheet" href="./Css/Global.css">
    <link rel="stylesheet" href="./Css/Component.css">
+   <link rel="stylesheet" href="./Css/Responsive.css">
    <link rel="icon" href="./Images/icon/favicon.png" type="image/x-icon" />
    <title>Fresh Organic Food</title>
 </head>
 
 <body>
+   <div class="page-loader">
+      <span></span>
+      <span></span>
+      <span></span>
+   </div>
 
-   <div class="wrapper">
+   <div class="wrapper hidden">
 
       <div class="header">
-         <header class="header-main" id="header-main">
+         <header class="header-main">
             <div class="container">
                <?php
                require "Page/Header.php"
@@ -69,20 +74,22 @@ if (!isset($_GET["url"])) {
                require "Page/Checkout.php";
             } elseif ($page == "Payment_Complete") {
                require "Page/Payment_Complete.php";
+            } elseif ($page == "Coming_Soon") {
+               require "Page/Coming_Soon.php";
             } elseif ($page == "Add_To_Cart") {
                require "Request/Add_To_Cart.php";
             } elseif ($page == "Remove_To_Cart") {
                require "Request/Remove_To_Cart.php";
             } elseif ($page == "Update_Cart_Quantity") {
                require "Request/Update_Cart_Quantity.php";
-            } elseif ($page == "Request_Order_Bill") {
-               require "Request/Request_Order_Bill.php";
-            } elseif ($page == "Request_Contact_Customer") {
-               require "Request/Request_Contact_Customer.php";
+            } elseif ($page == "Request_Order") {
+               require "Request/Request_Order.php";
+            } elseif ($page == "Cancel_Order") {
+               require "Request/Cancel_Order.php";
+            } elseif ($page == "Request_Contact") {
+               require "Request/Request_Contact.php";
             } elseif ($page == "Payment_Complete") {
                require "Request/Payment_Complete.php";
-            } elseif ($page == "Admin") {
-               require "./Admin/index.php";
             } else {
                require "Page/404.php";
             }
@@ -103,8 +110,9 @@ if (!isset($_GET["url"])) {
 
    </div>
 
-   <script src="./Script/App.js"></script>
+   <script src="./Script/Animation.js"></script>
    <script src="./Script/Reload.js"></script>
+   <script src="./Script/App.js"></script>
 </body>
 
 </html>

@@ -176,7 +176,7 @@
    padding: 0 36px;
 }
 
-.offer-item-title {
+.offer-item-content h1 {
    font-weight: 400;
    color: var(--heading-color);
    margin-bottom: 10px;
@@ -192,7 +192,7 @@
    margin-bottom: 22px;
 }
 
-.offer-item-price--old {
+.offer-item-price h2 {
    font-weight: 400;
    color: var(--text-color);
    font-size: var(--xlarge-font-size);
@@ -200,7 +200,7 @@
    text-decoration: line-through;
 }
 
-.offer-item-price--current {
+.offer-item-price h3 {
    font-weight: 600;
    color: var(--primary-color);
    font-size: var(--xxlarge-font-size);
@@ -283,6 +283,14 @@
    border-radius: 4px;
 }
 
+.feature-item-content h2 {
+   font-weight: 600;
+   font-size: var(--xxlarge-font-size);
+   line-height: var(--xxlarge-line-height);
+   color: var(--heading-color);
+   text-align: center;
+}
+
 .feature-item-title {
    font-weight: 400;
    color: var(--heading-color);
@@ -304,14 +312,6 @@
    width: 50%;
    height: 2px;
    background-color: var(--primary-color);
-}
-
-.feature-item-price {
-   font-weight: 600;
-   font-size: var(--xxlarge-font-size);
-   line-height: var(--xxlarge-line-height);
-   color: var(--heading-color);
-   text-align: center;
 }
 
 .feature-more {

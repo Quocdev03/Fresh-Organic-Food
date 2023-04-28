@@ -2,7 +2,20 @@
 require_once 'Server/Connect.php';
 require_once 'Server/Session.php';
 
-if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
+$fullname = isset($_SESSION['fullname']) ? $_SESSION['fullname'] : '';
+$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+$phone = isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
+
+$TotalQuantity = isset($_SESSION['TotalQuantity']) ? $_SESSION['TotalQuantity'] : '';
+$TotalPrice = isset($_SESSION['TotalPrice']) ? $_SESSION['TotalPrice'] : '';
+
+$MaDH = isset($_SESSION['MaDH']) ? $_SESSION['MaDH'] : '';
+$MaKH = isset($_SESSION['MaKH']) ? $_SESSION['MaKH'] : '';
+$MaThanhToan = isset($_SESSION['MaThanhToan']) ? $_SESSION['MaThanhToan'] : '';
+$TTrang = isset($_SESSION['TTrang']) ? $_SESSION['TTrang'] : '';
+$TgLap = isset($_SESSION['TgLap']) ? $_SESSION['TgLap'] : '';
+
+if (isset($_SESSION['payment_successful']) && $_SESSION['payment_successful'] === true) {
 ?>
    <section class="intro">
       <div class="container">
@@ -18,130 +31,99 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                <i class="fa-solid fa-circle-check paymentComplete-icon"></i>
                <h2 class="paymentComplete-user">Hi
                   <span>
-                     <?php
-                     $sql = "SELECT * FROM khachhang ORDER BY HoTen DESC LIMIT 1";
-                     $result = $conn->query($sql);
-                     if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                           echo '<span>' . $row['HoTen'] . '</span>';
-                        }
-                     }
-                     ?>
-                  </span>
-                  , Congratulation!
+                     <span><?php echo $fullname ?>,</span>
+                  </span>Congratulation!
                </h2>
                <h1 class="paymentComplete-title">Payment Successful!</h1>
                <div class="paymentComplete-info">
                   <div class="paymentComplete-info__item">
                      <i class="fa-solid fa-mobile-screen-button"></i>
-                     <?php
-                     $sql = "SELECT * FROM khachhang ORDER BY Sdt DESC LIMIT 1";
-                     $result = $conn->query($sql);
-                     if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                           $phone_number = $row['Sdt'];
-                           $hidden_part = str_repeat("*", strlen($phone_number) - 4);
-                           $visible_part = substr($phone_number, -4);
-                           $hidden_phone_number = $hidden_part . $visible_part;
-                           echo '<span>' .  $hidden_phone_number . '</span>';
-                        }
-                     }
-                     ?>
+                     <span>
+                        <?php
+                        $maskedPhone = substr($phone, 0, 6) . '****';
+                        echo $maskedPhone;
+                        ?>
+                     </span>
                   </div>
                   <div class="paymentComplete-info__item">
                      <i class="fa-solid fa-envelope"></i>
-                     <?php
-                     $sql = "SELECT * FROM khachhang ORDER BY Email DESC LIMIT 1";
-                     $result = $conn->query($sql);
-                     if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                           echo '<span class="ttc-unset">' .  $row['Email'] . '</span>';
-                        }
-                     }
-                     ?>
+                     <span class="ttc-unset"><?php echo $email ?></span>
                   </div>
                </div>
                <div class="paymentComplete-more">
                   <div class="paymentComplete-more-item">
                      <h2>Payment Code:</h2>
-                     <?php
-                     $sql = "SELECT * FROM donhang ORDER BY MaThanhToan DESC LIMIT 1";
-                     $result = $conn->query($sql);
-                     if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                           echo '<span>' . $row['MaThanhToan'] . '</span>';
-                        }
-                     }
-                     ?>
+                     <span><?php echo $MaThanhToan ?></span>
                   </div>
                   <div class="paymentComplete-more-item">
                      <h2>Time:</h2>
-                     <?php
-                     $sql = "SELECT * FROM donhang ORDER BY TgLap DESC LIMIT 1";
-                     $result = $conn->query($sql);
-                     if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                           echo '<span>' . $row['TgLap'] . '</span>';
-                        }
-                     }
-                     ?>
+                     <span><?php echo $TgLap ?></span>
                   </div>
                   <div class="paymentComplete-more-item">
                      <h2>Order Status:</h2>
-                     <?php
-                     $sql = "SELECT * FROM donhang ORDER BY TTrang DESC LIMIT 1";
-                     $result = $conn->query($sql);
-                     if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                           echo '<span class="paymentComplete-more-item__status not-confirm">' . $row['TTrang'] . '</span>';
+                     <span class="paymentComplete-more-item__status not-confirm">
+                        <?php
+                        $sql = "SELECT TTrang FROM donhang WHERE MaDH = '$MaDH' AND MaKH = '$MaKH' AND MaThanhToan = '$MaThanhToan'";
+                        $result = mysqli_query($conn, $sql);
+                        if (mysqli_num_rows($result) > 0) {
+                           while ($row = mysqli_fetch_assoc($result)) {
+                              echo $row["TTrang"];
+                           }
                         }
-                     }
-                     ?>
+                        ?>
+                     </span>
                   </div>
                   <p class="paymentComplete-more-note not-confirm">
                      Đơn Hàng Của Bạn Vẫn Đang Trong Quá Trình Xác Nhận, Tải Lại Trang Nếu Tiến Trình Diển Ra Lâu.
                   </p>
                </div>
+               <input type="hidden" name="MaDH" value="<?php echo $MaDH ?>">
+               <input type="hidden" name="MaKH" value="<?php echo $MaKH ?>">
+               <input type="hidden" name="MaThanhToan" value="<?php echo $MaThanhToan ?>">
+               <button class="btn-outline paymentComplete-more__button" type="submit">Cancel Order</button>
             </div>
             <div class="cart-payment">
                <div class="cart-payment-detail">
                   <div class="cart-payment-detail__header">
                      <div class="cart-payment-detail__title">
-                        <h1>Detail Payment</h1>
+                        <h1>Detail</h1>
                      </div>
+                     <?php
+                     foreach ($_SESSION['DetailProduct'] as $DetailProduct) {
+                        echo '<div class="cart-payment-detail__sub">
+                        <h1>' . $DetailProduct['productName'] . '</h1>
+                        <span>' . number_format($DetailProduct['productPrice']) . '<sup>&#8363</sup></span>
+                     </div>';
+                     }
+                     ?>
                   </div>
                   <div class="cart-payment-detail__total">
                      <?php
                      ?>
                      <h1 class="cart-payment-detail__total--title">Total</h1>
                      <div class="cart-payment-detail__total--list">
-                        <?php
-                        $totalquantity = 0;
-                        foreach ($_SESSION['cart'] as $product) {
-                           $totalquantity = $totalquantity + $product[4];
-                        }
-                        ?>
                         <div class="cart-payment-detail__total--item">
                            <h1>Product</h1>
-                           <span><?php echo number_format($totalquantity) ?></span>
-                        </div>
-                        <div class="cart-payment-detail__total--item">
                            <?php
-                           $totalprice = 0;
-                           foreach ($_SESSION['cart'] as $product) {
-                              $subtotal = $product[3] * $product[4];
-                              $totalprice += $subtotal;
+                           if (isset($_SESSION['TotalQuantity'])) {
+                              $TotalQuantity = $_SESSION['TotalQuantity'];
+                              echo "<span>" . number_format($TotalQuantity) . "</span>";
                            }
                            ?>
+                        </div>
+                        <div class="cart-payment-detail__total--item">
                            <h1>Price</h1>
-                           <span><?php echo number_format($totalprice) ?><sup>&#8363</sup></span>
+                           <?php
+                           if (isset($_SESSION['TotalPrice'])) {
+                              $TotalPrice = $_SESSION['TotalPrice'];
+                              echo "<span>" . number_format($TotalPrice) . "<sup>&#8363</sup></span>";
+                           }
+                           ?>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="cart-payment-checkout">
-                  <button name="Request_Info" type="submit" class="btn-primary">Download Bill</button>
-               </div>
+               <a href="index.php?url=Product" class="btn-primary">Return Product</a>
             </div>
          </div>
       </div>

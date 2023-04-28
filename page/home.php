@@ -25,7 +25,7 @@
    <section class="offer">
       <div class="container">
          <div class="offer-bg">
-            <img srcset="./Images/product/product-bg1.png 2x" alt="">
+            <img srcset="./Images/product-bg1.png 2x" alt="">
          </div>
          <div class="offer-container">
             <div class="section-heading offer-heading">
@@ -44,10 +44,10 @@
                      <img srcset="./Images/product/fruits_RedStrawberry.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1 class="offer-item-title">Red Strawberry</h1>
+                     <h1>Red Strawberry</h1>
                      <div class="offer-item-price">
-                        <h2 class="offer-item-price--old">$25.00</h2>
-                        <h3 class="offer-item-price--current">$15.00</h3>
+                        <h2>$25.00</h2>
+                        <h3>$15.00</h3>
                      </div>
                   </div>
                </div>
@@ -59,14 +59,13 @@
                      <i class="fa-solid fa-heart"></i>
                   </div>
                   <div class="offer-item-image">
-
                      <img srcset="./Images/product/fruits_SweetCherry.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1 class="offer-item-title">Sweet Cherry</h1>
+                     <h1>Sweet Cherry</h1>
                      <div class="offer-item-price">
-                        <h2 class="offer-item-price--old">$25.00</h2>
-                        <h3 class="offer-item-price--current">$15.00</h3>
+                        <h2>$25.00</h2>
+                        <h3>$15.00</h3>
                      </div>
                   </div>
                </div>
@@ -82,10 +81,10 @@
                      <img srcset="./Images/product/fruits_RedRespberry.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1 class="offer-item-title">Red Respberry</h1>
+                     <h1>Red Respberry</h1>
                      <div class="offer-item-price">
-                        <h2 class="offer-item-price--old">$25.00</h2>
-                        <h3 class="offer-item-price--current">$15.00</h3>
+                        <h2>$25.00</h2>
+                        <h3>$15.00</h3>
                      </div>
                   </div>
                </div>
@@ -97,14 +96,13 @@
                      <i class="fa-solid fa-heart"></i>
                   </div>
                   <div class="offer-item-image">
-
                      <img srcset="./Images/product/fruits_Watermelon.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1 class="offer-item-title">Watermelon</h1>
+                     <h1>Watermelon</h1>
                      <div class="offer-item-price">
-                        <h2 class="offer-item-price--old">$25.00</h2>
-                        <h3 class="offer-item-price--current">$15.00</h3>
+                        <h2>$25.00</h2>
+                        <h3>$15.00</h3>
                      </div>
                   </div>
                </div>
@@ -116,14 +114,13 @@
                      <i class="fa-solid fa-heart"></i>
                   </div>
                   <div class="offer-item-image">
-
                      <img srcset="./Images/product/fruits_BlackCurrant.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1 class="offer-item-title">Black Currant</h1>
+                     <h1>Black Currant</h1>
                      <div class="offer-item-price">
-                        <h2 class="offer-item-price--old">$25.00</h2>
-                        <h3 class="offer-item-price--current">$15.00</h3>
+                        <h2>$25.00</h2>
+                        <h3>$15.00</h3>
                      </div>
                   </div>
                </div>
@@ -139,10 +136,10 @@
                      <img srcset="./Images/product/fruits_DragonFruit.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1 class="offer-item-title">Dragon Fruit</h1>
+                     <h1>Dragon Fruit</h1>
                      <div class="offer-item-price">
-                        <h2 class="offer-item-price--old">$25.00</h2>
-                        <h3 class="offer-item-price--current">$15.00</h3>
+                        <h2>$25.00</h2>
+                        <h3>$15.00</h3>
                      </div>
                   </div>
                </div>
@@ -158,10 +155,10 @@
                      <img srcset="./Images/product/fruits_GreenApple.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1 class="offer-item-title">Green Apple</h1>
+                     <h1>Green Apple</h1>
                      <div class="offer-item-price">
-                        <h2 class="offer-item-price--old">$25.00</h2>
-                        <h3 class="offer-item-price--current">$15.00</h3>
+                        <h2>$25.00</h2>
+                        <h3>$15.00</h3>
                      </div>
                   </div>
                </div>
@@ -177,10 +174,10 @@
                      <img srcset="./Images/product/fruits_Grape.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1 class="offer-item-title">Grapes</h1>
+                     <h1>Grapes</h1>
                      <div class="offer-item-price">
-                        <h2 class="offer-item-price--old">$25.00</h2>
-                        <h3 class="offer-item-price--current">$15.00</h3>
+                        <h2>$25.00</h2>
+                        <h3>$15.00</h3>
                      </div>
                   </div>
                </div>
@@ -212,7 +209,7 @@
                   </div>
                   <div class="feature-item-content">
                      <h1 class="feature-item-title">Fresh Fruit</h1>
-                     <h2 class="feature-item-price">
+                     <h2>
                         $ 8.00 - $ 22.00
                      </h2>
                   </div>
@@ -223,7 +220,7 @@
                   </div>
                   <div class="feature-item-content">
                      <h1 class="feature-item-title">Fresh Dry Fruit</h1>
-                     <h2 class="feature-item-price">
+                     <h2>
                         $ 8.00 - $ 22.00
                      </h2>
                   </div>
@@ -234,7 +231,7 @@
                   </div>
                   <div class="feature-item-content">
                      <h1 class="feature-item-title">Fresh Salad</h1>
-                     <h2 class="feature-item-price">
+                     <h2>
                         $ 8.00 - $ 22.00
                      </h2>
                   </div>
@@ -245,7 +242,7 @@
                   </div>
                   <div class="feature-item-content">
                      <h1 class="feature-item-title">Oragnic Vegetables</h1>
-                     <h2 class="feature-item-price">
+                     <h2>
                         $ 8.00 - $ 22.00
                      </h2>
                   </div>

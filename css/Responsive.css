@@ -1,5 +1,5 @@
 /* Header */
-@media screen and (max-width: 1023.98px) {
+@media screen and (max-width: 1123.98px) {
    .header {
       padding-top: 0;
       padding-bottom: 70px;
@@ -332,6 +332,20 @@
    }
 }
 
+/* Intro Sectiob */
+@media screen and (max-width: 1023.98px) {
+   .intro {
+      padding: 110px 0;
+   }
+
+}
+
+@media screen and (max-width: 767.98px) {
+   .intro {
+      padding: 60px 0;
+   }
+}
+
 /* Product Section */
 @media screen and (min-width: 1024px) {
    .product-item:hover .product-item-image {
@@ -438,7 +452,7 @@
       gap: 11px;
    }
 
-   .card-item-content-prices {
+   .card-item-content__price {
       margin-bottom: 10px;
    }
 

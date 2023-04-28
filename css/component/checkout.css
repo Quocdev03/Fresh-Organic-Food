@@ -32,6 +32,10 @@
    grid-gap: 30px;
 }
 
+.checkout-form-group {
+   position: relative;
+}
+
 .checkout-form-group input {
    width: 100%;
    transition: all 0.3s linear;
@@ -79,4 +83,15 @@
 
 .checkout-address-form select>option {
    padding: 10px;
+}
+
+.personal_name.invalid+.input-icons .fa-times,
+.personal_phone.invalid+.input-icons .fa-times,
+.personal_email.invalid+.input-icons .fa-times,
+.personal_phone.valid+.input-icons .fa-check,
+.personal_email.valid+.input-icons .fa-check,
+.personal_name.valid+.input-icons .fa-check {
+   opacity: 1;
+   visibility: visible;
+   transform: scale(1);
 }

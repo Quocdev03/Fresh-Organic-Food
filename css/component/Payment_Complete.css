@@ -100,3 +100,9 @@
 .paymentComplete-more-note.not-confirm {
    color: var(--red-color);
 }
+
+.paymentComplete-more__button.is-disable {
+   pointer-events: none;
+   user-select: none;
+   opacity: .5;
+}

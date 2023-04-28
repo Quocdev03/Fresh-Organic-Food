@@ -1,10 +1,15 @@
 window.addEventListener("load", function () {
+   fixedMenu();
+});
+
+window.addEventListener("DOMContentLoaded", function () {
    menuToggle();
    likeItem();
    quantityCart();
-   fixedMenu();
    detailProductImage();
    checkContact();
+   checkPaymentStatus();
+   CheckOutvalidate();
 });
 
 // Menu Toggle
@@ -32,8 +37,7 @@ const likeItem = () => {
    let like = document.querySelectorAll(".offer-item-like");
    let activeLike = "show-like";
    like.forEach((item) => {
-      item.addEventListener("click", function (e) {
-         e.stopPropagation();
+      item.addEventListener("click", function () {
          item.classList.toggle(activeLike);
       });
    });
@@ -46,16 +50,17 @@ const quantityCart = () => {
       const quantity = parseInt(productItem.querySelector('.cart-item-content__counter--number').textContent);
 
       const xhr = new XMLHttpRequest();
-      xhr.open('POST', 'index.php?url=Update_Cart_Quantity');
+      xhr.open('POST', 'index.php?url=Update_Cart_Quantity', true);
       xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
       xhr.onreadystatechange = function () {
-         if (xhr.readyState === 4 && xhr.status === 200) {
-            // Lưu vị trí hiện tại của trang trước khi tải lại
-            const savedPosition = window.scrollY;
-            // Tải lại trang
-            window.location.reload(true);
-            // Đặt vị trí của trang trở lại vị trí được lưu trước đó
-            window.scrollTo(0, savedPosition);
+         if (this.readyState === 4) {
+            if (this.status === 200) {
+               const savedPosition = window.scrollY;
+               // Tải lại trang
+               window.location.reload();
+               // Đặt vị trí của trang trở lại vị trí được lưu trước đó
+               window.scrollTo(0, savedPosition);
+            }
          }
       };
       xhr.send(`productId=${productId}&quantity=${quantity}`);
@@ -68,13 +73,19 @@ const quantityCart = () => {
       const counterNumber = productItem.querySelector(".cart-item-content__counter--number");
       let counterValue = counterNumber ? parseInt(counterNumber.textContent) : 0;
       counterDecrease.addEventListener("click", function (e) {
-         counterValue = counterValue - 1;
+         counterValue -= 1;
+         if (counterValue < 1) {
+            counterValue = 1;
+         }
          counterNumber.textContent = counterValue;
          updateCartQuantity(productItem);
       });
 
       counterIncrease.addEventListener("click", function (e) {
          counterValue += 1;
+         if (counterValue > 30) {
+            counterValue = 30;
+         }
          counterNumber.textContent = counterValue;
          updateCartQuantity(productItem);
       });
@@ -84,25 +95,10 @@ const quantityCart = () => {
 
 // Fixed menu
 const fixedMenu = () => {
-   function debounceFn(func, wait, immediate) {
-      let timeout;
-      return function () {
-         let context = this,
-            args = arguments;
-         let later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-         };
-         let callNow = immediate && !timeout;
-         clearTimeout(timeout);
-         timeout = setTimeout(later, wait);
-         if (callNow) func.apply(context, args);
-      };
-   }
-
    const header = document.querySelector(".header-main");
    const headerHeight = header && header.offsetHeight;
-   window.addEventListener("scroll", debounceFn(function (e) {
+   window.addEventListener("scroll", handleFixedMenu);
+   function handleFixedMenu() {
       const scrollY = window.pageYOffset;
       if (scrollY >= headerHeight) {
          header && header.classList.add("fixed");
@@ -111,7 +107,7 @@ const fixedMenu = () => {
          header && header.classList.remove("fixed");
          document.body.style.paddingTop = 0;
       }
-   }), 300);
+   }
 }
 
 // Detail product image
@@ -136,47 +132,56 @@ const detailProductImage = () => {
 const checkContact = () => {
    const nameInput = document.querySelector(".contact-input-name");
    const mailInput = document.querySelector(".contact-input-mail");
-   nameInput && nameInput.addEventListener("input", function (e) {
-      const value = e.target.value;
+   nameInput && nameInput.addEventListener("input", regexValidateName);
+
+   function regexValidateName(event) {
+      const value = event.target.value;
       const regexName = /^[\p{L} ]{6,40}$/u;
       if (regexName.test(value)) {
-         e.target.classList.add("valid");
-         e.target.classList.remove("invalid");
+         event.target.classList.add("valid");
+         event.target.classList.remove("invalid");
       } else {
-         e.target.classList.remove("valid");
-         e.target.classList.add("invalid");
+         event.target.classList.remove("valid");
+         event.target.classList.add("invalid");
       }
       if (!value) {
-         e.target.classList.remove("invalid");
+         event.target.classList.remove("invalid");
       }
-   });
-   mailInput && mailInput.addEventListener("input", function (e) {
-      const value = e.target.value;
+   }
+
+   mailInput && mailInput.addEventListener("input", regexValidateEmail);
+
+   function regexValidateEmail(event) {
+      const value = event.target.value;
       const regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (regexEmail.test(value.trim(''))) {
-         e.target.classList.add("valid");
-         e.target.classList.remove("invalid");
+         event.target.classList.add("valid");
+         event.target.classList.remove("invalid");
       } else {
-         e.target.classList.remove("valid");
-         e.target.classList.add("invalid");
+         event.target.classList.remove("valid");
+         event.target.classList.add("invalid");
       }
       if (!value) {
-         e.target.classList.remove("invalid");
+         event.target.classList.remove("invalid");
       }
-   });
+   }
 }
 
 // Check Payment Status
 const checkPaymentStatus = () => {
-   const conditionStatus = "Đã Xác Nhận!";
-   const conditionNote = "Đơn Hàng Của Bạn Đã Được Xác Nhận Thành Công, Vui Lòng Chờ Trong Vài Giờ!";
+
+   const conditionStatusConfirm = "Đã Xác Nhận";
+   const conditionStatusCancel = "Đã Bị Huỷ";
+   const conditionNoteConfirm = "Đơn Hàng Của Bạn Đã Được Xác Nhận Thành Công, Vui Lòng Chờ Trong Vài Giờ!";
+   const conditionNoteCancel = "Đơn Hàng Của Bạn Đã Được Huỷ Thành Công!";
+   const cancelOrder = document.querySelector(".paymentComplete-more__button");
    const status = document.querySelector(".paymentComplete-more-item__status");
    const note = document.querySelector(".paymentComplete-more-note");
    const textStatus = status ? status.textContent.trim() : null;
 
    function colorProcessStatus() {
       if (status) {
-         if (textStatus === conditionStatus) {
+         if (textStatus === conditionStatusConfirm) {
             status.classList.remove("not-confirm");
             status.classList.add("confirm");
          } else {
@@ -189,17 +194,96 @@ const checkPaymentStatus = () => {
 
    function colorProcessNote() {
       if (note) {
-         if (textStatus === conditionStatus) {
-            note.textContent = conditionNote;
+         if (textStatus === conditionStatusConfirm) {
+            cancelOrder.classList.add("is-disable");
+            note.textContent = conditionNoteConfirm;
             note.classList.remove("not-confirm");
             note.classList.add("confirm");
-         } else {
+         } else if (textStatus === conditionStatusCancel) {
+            cancelOrder.classList.add("is-disable");
+            note.textContent = conditionNoteCancel;
             note.classList.add("not-confirm");
             note.classList.remove("confirm");
          }
       }
    }
    colorProcessNote();
+
+   cancelOrder && cancelOrder.addEventListener("click", checkButton);
+   function checkButton() {
+      if (confirm("Bạn có chắc chắn muốn huỷ đơn hàng?")) {
+         const MaDH = document.querySelector('input[name="MaDH"]').value;
+         const MaKH = document.querySelector('input[name="MaKH"]').value;
+         const MaThanhToan = document.querySelector('input[name="MaThanhToan"]').value;
+         const xhr = new XMLHttpRequest();
+         xhr.open("POST", "index.php?url=Cancel_Order", true);
+         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+         xhr.onreadystatechange = function () {
+            //yêu cầu đã hoàn tất và dữ liệu đã được trả về
+            if (this.readyState === 4) {
+               if (this.status === 200) {
+                  alert("Đơn hàng đã được huỷ thành công!");
+                  window.location.reload();
+               } else {
+                  alert("Có lỗi xảy ra khi huỷ đơn hàng!");
+               }
+            }
+         };
+         xhr.send("MaDH=" + MaDH + "&MaKH=" + MaKH + "&MaThanhToan=" + MaThanhToan);
+      }
+   }
 }
 
-checkPaymentStatus();
+// Checkout Regex
+function CheckOutvalidate() {
+   const personalEmall = document.querySelector(".personal_email");
+   const personalPhone = document.querySelector(".personal_phone");
+   const personalName = document.querySelector(".personal_name");
+   personalName && personalName.addEventListener("input", regexValidateName);
+   personalEmall && personalEmall.addEventListener("input", regexValidateEmail);
+   personalPhone && personalPhone.addEventListener("input", regexValidatePhone);
+
+   function regexValidateName(event) {
+      const value = event.target.value;
+      const regexName = /^[\p{L} ]{6,40}$/u;
+      if (regexName.test(value)) {
+         event.target.classList.add("valid");
+         event.target.classList.remove("invalid");
+      } else {
+         event.target.classList.remove("valid");
+         event.target.classList.add("invalid");
+      }
+      if (!value) {
+         event.target.classList.remove("invalid");
+      }
+   }
+
+   function regexValidateEmail(event) {
+      const value = event.target.value;
+      const regexEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (regexEmail.test(value.trim(''))) {
+         event.target.classList.add("valid");
+         event.target.classList.remove("invalid");
+      } else {
+         event.target.classList.remove("valid");
+         event.target.classList.add("invalid");
+      }
+      if (!value) {
+         event.target.classList.remove("invalid");
+      }
+   }
+   function regexValidatePhone(event) {
+      const value = event.target.value;
+      const regexEmail = /^(03[2-9]|05[689]|07[0|6-9]|08[1-9]|09[0-9])[0-9]{7}$/;
+      if (regexEmail.test(value.trim(''))) {
+         event.target.classList.add("valid");
+         event.target.classList.remove("invalid");
+      } else {
+         event.target.classList.remove("valid");
+         event.target.classList.add("invalid");
+      }
+      if (!value) {
+         event.target.classList.remove("invalid");
+      }
+   }
+}

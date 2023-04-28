@@ -18,7 +18,7 @@ require_once 'Server/Session.php';
             <p class="contact-desc">Feel free to contact with us any time.</p>
          </div>
          <div class="contact-form">
-            <form action="index.php?url=Request_Contact_Customer" method="post" autocomplete="off">
+            <form action="index.php?url=Request_Contact" method="post" autocomplete="off">
                <div class="contact-form-content">
                   <div class="contact-form-input">
                      <label for="#!">Full Name</label>

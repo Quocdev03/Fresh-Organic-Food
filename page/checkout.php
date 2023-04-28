@@ -12,7 +12,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
    </section>
    <section class="checkout padding-section">
       <div class="container">
-         <form action="index.php?url=Request_Order_Bill" method="POST">
+         <form action="index.php?url=Request_Order" method="POST">
             <div class="checkout-main">
                <div class="checkout-content">
                   <h1 class="checkout-info-heading">Order Checkout</h1>
@@ -22,7 +22,11 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                         <div class="checkout-info-form">
                            <div class="checkout-form-group">
                               <label for="#!">Full Name</label>
-                              <input name="fullname" required type="text" placeholder="Full Name">
+                              <input class="personal_name" name="fullname" required type="text" placeholder="Full Name">
+                              <div class="input-icons">
+                                 <i class="fa fa-check"></i>
+                                 <i class="fa fa-times"></i>
+                              </div>
                            </div>
                            <div class="checkout-form-group">
                               <label for="#!">Birthday</label>
@@ -30,11 +34,19 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                            </div>
                            <div class="checkout-form-group">
                               <label for="#!">Phone Number</label>
-                              <input name="phone" required type="tel" placeholder="Phone Number" pattern="[0-9]{10,11}" required>
+                              <input class="personal_phone" name="phone" required type="tel" placeholder="Phone Number" pattern="[0-9]{10,11}" required>
+                              <div class="input-icons">
+                                 <i class="fa fa-check"></i>
+                                 <i class="fa fa-times"></i>
+                              </div>
                            </div>
                            <div class="checkout-form-group">
                               <label for="#!">Email</label>
-                              <input name="email" required type="mail" placeholder="Email">
+                              <input class="personal_email" name="email" required type="mail" placeholder="Email">
+                              <div class="input-icons">
+                                 <i class="fa fa-check"></i>
+                                 <i class="fa fa-times"></i>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -52,10 +64,6 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                            <select required name="district">
                               <option>Chọn Quận/Huyện</option>
                               <option>Quận Ninh Kiều</option>
-                              <option>Quận Ô Môn</option>
-                              <option>Quận Bình Thủy</option>
-                              <option>Quận Cái Răng</option>
-                              <option>Quận Thốt Nốt</option>
                            </select>
                         </div>
                         <div class="checkout-form-group">
@@ -63,22 +71,30 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                            <input name="moreAddress" required type="text" placeholder="Địa Chỉ cụ thể">
                         </div>
                      </div>
-
                   </div>
                </div>
                <div class="cart-payment">
                   <div class="cart-payment-detail">
                      <div class="cart-payment-detail__header">
                         <div class="cart-payment-detail__title">
-                           <h1>Price Detail</h1>
+                           <h1>Detail</h1>
                         </div>
-
+                        <!-- Lấy ra tên, tính tổng tiền của từng loại sản phẩm -->
+                        <!-- Tạo mảng và lưu trong 1 session mới để dùng cho trang PaymentComplete.php -->
                         <?php
+                        $_SESSION["DetailProduct"] = array();
                         foreach ($_SESSION['cart'] as $product) {
                            $subtotal = $product[3] * $product[4];
+                           $DetailProduct = array(
+                              'productId' => $product[0],
+                              'productName' => $product[1],
+                              'productQuantity' => $product[4],
+                              'productPrice' => $subtotal
+                           );
+                           array_push($_SESSION['DetailProduct'], $DetailProduct);
                            echo ' <div class="cart-payment-detail__sub">
-                        <h1 class="cart-payment-detail__sub--title">' . $product[1] . '</h1>
-                        <span class="cart-payment-detail__sub--price">' . number_format($subtotal) . '<sup>&#8363</sup></span></div>';
+                        <h1>' . $product[1] . '</h1>
+                        <span>' . number_format($subtotal) . '<sup>&#8363</sup></span></div>';
                         }
                         ?>
 
@@ -88,17 +104,20 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                         ?>
                         <h1 class="cart-payment-detail__total--title">Total</h1>
                         <div class="cart-payment-detail__total--list">
-                           <?php
-                           $totalquantity = 0;
-                           foreach ($_SESSION['cart'] as $product) {
-                              $totalquantity = $totalquantity + $product[4];
-                           }
-                           ?>
                            <div class="cart-payment-detail__total--item">
                               <h1>Product</h1>
+                              <!-- Lấy tất cả số lượng sản phẩm có trong giỏ hàng -->
+                              <?php
+                              $totalquantity = 0;
+                              foreach ($_SESSION['cart'] as $product) {
+                                 $totalquantity = $totalquantity + $product[4];
+                              }
+                              ?>
                               <span><?php echo number_format($totalquantity) ?></span>
                            </div>
                            <div class="cart-payment-detail__total--item">
+                              <h1>Price</h1>
+                              <!-- Tính tổng tất tiền tất cả sản phẩm trong giỏ hàng -->
                               <?php
                               $totalprice = 0;
                               foreach ($_SESSION['cart'] as $product) {
@@ -106,16 +125,19 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                                  $totalprice += $subtotal;
                               }
                               ?>
-                              <h1>Price</h1>
                               <span><?php echo number_format($totalprice) ?><sup>&#8363</sup></span>
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="cart-payment-checkout">
+                     <!-- Truyền 'Id','Tên','Giá','Số Lượng' của từng sản phẩm, và tổng 'tiền','số lượng' của tất cả sản phẩm sang trang Request_Order -->
                      <input type="hidden" value="<?php echo $product[0] ?>" name="productId">
-                     <input type="hidden" value="<?php echo $totalprice ?>" name="productTotalPrice">
-                     <input type="hidden" value="<?php echo $totalquantity ?>" name="productTotalQuantity">
+                     <input type="hidden" value="<?php echo $product[1] ?>" name="productName">
+                     <input type="hidden" value="<?php echo $product[3] ?>" name="productPrice">
+                     <input type="hidden" value="<?php echo $product[4] ?>" name="productQuantity">
+                     <input type="hidden" value="<?php echo $totalprice ?>" name="TotalPrice">
+                     <input type="hidden" value="<?php echo $totalquantity ?>" name="TotalQuantity">
                      <button name="Request_Info" type="submit" class="btn-primary">Order Now</button>
                   </div>
                </div>
@@ -132,7 +154,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
             <img class="cartempty-image" srcset="images/cart/cart-empty2x.png 2x" alt="">
             <h1 class="cartempty-title">Your Cart Is <span>Empty!</span></h1>
             <p class="cartempty-desc">Must add item on the cart before you process to check out!</p>
-            <a class="btn-primary" href="index.php?url=product">Return to product</a>
+            <a class="btn-primary" href="index.php?url=Product">Return to product</a>
          </div>
       </div>
    </section>

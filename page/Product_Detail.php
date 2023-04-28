@@ -46,7 +46,7 @@ if ((isset($_GET['url']) && $_GET['url'] == 'Product_Detail')) {
                   </div>
                   <div class="detail-image-button">
                      <button type="submit" name="productAdd" value="Add To Cart" class="btn-outline ">Add To Cart</button>
-                     <a href="index.php?url=product" class="btn-primary">Product</a>
+                     <a href="index.php?url=Product" class="btn-primary">Product</a>
                   </div>
                </div>
                <div class="detail-content">
@@ -73,13 +73,13 @@ if ((isset($_GET['url']) && $_GET['url'] == 'Product_Detail')) {
                         <h1>About the Product</h1>
                      </div>
                      <div class="detail-content__about--bottom">
-                        <span class="detail-content__about--desc">100% Organic Food</span>
-                        <span class="detail-content__about--desc">Grown without synthetic chemicals</span>
-                        <span class="detail-content__about--desc">No artificial flavors or preservatives</span>
-                        <span class="detail-content__about--desc">Delicious and nutritious</span>
-                        <span class="detail-content__about--desc">Environmentally friendly</span>
-                        <span class="detail-content__about--desc">Certified organic</span>
-                        <span class="detail-content__about--desc">High-quality and pure</span>
+                        <span>100% Organic Food</span>
+                        <span>Grown without synthetic chemicals</span>
+                        <span>No artificial flavors or preservatives</span>
+                        <span>Delicious and nutritious</span>
+                        <span>Environmentally friendly</span>
+                        <span>Certified organic</span>
+                        <span>High-quality and pure</span>
                      </div>
                   </div>
                </div>

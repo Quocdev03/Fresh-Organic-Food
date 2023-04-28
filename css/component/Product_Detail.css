@@ -162,7 +162,7 @@
    margin-bottom: 15px;
 }
 
-.detail-content__about--desc {
+.detail-content__about--bottom span {
    color: var(--text-color);
    font-size: var(--large-font-size);
    line-height: var(--large-line-height);

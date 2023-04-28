@@ -24,12 +24,9 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                   <h1 class="cart-item-content__title">
                      ' . $product[1] . '
                   </h1>
-                  <div class="card-item-content-prices">
-                     <div class="cart-item-content__price">
+                  <div class="card-item-content__price">
                         <h2>
-                           ' . number_format($product[3]) . '
-                        </h2><sup>&#8363</sup>
-                     </div>
+                           ' . number_format($product[3]) . '&#8363</h2>
                      <span class="cart-item-content__category">/kg</span>
                   </div>
                   <div class="cart-item-content__quantity">
@@ -56,15 +53,15 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                <div class="cart-payment-detail">
                   <div class="cart-payment-detail__header">
                      <div class="cart-payment-detail__title">
-                        <h1>Price Detail</h1>
+                        <h1>Detail</h1>
                      </div>
 
                      <?php
                      foreach ($_SESSION['cart'] as $product) {
                         $subtotal = $product[3] * $product[4];
                         echo ' <div class="cart-payment-detail__sub">
-                        <h1 class="cart-payment-detail__sub--title">' . $product[1] . '</h1>
-                        <span class="cart-payment-detail__sub--price">' . number_format($subtotal) . '<sup>&#8363</sup></span></div>';
+                        <h1>' . $product[1] . '</h1>
+                        <span>' . number_format($subtotal) . '<sup>&#8363</sup></span></div>';
                      }
                      ?>
 

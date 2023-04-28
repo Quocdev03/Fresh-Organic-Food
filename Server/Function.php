@@ -1,4 +1,5 @@
 <?php
+require_once "Server/Connect.php";
 
 function TongKhachHang($connect)
 {
@@ -17,11 +18,11 @@ function ThemKhachHang($connect, $fullname, $address, $birthday, $phone, $email)
    return mysqli_query($connect, $sql_customer);
 }
 
-function XacDinhMaKhachHang($connect, $fullname, $address, $birthday, $phone, $email)
-{
-   $sql_customer = "SELECT * FROM khachhang WHERE HoTen ='" . $fullname . "' and DiaChi='" . $address . "'and NgaySinh='" . $birthday . "' and Sdt='" . $phone . "' and Email='" . $email . "'";
-   return  mysqli_query($connect, $sql_customer);
-}
+// function XacDinhMaKhachHang($connect, $fullname, $address, $birthday, $phone, $email)
+// {
+//    $sql_customer = "SELECT * FROM khachhang WHERE HoTen ='" . $fullname . "' and DiaChi='" . $address . "'and NgaySinh='" . $birthday . "' and Sdt='" . $phone . "' and Email='" . $email . "'";
+//    return  mysqli_query($connect, $sql_customer);
+// }
 
 function TongDonHang($connect)
 {
@@ -29,20 +30,34 @@ function TongDonHang($connect)
    return  mysqli_query($connect, $sql);
 }
 
-function ThemDonHang($connect, $fullname, $address, $birthday, $phone, $email, $price, $currentTime)
+function ThemDonHang($connect, $price, $currentTime)
 {
-   $callBack2 = XacDinhMaKhachHang($connect, $fullname, $address, $birthday, $phone, $email);
-   $resultCallBack2 = mysqli_fetch_array($callBack2);
-   $maKH = $resultCallBack2["MaKH"];
-   $callBack = TongDonHang($connect);
-   $resultCallBack = mysqli_fetch_array($callBack);
-   $createPaymentCode = $resultCallBack["Count(*)"] + 1;
-   $getPaymentCode = "FOF000" . $createPaymentCode;
-   $createNumber = $resultCallBack["Count(*)"] + 1;
-   $createId = "DH" . $createNumber;
+   $goiHam1 = TongKhachHang($connect);
+   $ketQuaHam1 = mysqli_fetch_array($goiHam1);
+   $taoSo1 = $ketQuaHam1["Count(*)"];
+   $layMaKhachHang = "KH" . $taoSo1;
+
+   $goiHam2 = TongDonHang($connect);
+   $ketQuaHam2 = mysqli_fetch_array($goiHam2);
+   $taoSo2 = $ketQuaHam2["Count(*)"] + 1;
+   $taoMaDonHang = "DH" . $taoSo2;
+   $taoMaThanhToan = "FOF" . $taoSo2;
+
    $sql_order = "INSERT INTO donhang (MaDH, MaKH, TgLap, TTrang, Tien, MaThanhToan)
-                  VALUES ('$createId', '$maKH', '$currentTime', 'Chờ Xác Nhận', '$price','$getPaymentCode')";
-   return mysqli_query($connect, $sql_order);
+                  VALUES ('$taoMaDonHang', '$layMaKhachHang', '$currentTime', 'Chờ Xác Nhận', '$price','$taoMaThanhToan')";
+   $success = mysqli_query($connect, $sql_order);
+
+   if ($success) {
+      return array('MaKH' => $layMaKhachHang, 'MaDH' => $taoMaDonHang, 'TgLap' => $currentTime, 'MaThanhToan' => $taoMaThanhToan, 'TTrang' => 'Chờ Xác Nhận');
+   } else {
+      return false;
+   }
+}
+
+function HuyDonHang($connect, $MaDH, $MaKH, $MaThanhToan)
+{
+   $sql_cancel = "UPDATE donhang SET TTrang ='Đã Bị Huỷ' WHERE MaDH = '$MaDH' AND MaKH = '$MaKH' AND MaThanhToan = '$MaThanhToan'";
+   return mysqli_query($connect, $sql_cancel);
 }
 
 function TongYKienKhachHang($connect)
@@ -60,4 +75,11 @@ function YKienKhachHang($connect, $fullname, $email, $message)
    $sql_customer = "INSERT INTO ykienkhachhang (MaYK, HoTen, Email, YKien)
                      VALUES ('$createId', '$fullname', '$email','$message')";
    return mysqli_query($connect, $sql_customer);
+}
+
+function ThemHoaDon($connect, $MaDH, $MaSP, $Sl)
+{
+   $sql_bill = "INSERT INTO hoadon (MaDH, MaSP, Sl)
+   VALUES ('$MaDH', '$MaSP', '$Sl')";
+   return mysqli_query($connect, $sql_bill);
 }

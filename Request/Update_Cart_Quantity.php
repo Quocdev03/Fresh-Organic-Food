@@ -15,7 +15,6 @@ if (isset($_POST['productId']) && isset($_POST['quantity'])) {
             $product[4] = $quantity;
          }
       }
-      $_SESSION['cart'] = array_values($_SESSION['cart']);
    }
 } else {
    require 'Page/404.php';

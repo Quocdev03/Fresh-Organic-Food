@@ -44,31 +44,31 @@
             <a href="#!" class="footer-link">Terms & Conditions</a>
          </li>
          <li class="footer-item">
-            <a href="#!" class="footer-link">Contact Us</a>
+            <a href="index.php?url=Contact" class="footer-link">Contact Us</a>
          </li>
          <li class="footer-item">
             <a href="#!" class="footer-link">Site Map</a>
+         </li>
+         <li class="footer-item">
+            <a href="#!" class="footer-link">Admin</a>
          </li>
       </ul>
       <ul class="footer-column">
          <h1 class="footer-column-heading">Products</h1>
          <li class="footer-item">
-            <a href="#!" class="footer-link">Meat</a>
+            <a href="index.php?url=Product" class="footer-link">Meat</a>
          </li>
          <li class="footer-item">
-            <a href="#!" class="footer-link">Vegetables</a>
+            <a href="index.php?url=Product" class="footer-link">Vegetables</a>
          </li>
          <li class="footer-item">
-            <a href="#!" class="footer-link">Fruits</a>
+            <a href="index.php?url=Product" class="footer-link">Fruits</a>
          </li>
          <li class="footer-item">
-            <a href="#!" class="footer-link">Fast Food</a>
+            <a href="index.php?url=Product" class="footer-link">Fast Food</a>
          </li>
          <li class="footer-item">
-            <a href="#!" class="footer-link">Fried Food</a>
-         </li>
-         <li class="footer-item">
-            <a href="#!" class="footer-link">Food</a>
+            <a href="index.php?url=Product" class="footer-link">Food</a>
          </li>
       </ul>
       <ul class="footer-column">
@@ -94,16 +94,16 @@
          <span>© 2023 Madbrains. All Rights Reserved.</span>
       </div>
       <div class="footer-social">
-         <a href="#!" class="footer-social-link">
+         <a target="_blank" href="#!" class="footer-social-link">
             <img src="./Images/icon/facebook-icon.svg" alt="">
          </a>
-         <a href="#!" class="footer-social-link">
+         <a target="_blank" href="#!" class="footer-social-link">
             <img src="./Images/icon/twiter-icon.svg" alt="">
          </a>
-         <a href="#!" class="footer-social-link">
+         <a target="_blank" href="#!" class="footer-social-link">
             <img src="./Images/icon/instagram-icon.svg" alt="">
          </a>
-         <a href="#!" class="footer-social-link">
+         <a target="_blank" href="#!" class="footer-social-link">
             <img src="./Images/icon/pinterest-icon.svg" alt="">
          </a>
       </div>

@@ -92,12 +92,6 @@
    transform: scale(1);
 }
 
-.input-wrapper {
-   position: relative;
-   width: 300px;
-   margin: 25px auto;
-}
-
 .input-icons {
    position: absolute;
    top: 67%;
