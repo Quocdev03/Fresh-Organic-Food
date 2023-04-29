@@ -5,6 +5,8 @@ window.addEventListener('beforeunload', function () {
    sessionStorage.setItem('savedPosition', savedPosition);
 });
 window.addEventListener('load', function () {
+   const wrapper = document.querySelector(".wrapper");
+   wrapper.classList.remove("hidden");
    // Lấy vị trí được lưu từ sessionStorage
    const savedPosition = sessionStorage.getItem('savedPosition');
    // Nếu có vị trí được lưu, đặt vị trí của trang trở lại vị trí được lưu trước đó

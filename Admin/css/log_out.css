@@ -1,0 +1,27 @@
+.logout .logout_an {
+    display: none;
+}
+
+.logout_an {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 26px;
+    right: 110px;
+    width: 200px;
+    height: 50px;
+    background-color: rgba(162, 94, 121, 0.7);
+    border: 3px solid rgb(181, 7, 7);
+    padding-top: 7px;
+    padding-left: 20px;
+    color: aliceblue;
+    border-radius: 10px 0px 50px 10px;
+}
+
+.logout_an button {
+    margin-top: 7px;
+}
+
+.logout :hover .logout_an {
+    display: block;
+
+}

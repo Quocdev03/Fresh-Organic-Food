@@ -190,9 +190,9 @@ const checkContact = () => {
 const checkPaymentStatus = () => {
 
    const conditionStatusConfirm = "Đã Xác Nhận";
-   const conditionStatusCancel = "Đã Bị Huỷ";
+   const conditionStatusCancel = "Đã Bị Hủy";
    const conditionNoteConfirm = "Đơn Hàng Của Bạn Đã Được Xác Nhận Thành Công, Vui Lòng Chờ Trong Vài Giờ!";
-   const conditionNoteCancel = "Đơn Hàng Của Bạn Đã Được Huỷ Thành Công!";
+   const conditionNoteCancel = "Đơn Hàng Của Bạn Đã Được Hủy Thành Công!";
    const cancelOrder = document.querySelector(".paymentComplete-more__button");
    const status = document.querySelector(".paymentComplete-more-item__status");
    const note = document.querySelector(".paymentComplete-more-note");

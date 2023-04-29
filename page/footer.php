@@ -50,7 +50,7 @@
             <a href="#!" class="footer-link">Site Map</a>
          </li>
          <li class="footer-item">
-            <a href="#!" class="footer-link">Admin</a>
+            <a href="Admin/index.php" class="footer-link">Admin</a>
          </li>
       </ul>
       <ul class="footer-column">

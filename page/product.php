@@ -69,7 +69,7 @@ $currentTime = date('Y-m-d H:i:s');
                   </div>';
                   }
                } else {
-                  require "page/404.php";
+                  echo '';
                }
                ?>
             </div>

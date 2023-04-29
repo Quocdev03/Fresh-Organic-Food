@@ -1,0 +1,11 @@
+.info-1 {
+    margin: 0;
+    padding: 0;
+    height: 480px;
+    width: 700px;
+    background-color: rgba(232, 232, 232, 1);
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border: 2px solid rgb(129, 47, 47);
+}

@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.login {
+    background-image: url('../picture/login.jpg');
+}
+
+.login_flex {
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+    color: rgb(18, 14, 14);
+    font-size: 18px;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.lodin_c {
+    max-width: 500px;
+    max-height: 400px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.lodin_c .login_b {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    border: 1px solid #bdb9b9;
+    margin: 2px 0 10px 0;
+}
+
+.lodin_c .login_t {
+    margin-top: 5px;
+    text-align: center;
+    color: #383838;
+    font-size: 35px;
+}
+
+.lodin_c form {
+    padding: 10px 30px 40px;
+}
+
+.lodin_c .login_b .form-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 6px;
+}
+
+.login_f {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 24px;
+    color: rgb(160, 33, 33);
+}
+
+.sub {
+    background: none;
+    padding: 10px 30px;
+    text-align: center;
+    background: #0c6ee7;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}

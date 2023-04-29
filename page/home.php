@@ -59,10 +59,10 @@
                      <i class="fa-solid fa-heart"></i>
                   </div>
                   <div class="offer-item-image">
-                     <img srcset="./Images/product/fruits_SweetCherry.png 2x" alt="">
+                     <img srcset="./Images/product/fruits_banana.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1>Sweet Cherry</h1>
+                     <h1>Banana</h1>
                      <div class="offer-item-price">
                         <h2>$25.00</h2>
                         <h3>$15.00</h3>
@@ -77,11 +77,10 @@
                      <i class="fa-solid fa-heart"></i>
                   </div>
                   <div class="offer-item-image">
-
-                     <img srcset="./Images/product/fruits_RedRespberry.png 2x" alt="">
+                     <img srcset="./Images/product/vet_Carrot.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1>Red Respberry</h1>
+                     <h1>Carrot</h1>
                      <div class="offer-item-price">
                         <h2>$25.00</h2>
                         <h3>$15.00</h3>
@@ -96,10 +95,10 @@
                      <i class="fa-solid fa-heart"></i>
                   </div>
                   <div class="offer-item-image">
-                     <img srcset="./Images/product/fruits_Watermelon.png 2x" alt="">
+                     <img srcset="./Images/product/vet_Pineapple.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1>Watermelon</h1>
+                     <h1>Pineapple</h1>
                      <div class="offer-item-price">
                         <h2>$25.00</h2>
                         <h3>$15.00</h3>
@@ -133,10 +132,10 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./Images/product/fruits_DragonFruit.png 2x" alt="">
+                     <img srcset="./Images/product/vet_RedTomatoes.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1>Dragon Fruit</h1>
+                     <h1>Red Tomatoes</h1>
                      <div class="offer-item-price">
                         <h2>$25.00</h2>
                         <h3>$15.00</h3>
@@ -171,10 +170,10 @@
                   </div>
                   <div class="offer-item-image">
 
-                     <img srcset="./Images/product/fruits_Grape.png 2x" alt="">
+                     <img srcset="./Images/product/vet_Broccoli.png 2x" alt="">
                   </div>
                   <div class="offer-item-content">
-                     <h1>Grapes</h1>
+                     <h1>Broccoli</h1>
                      <div class="offer-item-price">
                         <h2>$25.00</h2>
                         <h3>$15.00</h3>

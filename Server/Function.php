@@ -18,12 +18,6 @@ function ThemKhachHang($connect, $fullname, $address, $birthday, $phone, $email)
    return mysqli_query($connect, $sql_customer);
 }
 
-// function XacDinhMaKhachHang($connect, $fullname, $address, $birthday, $phone, $email)
-// {
-//    $sql_customer = "SELECT * FROM khachhang WHERE HoTen ='" . $fullname . "' and DiaChi='" . $address . "'and NgaySinh='" . $birthday . "' and Sdt='" . $phone . "' and Email='" . $email . "'";
-//    return  mysqli_query($connect, $sql_customer);
-// }
-
 function TongDonHang($connect)
 {
    $sql = "SELECT Count(*) FROM donhang ";
@@ -44,11 +38,11 @@ function ThemDonHang($connect, $price, $currentTime)
    $taoMaThanhToan = "FOF" . $taoSo2;
 
    $sql_order = "INSERT INTO donhang (MaDH, MaKH, TgLap, TTrang, Tien, MaThanhToan)
-                  VALUES ('$taoMaDonHang', '$layMaKhachHang', '$currentTime', 'Chờ Xác Nhận', '$price','$taoMaThanhToan')";
+                  VALUES ('$taoMaDonHang', '$layMaKhachHang', '$currentTime', 'Chưa Xác Nhận', '$price','$taoMaThanhToan')";
    $success = mysqli_query($connect, $sql_order);
 
    if ($success) {
-      return array('MaKH' => $layMaKhachHang, 'MaDH' => $taoMaDonHang, 'TgLap' => $currentTime, 'MaThanhToan' => $taoMaThanhToan, 'TTrang' => 'Chờ Xác Nhận');
+      return array('MaKH' => $layMaKhachHang, 'MaDH' => $taoMaDonHang, 'TgLap' => $currentTime, 'MaThanhToan' => $taoMaThanhToan, 'TTrang' => 'Chưa Xác Nhận');
    } else {
       return false;
    }
@@ -56,7 +50,7 @@ function ThemDonHang($connect, $price, $currentTime)
 
 function HuyDonHang($connect, $MaDH, $MaKH, $MaThanhToan)
 {
-   $sql_cancel = "UPDATE donhang SET TTrang ='Đã Bị Huỷ' WHERE MaDH = '$MaDH' AND MaKH = '$MaKH' AND MaThanhToan = '$MaThanhToan'";
+   $sql_cancel = "UPDATE donhang SET TTrang ='Đã Bị Hủy' WHERE MaDH = '$MaDH' AND MaKH = '$MaKH' AND MaThanhToan = '$MaThanhToan'";
    return mysqli_query($connect, $sql_cancel);
 }
 

@@ -1,0 +1,283 @@
+.item {
+    display: inline-flex;
+    width: 100%;
+    gap: 20px;
+    border: 1px solid;
+    padding: 10px;
+    background-color: rgba(36, 233, 233, 0.8);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 30px;
+
+}
+
+.admin {
+    display: inline-block;
+    border: 1px solid;
+    flex-basis: 15%;
+    height: 45px;
+    font-size: 25px;
+    background-color: rgb(254, 184, 192);
+    color: rebeccapurple;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-weight: bolder;
+}
+
+.big {
+    display: inline-flex;
+    width: 100%;
+    border: 1px solid;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 30px;
+}
+
+.top-right {
+    display: inline-flex;
+    width: 90%;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.left-1 {
+    width: 100px;
+}
+
+.item a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(12, 80, 176);
+    font-weight: bolder;
+
+}
+
+
+body {
+    background-image: url('../picture/background5.jpg');
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.bottom {
+    display: flex;
+    border: 1px solid;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.left {
+    flex-basis: 13.5%;
+    border: 1px solid;
+}
+
+.right {
+    flex-basis: 87%;
+    border: 1px solid;
+
+}
+
+.top {
+    padding: 5px;
+}
+
+
+
+.left-left {
+    height: 700px;
+    background-color: rgba(127, 255, 212, 0.7);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none
+}
+
+.left-left>li>a {
+    color: rgb(31, 16, 106);
+}
+
+.left-left>li {
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-size: 25px;
+    padding-bottom: 20px;
+    background-color: rgb(255, 240, 240);
+    padding-top: 10px;
+}
+
+.left-left>li:hover {
+    font-size: 30px;
+    background-color: rgb(255, 153, 0);
+}
+
+
+.left-left>li>a:hover {
+    color: white;
+
+}
+
+.top-right a:hover,
+.top-left>a:hover {
+    color: rgb(223, 73, 73);
+}
+
+
+.down {
+    display: flex;
+    width: 500px;
+    padding-top: 30px;
+    margin-left: 20px;
+    gap: 10px;
+    margin-bottom: 50px;
+    color: green;
+    font-size: 20px;
+}
+
+.down select {
+    width: 60px;
+    height: 25px;
+    font-size: 15px;
+}
+
+.down button {
+    width: 80px;
+    height: 25px;
+    border-radius: 30px;
+}
+
+
+.body-sp {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 255, 255, 0.7);
+    height: 700px;
+    box-sizing: border-box;
+}
+
+.funcsp {
+    display: flex;
+    gap: 2px;
+}
+
+.funcsp button {
+    color: red;
+    margin: 20px;
+    font-size: 15px;
+    background-color: rgb(127, 255, 212);
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.table,
+.table-3 {
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 97%;
+}
+
+.table th,
+.table-3 th {
+    height: 30px;
+}
+
+.table th,
+.table-3 th,
+td {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 0;
+    text-align: center;
+}
+
+.table th,
+.table td {
+    width: 15%;
+}
+
+.table:first-child,
+.table-3:first-child {
+    border-top: 1px solid black;
+}
+
+.table:last-child,
+.table-3:last-child {
+    border-right: 1px solid black;
+}
+
+.table-3 th,
+.table-3 td {
+    width: 20%;
+}
+
+.click-page {
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    gap: 15px
+}
+
+.click-page>div {
+    font-size: 27px;
+    color: rgb(82, 191, 187);
+}
+
+.click-page a {
+    margin: 0;
+    border: 1px solid black;
+    font-size: 20px;
+    height: 20px;
+    width: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: yellow;
+    color: rgb(0, 0, 0);
+}
+
+.red {
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    pointer-events: none;
+    cursor: default;
+    font-size: 20px;
+    height: 20px;
+    width: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgb(141, 87, 12);
+}
+
+table tr:nth-child(odd) {
+    background-color: rgb(215, 212, 212);
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+table tr:nth-child(1) {
+    background-color: skyblue;
+}
+
+img {
+    max-width: 100px;
+}
+
+button img {
+    max-width: 18px;
+}
+
+#button_n1 {
+    width: 50px;
+}

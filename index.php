@@ -27,11 +27,6 @@ if (!isset($_GET["url"])) {
 </head>
 
 <body>
-   <div class="page-loader">
-      <span></span>
-      <span></span>
-      <span></span>
-   </div>
 
    <div class="wrapper hidden">
 
@@ -110,7 +105,6 @@ if (!isset($_GET["url"])) {
 
    </div>
 
-   <script src="./Script/Animation.js"></script>
    <script src="./Script/Reload.js"></script>
    <script src="./Script/App.js"></script>
 </body>

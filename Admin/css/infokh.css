@@ -1,0 +1,53 @@
+.info {
+    margin: 0;
+    padding: 0;
+    height: 450px;
+    width: 600px;
+    background-color: rgba(232, 232, 232, 1);
+    position: absolute;
+    top: 29%;
+    left: 20%;
+    border: 2px solid rgb(129, 47, 47);
+}
+
+.XX {
+    display: flex;
+    background-color: rgb(211, 69, 69);
+    justify-content: end;
+    gap: 150px;
+}
+
+.X1 {
+    font-size: 20px;
+    padding-top: 10px;
+    color: rgb(152, 227, 240);
+}
+
+.X {
+    text-align: end;
+    padding-right: 30px;
+    padding-top: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.X a {
+    color: yellow;
+}
+
+.info_KH1 {
+    padding-top: 30px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    color: rgb(20, 85, 85);
+    font-size: 25px;
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+
+.info_KH1 div {
+    border-bottom: 1px dashed;
+    padding-bottom: 20px;
+}

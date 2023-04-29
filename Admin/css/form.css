@@ -1,0 +1,92 @@
+.form {
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    background-color: white;
+    width: 900px;
+}
+
+.b1 {
+    position: absolute;
+    top: 12%;
+    left: 23%;
+}
+
+.fo-body {
+    height: 400px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 33%;
+    font-size: 20px;
+}
+
+.fo-body1 {
+    display: flex;
+    gap: 27%;
+    margin-left: 7%;
+    margin-top: 2%;
+}
+
+.fo-body1-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 45%;
+}
+
+.fo-body2 {
+    margin-left: 5%;
+    display: flex;
+    gap: 33%;
+}
+
+.fo-text {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+    background-color: aquamarine;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    padding-right: 40px;
+    gap: 31%;
+}
+
+.fo-bu {
+    background-color: blue;
+    height: 100px;
+    text-align: center;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.fo-bu button {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+}
+
+#mota {
+    width: 100%;
+    height: 150px;
+}
+
+.fo-body1-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.update-1-2 {
+    display: flex;
+    gap: 20px;
+}
+
+.fo-bo {
+    height: 400px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    font-size: 20px;
+}
