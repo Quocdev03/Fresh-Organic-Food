@@ -1,15 +1,6 @@
-.info {
-    margin: 0;
-    padding: 0;
-    height: 450px;
-    width: 600px;
-    background-color: rgba(232, 232, 232, 1);
-    position: absolute;
-    top: 29%;
-    left: 20%;
-    border: 2px solid rgb(129, 47, 47);
-}
+/* Trang Info khách hàng và info hóa đơn */
 
+/* Thanh Đóng tab */
 .XX {
     display: flex;
     background-color: rgb(211, 69, 69);
@@ -35,6 +26,8 @@
     color: yellow;
 }
 
+/* Info Khach Hang */
+
 .info_KH1 {
     padding-top: 30px;
     padding-left: 50px;
@@ -50,4 +43,29 @@
 .info_KH1 div {
     border-bottom: 1px dashed;
     padding-bottom: 20px;
+}
+
+/* Info Hoa Don */
+.info {
+    margin: 0;
+    padding: 0;
+    height: 450px;
+    width: 600px;
+    background-color: rgba(232, 232, 232, 1);
+    position: absolute;
+    top: 29%;
+    left: 20%;
+    border: 2px solid rgb(129, 47, 47);
+}
+
+.info-1 {
+    margin: 0;
+    padding: 0;
+    height: 480px;
+    width: 700px;
+    background-color: rgba(232, 232, 232, 1);
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    border: 2px solid rgb(129, 47, 47);
 }

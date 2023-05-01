@@ -73,8 +73,6 @@ $dem=Dem($ro,biendonhang);
             { ?> <div class="check_2">
                 <button type="submit" name="huydon">Hủy đơn</button>
             </div>  <?php  }?>
-            
-            
             <div> <button type="submit" name="don_huy">Xem Đơn Đã Hủy</button></div>
             <div><button type="submit" name="huy1_"  id="button_n1"><img src="picture/Re.png" alt=""></button></a></div>
         </div>

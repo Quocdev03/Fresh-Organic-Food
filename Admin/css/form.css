@@ -1,15 +1,12 @@
+/* Trang form insert và form update */
+
+/* Cả hai form đều có  */
 .form {
     margin: 0;
     padding: 0;
     border: 1px solid black;
     background-color: white;
     width: 900px;
-}
-
-.b1 {
-    position: absolute;
-    top: 12%;
-    left: 23%;
 }
 
 .fo-body {
@@ -64,6 +61,14 @@
     width: 120px;
     height: 40px;
     font-size: 20px;
+}
+
+
+/* + Css From update (chỉ form update có0 */
+.b1 {
+    position: absolute;
+    top: 12%;
+    left: 23%;
 }
 
 #mota {

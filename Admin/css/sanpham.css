@@ -1,3 +1,5 @@
+/* các Nút Chức năng của Trang Sản Phẩm */
+
 .funcsp a {
     color: red;
     margin: 20px;
@@ -12,14 +14,6 @@
     cursor: pointer;
     box-sizing: border-box;
     border: 2px solid black;
-}
-
-.body-sp {
-    margin: 0;
-    padding: 0;
-    background-color: rgba(0, 255, 255, 0.7);
-    height: 700px;
-    box-sizing: border-box;
 }
 
 .funcsp {

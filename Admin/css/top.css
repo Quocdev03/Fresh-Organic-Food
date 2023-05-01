@@ -1,0 +1,60 @@
+/* Trang top */
+
+.item {
+    display: inline-flex;
+    width: 100%;
+    gap: 20px;
+    border: 1px solid;
+    padding: 10px;
+    background-color: rgba(36, 233, 233, 0.8);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 30px;
+
+}
+
+.admin {
+    display: inline-block;
+    border: 1px solid;
+    flex-basis: 15%;
+    height: 45px;
+    font-size: 25px;
+    background-color: rgb(254, 184, 192);
+    color: rebeccapurple;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-weight: bolder;
+}
+
+.big {
+    display: inline-flex;
+    width: 100%;
+    border: 1px solid;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 30px;
+}
+
+.top-right {
+    display: inline-flex;
+    width: 90%;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.left-1 {
+    width: 100px;
+}
+
+.item a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(12, 80, 176);
+    font-weight: bolder;
+
+}
+
+.top-right a:hover,
+.top-left>a:hover {
+    color: rgb(223, 73, 73);
+}

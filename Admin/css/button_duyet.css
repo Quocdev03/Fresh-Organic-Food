@@ -1,0 +1,22 @@
+/* Trang Hoa Don va Y Kien Khach Hang */
+
+.check {
+    display: flex;
+}
+
+.check button,
+.check_2 button {
+    height: 30px;
+    font-size: 15px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.check button {
+    width: 150px;
+}
+
+.check_2 button {
+    width: 100px;
+}

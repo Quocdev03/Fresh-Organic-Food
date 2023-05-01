@@ -17,15 +17,20 @@ if (!$_SESSION['user'] || $_SESSION['quyen'] != 1) {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/button_duyet.css">
+      <link rel="stylesheet" href="css/clickpage.css">
       <link rel="stylesheet" href="css/donhang.css">
-      <link rel="stylesheet" href="css/danhgia.css">
-      <link rel="stylesheet" href="css/infokh.css">
-      <link rel="stylesheet" href="css/infohd.css">
-      <link rel="stylesheet" href="css/root.css">
+      <link rel="stylesheet" href="css/index.css">
       <link rel="stylesheet" href="css/form.css">
       <link rel="stylesheet" href="css/sanpham.css">
       <link rel="stylesheet" href="css/sea_sp.css">
       <link rel="stylesheet" href="css/log_out.css">
+      <link rel="stylesheet" href="css/info_donhang.css">
+      <link rel="stylesheet" href="css/left.css">
+      <link rel="stylesheet" href="css/quanlygia-doanhthu.css">
+      <link rel="stylesheet" href="css/root.css">
+      <link rel="stylesheet" href="css/table.css">
+      <link rel="stylesheet" href="css/top.css">
       <title>Document</title>
    </head>
 

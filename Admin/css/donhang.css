@@ -1,60 +1,4 @@
-.check {
-    display: flex;
-}
-
-.check button {
-    width: 150px;
-    height: 30px;
-    font-size: 15px;
-    border-radius: 30px;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
-.check_2 button {
-    width: 100px;
-    height: 30px;
-    font-size: 15px;
-    border-radius: 30px;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
-.table-1 th,
-.table-1 td {
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    margin: 0;
-    width: 17%;
-    text-align: center;
-    height: 50px;
-}
-
-.table-1:first-child {
-    border-top: 1px solid black;
-}
-
-.table-1:last-child {
-    border-right: 1px solid black;
-}
-
-.table-1 tr:nth-child(odd) {
-    background-color: rgb(215, 212, 212);
-}
-
-.table-1 tr:nth-child(even) {
-    background-color: rgb(255, 255, 255);
-}
-
-.table-1 tr:nth-child(1) {
-    background-color: skyblue;
-}
-
-.table-1 {
-    margin-left: 10px;
-    margin-top: 35px;
-    width: 97%;
-}
+/*các item và button trong bảng Trang Đơn Hàng */
 
 .See {
     display: flex;
@@ -70,4 +14,8 @@
 
 .td img {
     width: 30px;
+}
+
+#button_n1 {
+    width: 50px;
 }

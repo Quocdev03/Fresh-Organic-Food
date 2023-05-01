@@ -1,0 +1,73 @@
+/* cấu trúc của các bảng của giao diện */
+
+table {
+    margin-left: 10px;
+    margin-top: 35px;
+    width: 97%;
+}
+
+table tr:nth-child(odd) {
+    background-color: rgb(215, 212, 212);
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+table tr:nth-child(1) {
+    background-color: skyblue;
+}
+
+table:first-child {
+    border-top: 1px solid black;
+}
+
+table:last-child {
+    border-right: 1px solid black;
+}
+
+table th,
+table td {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 0;
+    text-align: center;
+}
+
+/* class table của trang doanh thu và sản phẩm */
+/* class table-1 của trang đơn hàng và info hóa đơn */
+/* class table-2 của trang đánh giá*/
+/* class table-3 của trang quản lý giá */
+
+.table-1 th,
+.table-1 td {
+    width: 17%;
+    height: 50px;
+}
+
+.table th,
+.table td {
+    width: 15%;
+}
+
+
+.table-3 th,
+.table-3 td {
+    width: 20%;
+}
+
+.table-2 th,
+.table-2 td {
+    width: 90%;
+    height: 50px;
+}
+
+.table th,
+.table-3 th {
+    height: 30px;
+}
+
+.table-2 tr td:first-child {
+    text-align: left;
+    padding-left: 30px;
+}

@@ -57,7 +57,7 @@ $dem=Dem($ro,biensanpham);
         <div class="down">
             <div >
                 <label>Giá</label>
-                <input class="gg" type="text" name="gia">
+                <input  type="text" name="gia">
             </div>
             <div>
             <button type="submit" name="chinh">Chỉnh giá</button>

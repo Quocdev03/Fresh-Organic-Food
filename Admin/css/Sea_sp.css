@@ -1,9 +1,13 @@
+/* Thanh Search  trang search đơn hàng và search sản phẩm*/
+
+/* Search sản phẩm */
 #Search {
     position: absolute;
     right: 5%;
     top: 100px;
 }
 
+/* Search đơn hàng */
 #search-dh {
     position: absolute;
     right: 5%;
