@@ -55,7 +55,6 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                      <div class="cart-payment-detail__title">
                         <h1>Detail</h1>
                      </div>
-
                      <?php
                      foreach ($_SESSION['cart'] as $product) {
                         $subtotal = $product[3] * $product[4];
@@ -64,7 +63,6 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
                         <span>' . number_format($subtotal) . '<sup>&#8363</sup></span></div>';
                      }
                      ?>
-
                   </div>
                   <div class="cart-payment-detail__total">
                      <?php
