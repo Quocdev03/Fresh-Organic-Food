@@ -1,0 +1,9 @@
+@import url('./Component/Header.css');
+@import url('./Component/Home.css');
+@import url('./Component/Cart.css');
+@import url('./Component/Product.css');
+@import url('./Component/Product_Detail.css');
+@import url('./Component/Checkout.css');
+@import url('./Component/404.css');
+@import url('./Component/Contact.css');
+@import url('./Component/Payment_Complete.css');

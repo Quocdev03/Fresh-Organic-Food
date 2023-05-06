@@ -1,0 +1,29 @@
+/* Trang Index */
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.bottom {
+    display: flex;
+    border: 1px solid;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.left {
+    flex-basis: 13.5%;
+    border: 1px solid;
+}
+
+.right {
+    flex-basis: 87%;
+    border: 1px solid;
+
+}
+
+.top {
+    padding: 5px;
+}

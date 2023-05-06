@@ -1,0 +1,126 @@
+.contact-container {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.contact-header {
+   margin-bottom: 60px;
+}
+
+.contact-desc {
+   text-align: center;
+   font-size: var(--xlarge-font-size);
+   line-height: var(--xlarge-line-height);
+}
+
+.contact-form {
+   width: 100%;
+}
+
+.contact-form-content {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 31px;
+   margin-bottom: 30px;
+}
+
+.contact-form-input {
+   width: 100%;
+   position: relative;
+}
+
+.contact-form-input input {
+   width: 100%;
+   transition: all .2s ease-in;
+   padding: 20px 0px 20px 25px;
+}
+
+.contact-form-input input:focus,
+.contact-form-input input:valid,
+.contact-form-input input {
+   border: 1px solid var(--primary-color);
+}
+
+.contact-form-texterea textarea {
+   width: 100%;
+   height: 190px;
+   margin-bottom: 30px;
+   padding: 20px 0px 20px 25px;
+}
+
+.contact-form-texterea textarea:focus,
+.contact-form-texterea textarea {
+   border: 1px solid var(--primary-color);
+}
+
+.contact-form-input input,
+.contact-form-texterea textarea {
+   outline: none;
+   border: 1px solid var(--gray-light-color);
+   border-radius: 6px;
+}
+
+.contact-form-input input::placeholder,
+.contact-form-texterea textarea::placeholder {
+   color: var(--gray-light-color);
+   transition: all 0.3s linear;
+}
+
+.contact-form-input input:focus::placeholder,
+.contact-form-texterea textarea:focus::placeholder {
+   opacity: 0;
+   visibility: hidden;
+}
+
+.contact-form-input label,
+.contact-form-texterea label {
+   display: block;
+   font-size: var(--large-font-size);
+   line-height: var(--large-line-height);
+   color: var(--text-color-2);
+   margin-bottom: 10px;
+}
+
+.contact-input-name.invalid+.input-icons .fa-times,
+.contact-input-name.valid+.input-icons .fa-check,
+.contact-input-mail.invalid+.input-icons .fa-times,
+.contact-input-mail.valid+.input-icons .fa-check {
+   opacity: 1;
+   visibility: visible;
+   transform: scale(1);
+}
+
+.input-icons {
+   position: absolute;
+   top: 67%;
+   right: 25px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.input-icons i {
+   color: white;
+   width: 23px;
+   height: 23px;
+   border-radius: 23px;
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+   font-size: 14px;
+   opacity: 0;
+   visibility: hidden;
+   transform: scale(0);
+   transition: all 0.2s ease;
+   position: absolute;
+}
+
+.fa-check {
+   background-color: #07efb5;
+}
+
+.fa-times {
+   background-color: #ff2149;
+}

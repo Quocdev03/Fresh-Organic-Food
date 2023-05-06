@@ -1,0 +1,25 @@
+/* Bố Cục chung của các trang mở bằng đường url */
+.body-sp {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 255, 255, 0.7);
+    height: 700px;
+    box-sizing: border-box;
+}
+
+/* Dùng chung cho toàn giao diện */
+body {
+    background-image: url('../picture/background5.jpg');
+}
+
+a {
+    text-decoration: none
+}
+
+img {
+    max-width: 100px;
+}
+
+button img {
+    max-width: 18px;
+}

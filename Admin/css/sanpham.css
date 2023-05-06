@@ -1,0 +1,33 @@
+/* các Nút Chức năng của Trang Sản Phẩm */
+
+.funcsp a {
+    color: red;
+    margin: 20px;
+    text-align: center;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(127, 255, 212);
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.funcsp {
+    display: flex;
+    gap: 2px;
+}
+
+.funcsp button {
+    color: red;
+    margin: 20px;
+    font-size: 15px;
+    background-color: rgb(127, 255, 212);
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}

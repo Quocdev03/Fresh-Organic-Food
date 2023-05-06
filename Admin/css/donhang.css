@@ -1,0 +1,21 @@
+/*các item và button trong bảng Trang Đơn Hàng */
+
+.See {
+    display: flex;
+    justify-content: end;
+    gap: 60px;
+    margin-right: 15px;
+}
+
+.td button {
+    width: 40%;
+    border-radius: 20px;
+}
+
+.td img {
+    width: 30px;
+}
+
+#button_n1 {
+    width: 50px;
+}

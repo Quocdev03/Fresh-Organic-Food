@@ -1,0 +1,19 @@
+.error-container {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+}
+
+.error-desc {
+   color: var(--text-color);
+   font-size: var(--xxlarge-font-size);
+   line-height: var(xxlarge-line-hight);
+   margin-bottom: 60px;
+}
+
+.error-image {
+   max-width: 80%;
+   object-fit: cover;
+   margin-bottom: 60px;
+}
