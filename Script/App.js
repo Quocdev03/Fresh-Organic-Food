@@ -34,17 +34,17 @@ const menuToggle = () => {
 // Likes
 const likeItem = () => {
    const likes = document.querySelectorAll('.offer-item-like');
-   const likesState = JSON.parse(sessionStorage.getItem('likesState')) || [];
-
    likes.forEach((like, index) => {
-      if (likesState[index]) {
-         like.classList.add("show-like");
-      }
       like.addEventListener('click', () => {
-         like.classList.toggle("show-like");
-         likesState[index] = like.classList.contains("show-like");
+         like.classList.toggle('show-like');
+         const likesState = JSON.parse(sessionStorage.getItem('likesState')) || [];
+         likesState[index] = like.classList.contains('show-like');
          sessionStorage.setItem('likesState', JSON.stringify(likesState));
       });
+      const likesState = JSON.parse(sessionStorage.getItem('likesState')) || [];
+      if (likesState[index]) {
+         like.classList.add('show-like');
+      }
    });
 };
 

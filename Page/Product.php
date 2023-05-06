@@ -28,7 +28,7 @@ $currentTime = date('Y-m-d H:i:s');
             </div>
             <div class="product-list">
                <?php
-               $sql = "SELECT * FROM sanpham WHERE MaL='Meat' AND TTrang != 'Xoá' order by TgThem desc";
+               $sql = "SELECT * FROM sanpham WHERE MaL='Meat' AND TTrang != 'Xoá' ORDER BY TgThem DESC";
                $result = $conn->query($sql);
                if ($result->num_rows > 0) {
                   // đổ dữ liệu vào trang web
@@ -83,7 +83,7 @@ $currentTime = date('Y-m-d H:i:s');
             </div>
             <div class="product-list">
                <?php
-               $sql = "SELECT * FROM sanpham WHERE MaL='Fruit' AND TTrang != 'Xoá' order by TgThem desc";
+               $sql = "SELECT * FROM sanpham WHERE MaL='Fruit' AND TTrang != 'Xoá' ORDER BY TgThem DESC";
                $result = $conn->query($sql);
                if ($result->num_rows > 0) {
                   // đổ dữ liệu vào trang web
@@ -138,7 +138,7 @@ $currentTime = date('Y-m-d H:i:s');
             </div>
             <div class="product-list">
                <?php
-               $sql = "SELECT * FROM sanpham WHERE MaL='Veget'AND TTrang != 'Xoá' order by TgThem desc";
+               $sql = "SELECT * FROM sanpham WHERE MaL='Veget'AND TTrang != 'Xoá' ORDER BY TgThem DESC";
                $result = $conn->query($sql);
                if ($result->num_rows > 0) {
                   // đổ dữ liệu vào trang web
@@ -193,7 +193,7 @@ $currentTime = date('Y-m-d H:i:s');
             </div>
             <div class="product-list">
                <?php
-               $sql = "SELECT * FROM sanpham WHERE MaL='FastF'AND TTrang != 'Xoá' order by TgThem desc";
+               $sql = "SELECT * FROM sanpham WHERE MaL='FastF'AND TTrang != 'Xoá' ORDER BY TgThem DESC";
                $result = $conn->query($sql);
                if ($result->num_rows > 0) {
                   // đổ dữ liệu vào trang web
